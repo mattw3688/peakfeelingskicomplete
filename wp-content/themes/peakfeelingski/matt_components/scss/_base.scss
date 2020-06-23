@@ -1,8 +1,4 @@
 
-.container {
-  @include flexCenter(column);
-  max-width: 100%;
-}
 
 body {
   font: $themefont;

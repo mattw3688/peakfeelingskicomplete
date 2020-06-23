@@ -6,7 +6,7 @@ function peakfeelingski_post_types()
 {
     // customer post type
     register_post_type('customer', array(
-        'supports' => array(),
+        'supports' => array('title', 'editor', 'custom-fields'),
         'rewrite' => array('slug' => 'customers'),
         'has_archive' => true,
         'public' => true,

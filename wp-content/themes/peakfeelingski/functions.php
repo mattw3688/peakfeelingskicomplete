@@ -101,13 +101,17 @@ add_action( 'after_setup_theme', 'peakfeelingski_setup' );
  * load stylesheets
  */
 function load_stylesheets() {
-	wp_register_style('bootstrap', get_template_directory_uri() . '/assets/style/bootstrap.min.css',
+	wp_register_style('bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css',
 		array(), false, 'all');
 	wp_enqueue_style('bootstrap');
 
 	wp_register_style('maincss', get_template_directory_uri() . '/assets/css/main.css',
-		array(), false, 'all');
+		[], false, 'all');
 	wp_enqueue_style('maincss');
+
+    wp_register_style('magnificcss', get_template_directory_uri() . '/assets/css/magnific.css',
+        [], false, 'all');
+    wp_enqueue_style('magnificcss');
 
 
 }
@@ -123,12 +127,16 @@ function loadjs() {
 	wp_enqueue_script('jquery');
 
 
-	wp_register_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', 'jquery', false, true);
+	wp_register_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', ['jquery'], false, true);
 	wp_enqueue_script('bootstrap');
 
+    wp_register_script('magnificjs', get_template_directory_uri() . '/assets/js/magnific.js', ['jquery'], 1, true);
+    wp_enqueue_script('magnificjs');
 
-	wp_register_script('mainjs', get_template_directory_uri() . '/assets/js/main.js', '', 1, true);
+	wp_register_script('mainjs', get_template_directory_uri() . '/assets/js/main.js', [], 1, true);
 	wp_enqueue_script('mainjs');
+
+
 }
 add_action('wp_enqueue_scripts', 'loadjs');
 
@@ -140,5 +148,30 @@ if ( !defined('theme_img_path')) {
 	define('theme_img_path', get_stylesheet_directory_uri() .'/assets/images');
 }
 
+/**
+ * ACF Settings
+ */
 
+function my_acf_load_field( $field ) {
+
+    // make required
+    $field['required'] = true;
+
+
+    // customize instructions with icon
+    $field['instructions'] = '<i class="help" title="Instructions here"></i>';
+
+
+    // customize wrapper element
+    $field['wrapper']['id'] = 'my-custom-id';
+    $field['wrapper']['data-jsify'] = '123';
+    $field['wrapper']['title'] = 'Text here';
+
+
+    // return
+    return $field;
+
+}
+
+add_filter('acf/load_field/name=event', 'my_acf_load_field');
 
