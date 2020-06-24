@@ -1,33 +1,32 @@
-<?php get_header();
+<?php
 
-$title = get_field('page_title');
-$description = get_field('description');
-$my_number = (int)get_field('my_number');
-?>
+get_header(); ?>
 
-<div class="container">
+    <section class="page card card-body mt-2">
+        <div class="container ">
 
 
+            <?php if (have_rows('content')): ?>
 
-    <?php if( have_posts() ): while ( have_posts() ): the_post();?>
+                <?php while (have_rows('content')): the_row(); ?>
 
-        <?php the_content()?>
+                    <?php if (get_row_layout() == 'columns_section'): ?>
 
-    <?php  endwhile; else: endif;  ?>
+                        <?php get_template_part('template-parts/modules/module', 'columns');?>
 
-    <?php if($title):?>
-    <h1><?php echo $title ?></h1>
-    <?php endif;?>
+                    <?php endif; ?>
 
-    <?php if($description):?>
-        <?php echo nl2br($description) ?>
-    <?php endif;?>
+                    <?php if (get_row_layout() == 'text_area_with_image'):?>
 
-    <?php if($my_number):?>
-        <h1><?php var_dump($my_number);  ?></h1>
-    <?php endif;?>
+                        <?php get_template_part('template-parts/modules/module', 'textwithimage');?>
 
+                    <?php endif; ?>
 
-</div>
+                <?php endwhile; ?>
+
+            <?php endif; ?>
+
+        </div>
+    </section>
 
 <?php get_footer(); ?>

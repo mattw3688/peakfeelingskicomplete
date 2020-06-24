@@ -6,7 +6,7 @@ function peakfeelingski_post_types()
 {
     // customer post type
     register_post_type('customer', array(
-        'supports' => array('title', 'editor', 'custom-fields'),
+        'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
         'rewrite' => array('slug' => 'customers'),
         'has_archive' => true,
         'public' => true,
@@ -23,7 +23,7 @@ function peakfeelingski_post_types()
     ));
         // product post type
     register_post_type('product', array(
-        'supports' => array('title', 'editor', 'custom-fields'),
+        'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
         'rewrite' => array('slug' => 'products'),
         'has_archive' => true,
         'public' => true,

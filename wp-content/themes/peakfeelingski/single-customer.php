@@ -1,17 +1,22 @@
 <?php
-get_header();?>
 
-<?php
-if ( have_posts() ) {
-    while ( have_posts() ) {
+get_header(); ?>
+
+    <section class="page">
+        <div class="container">
 
 
-        get_template_part('/template-parts/modules/customer-module');
-    } // end while
-} // end if
-?>
+            <h1> <?php the_title(); ?></h1>
 
-<?php echo $price ?>
+            <?php if(have_rows('products')): ?>
 
-<?php
-get_footer();
+
+                <?php get_template_part('template-parts/modules/module', 'products');?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </section>
+
+<?php get_footer(); ?>

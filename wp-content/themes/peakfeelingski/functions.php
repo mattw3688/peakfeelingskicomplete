@@ -175,3 +175,34 @@ function my_acf_load_field( $field ) {
 
 add_filter('acf/load_field/name=event', 'my_acf_load_field');
 
+// Add options pages for ACF
+
+
+if(function_exists('acf_add_options_page'))
+{
+    acf_add_options_page(
+        array(
+            'page-title' => 'Website Settings',
+            'menu_title' => 'Website Settings',
+            'menu_slug' => 'website-settings',
+            'capability' => 'edit_posts',
+            'icon_url' => 'dashicons-admin-tools'
+        )
+    );
+
+    acf_add_options_sub_page(
+        array(
+            'page-title' => 'Contact Settings',
+            'menu_title' => 'Contact',
+            'parent_slug' => 'website-settings',
+        )
+    );
+
+    acf_add_options_sub_page(
+        array(
+            'page-title' => 'Design Settings',
+            'menu_title' => 'Design',
+            'parent_slug' => 'website-settings',
+        )
+    );
+}
