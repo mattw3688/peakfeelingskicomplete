@@ -12,3 +12,4 @@ jQuery('.gallery').magnificPopup({
     }
     // other options
 });
+

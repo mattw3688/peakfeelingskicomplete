@@ -12,4 +12,6 @@ jQuery('.gallery').magnificPopup({
     }
     // other options
 });
+
+
 //# sourceMappingURL=main.js.map

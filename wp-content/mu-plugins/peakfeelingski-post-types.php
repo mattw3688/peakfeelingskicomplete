@@ -6,6 +6,7 @@ function peakfeelingski_post_types()
 {
     // customer post type
     register_post_type('customer', array(
+        'hierarchical' => true,
         'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
         'rewrite' => array('slug' => 'customers'),
         'has_archive' => true,
@@ -23,6 +24,7 @@ function peakfeelingski_post_types()
     ));
         // product post type
     register_post_type('product', array(
+        'hierarchical' => true,
         'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
         'rewrite' => array('slug' => 'products'),
         'has_archive' => true,
@@ -34,7 +36,6 @@ function peakfeelingski_post_types()
             'edit_item' => 'Edit Product',
             'all_items' => 'All Products',
             'singular_name' => 'Product',
-                'taxonomies' => array('lift pass', 'accommodation', 'ski hire', 'ski school', 'childcare','extras'),
         )
     ));
 
@@ -44,3 +45,17 @@ function peakfeelingski_post_types()
 
 add_action('init', 'peakfeelingski_post_types');
 
+function product_taxonomy()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Categories',
+            'singular_name' => 'Category',
+        ),
+        'public' => true,
+        'hierarchical' => true,
+    );
+    register_taxonomy('category', array('product'), $args);
+
+}
+add_action('init', 'product_taxonomy');
