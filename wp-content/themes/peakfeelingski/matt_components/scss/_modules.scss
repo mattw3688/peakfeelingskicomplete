@@ -4,3 +4,22 @@
   min-height: 200px;
 }
 
+.accommodation__module {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  .fit-image{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+.gallery {
+  img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: block;
+  }
+}

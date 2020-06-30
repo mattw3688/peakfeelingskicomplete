@@ -1,4 +1,4 @@
-<div class="tuition__module">
+<div class="massage__module">
 
     <?php
     $products = get_sub_field('product_post');
@@ -80,3 +80,5 @@
     <!--    </ul>-->
 
 </div>
+
+

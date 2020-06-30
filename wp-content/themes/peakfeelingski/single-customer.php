@@ -1,39 +1,91 @@
 <?php
 
 get_header(); ?>
+    <div class="page-wrapper">
 
-    <section class="page card card-body mt-2">
-        <div class="container ">
-
-
-            <?php if (have_rows('product_block')): ?>
-
-                <?php while (have_rows('product_block')): the_row(); ?>
+        <div class="container mt-2 ml-5">
+            <h1><?php the_field('top_heading')?></h1>
 
 
 
-                    <?php if (get_row_layout() == 'lift_passes'): ?>
-                        <h2>Lift Passes</h2>
-                        <?php get_template_part('template-parts/modules/module', 'passes');?>
+                <?php if (have_rows('product_block')): ?>
 
-                    <?php endif; ?>
+                    <?php while (have_rows('product_block')): the_row(); ?>
 
-                    <?php if (get_row_layout() == 'tuition'):?>
-                        <h2>Tuition</h2>
-                        <?php get_template_part('template-parts/modules/module', 'tuition');?>
+                            <?php if (get_row_layout() == 'category_heading'):?>
 
-                    <?php endif; ?>
+                                <h2><?php echo get_sub_field('heading') ?></h2>
 
-                <?php endwhile; ?>
+                            <?php endif; ?>
 
-            <?php endif; ?>
+                        <?php if (get_row_layout() == 'accommodation'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'accommodation');?>
+
+                        <?php endif; ?>
+
+                        <?php if (get_row_layout() == 'transport'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'transport');?>
+
+                        <?php endif; ?>
+
+                        <?php if (get_row_layout() == 'equipment_hire'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'equipment');?>
+
+                        <?php endif; ?>
+
+                        <?php if (get_row_layout() == 'child_care'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'childcare');?>
+
+                        <?php endif; ?>
+
+                        <?php if (get_row_layout() == 'massage_and_spa'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'massage');?>
+
+                        <?php endif; ?>
+
+                        <?php if (get_row_layout() == 'extra_activities'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'extras');?>
+
+                        <?php endif; ?>
+
+                        <?php if (get_row_layout() == 'additional_treats'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'treats');?>
+
+                        <?php endif; ?>
+
+
+                        <?php if (get_row_layout() == 'lift_passes'): ?>
+
+                            <?php get_template_part('template-parts/modules/module', 'passes');?>
+
+                        <?php endif; ?>
+
+                        <?php if (get_row_layout() == 'tuition'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'tuition');?>
+
+                        <?php endif; ?>
+
+
+
+                    <?php endwhile; ?>
+
+                <?php endif; ?>
+
 
         </div>
-    </section>
-
+    </div>
 
     <script>
 
+        var sum = 0
 
         function lift_pass_calculator($value) {
 
@@ -41,13 +93,15 @@ get_header(); ?>
             $('.total').val( $value );
         }
 
-        $( document ).ready(function() {
+        $( ".liftpass__module select" ).each(function( index ) {
+            console.log( index + ": " + $( this ).text() );
+        });
 
-            console.log( "Look I'm in your console...." );
+
 
 
             // this is watching ALL select elements... you can use classes or ID's instead..
-            $( ".liftpass__module select, .dog__module select" ).on( "click keyup change", function() {
+            $( ".liftpass__module select" ).on( "click keyup change", function() {
 
                 console.log('Oh wow you clicked a select within lift passes...');
 
@@ -59,17 +113,20 @@ get_header(); ?>
 
             });
 
+        $( document ).ready(function() {
+
+            console.log( "Look I'm in your console...." );
 
 
             //$jquery_variable = <?php //echo $count; ?>;
 
             //}
 
-          //  $( "select" ).on( "click keyup change", function() {
+            //  $( "select" ).on( "click keyup change", function() {
 
-           //     total();
+            //     total();
 
-          //  });
+            //  });
 
 
             // function total() {

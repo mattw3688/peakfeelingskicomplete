@@ -1,0 +1,51 @@
+Siteground
+Tignes123
+
+Gsuite
+Tignes123
+
+Namecheap
+Morzine321!
+
+
+To Do...
+
+Gallery link on image click in customer page...
+    - Change to featherlight gallery
+    - Use jQuery to hide / show it
+
+Look at Twisper for styling
+
+Setup G Suite
+
+Add pricing field to individual product blocks in customer page
+
+jQuery for calculations on customer page
+
+Setup Gravity Forms & Stripe
+
+Thoughts for product page....
+    Lift passes & tuition have a custom text field for you guys to personalize
+        Any other products to have that?
+    Al the rest to have custom prices per customer? Or a set price?
+    Add a product header field and remove the hard coded ones? This can help with multiple blocks of the same type.
+
+Different functionality for different products?
+    Separate Pricing!
+    Different Layout...
+    Links to ski schools / lift pass price list
+
+Integrate Booking form on contact page
+
+
+Use an invisible form to record the boxes checked and send to an email?
+    Add a message popup that says thanks and 48hours etc
+
+
+
+Categories...
+Accommodation       Transport       Ski Hire       Ski School       Child Care       Massage and Spa       Extra Activities       Additional Treats
+Correct?
+
+Gsuite, Setup ok?
+       Login Details...
