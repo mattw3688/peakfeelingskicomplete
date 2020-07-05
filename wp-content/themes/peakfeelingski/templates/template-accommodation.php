@@ -2,7 +2,7 @@
 
 /* Template Name: Accommodation */
 
-<?php get_header(); ?>
+ get_header(); ?>
 
 <section class="page">
     <div class="container">

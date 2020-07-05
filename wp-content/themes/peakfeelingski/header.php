@@ -13,12 +13,4 @@
 <body <?php body_class();?>>
 
 
-<header class = "main">
-    <?php wp_nav_menu(array(
-
-            'theme_location' => 'primary-menu',
-            'menu_class' => 'primary-menu',
-        ));
-    ?>
-</header>
-
+<?php get_template_part('template-parts/modules/module', 'header');?>

@@ -31,7 +31,8 @@ function peakfeelingski_setup() {
 	 */
 	register_nav_menus( array(
 		'primary'   => __( 'Primary Menu', 'peakfeelingski' ),
-		'secondary' => __('Secondary Menu', 'peakfeelingski' )
+		'secondary' => __('Secondary Menu', 'peakfeelingski' ),
+        'top-menu' => __('Top Menu', 'peakfeelingski')
 	) );
 
 	/**
@@ -89,6 +90,9 @@ function peakfeelingski_setup() {
 
 
 }
+
+// image sizing
+add_image_size('customer-page', '300', '200', false);
 
 // Register Sidebars
 function theme_sidebars()
@@ -219,3 +223,22 @@ if(function_exists('acf_add_options_page'))
         )
     );
 }
+
+// Add Google Fonts
+
+function add_google_fonts(){
+
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap', false);
+
+}
+
+add_action('wp_enqueue_scripts', 'add_google_fonts');
+
+// Add Font Awesome
+add_action('wp_enqueue_scripts', 'add_font_awesome');
+function add_font_awesome(){
+
+    wp_enqueue_script('font-awesome-script', 'https://kit.fontawesome.com/34047c7ac7.js', array(), NULL, true);
+
+};
+

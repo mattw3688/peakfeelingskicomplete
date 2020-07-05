@@ -1,37 +1,45 @@
-<div class="treats__module">
+<div class="customer-section treats__module">
 
     <?php
     $products = get_sub_field('product_post');
-    $selector = get_sub_field('selector');
-    $quantity = get_sub_field('quantity');
-
-
+    $price = get_sub_field('price');
     ?>
-
-    <!--    <ul class="list-group">-->
 
     <?php foreach ($products as $post):?>
 
+        <div class="container-fluid text-center">
 
+            <div class="row content">
 
-        <section class="row mt-5">
-            <div class="d-flex">
+                <div class="container-fluid  col-lg-5" id="thumbnail-box">
 
-                <!--                <li class="list-group-item col-lg-10">-->
-                <!--                allow you to use post data-->
-                <?php setup_postdata($post); ?>
-                <!--                    --><?php //$price = get_field('price');  ?>
+                    <div class="text-block">
+                        <h3 class=>
+                            <?php echo the_title(); ?>
+                        </h3>
+                        <h6> <?php echo get_sub_field('image_overlay_text') ?> </h6>
+                    </div>
+                    <a href="
 
-                <div class="container-fluid col-lg-4">
-                    <h3>
-                        <a href="<?php echo get_page_link() ?>" class=""><?php echo the_title(); ?></a>
-                    </h3> <br/>
-                    <?php the_field('product_description'); ?>
-
+">
+                        <img class="img-fluid main-image " src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
+                    </a>
                 </div>
 
-                <div class="container-fluid col-lg-4">
-                    <div class="gallery">
+                <div class="container-fluid col-lg-6">
+
+                    <div class="description">
+
+                        <?php echo the_field('product_description')?>
+                        <br/>
+                        <h6>Total Price €<?php echo the_field('price')?></h6>
+                        <input type="checkbox" id="checkbox_accommodation">
+                        <label for="checkbox_accommodation">Tick here to confirm</label>
+
+                    </div>
+                    <div class="container-fluid gallery col-lg-9 justify-content-center">
+
+
                         <?php $images = get_field('gallery');?>
 
                         <?php if ($images): ?>
@@ -47,38 +55,14 @@
 
                         <?php endif; ?>
 
-
-
                     </div>
-                    <!--                        <img src="--><?php //the_post_thumbnail_url('thumbnail'); ?><!--" alt="">-->
-                </div>
-
-                <div class="container-fluid col-lg-1">
-                    <select class="custom-select-sm" name="test" >
-                        <option value="1">Value of 1</option>
-                        <option value="2">Value of 2</option>
-                        <option value="3">Value of 3</option>
-                    </select>
-                </div>
-                <div class="container-fluid col-lg-1">
-
-                    <select class="custom-select-sm" name="test2" >
-                        <option value="5">Value of 5</option>
-                        <option value="6">Value of 6</option>
-                        <option value="7">Value of 7</option>
-                    </select>
 
                 </div>
 
             </div>
 
-            <!--                </li>-->
-
-        </section>
+        </div>
 
         <?php wp_reset_postdata(); endforeach; ?>
-    <!--    </ul>-->
 
 </div>
-
-

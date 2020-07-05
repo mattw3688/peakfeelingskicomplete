@@ -1,10 +1,11 @@
-<?php
 
-get_header(); ?>
-    <div class="page-wrapper">
 
-        <div class="container mt-2 ml-5">
-            <h1><?php the_field('top_heading')?></h1>
+<?php get_header(); ?>
+<div class="page-wrapper">
+
+            <div class="container col-lg-12 text-center mt-2" id="customer-page">
+                <h1><?php the_field('top_heading')?></h1>
+            </div>
 
 
 
@@ -12,15 +13,20 @@ get_header(); ?>
 
                     <?php while (have_rows('product_block')): the_row(); ?>
 
-                            <?php if (get_row_layout() == 'category_heading'):?>
-
+                        <?php if (get_row_layout() == 'category_heading'):?>
+                            <br/>
+                            <div class="container-fluid text-left ml-3">
                                 <h2><?php echo get_sub_field('heading') ?></h2>
+                            </div>
+                            <br/>
 
-                            <?php endif; ?>
+
+                        <?php endif; ?>
 
                         <?php if (get_row_layout() == 'accommodation'):?>
 
                             <?php get_template_part('template-parts/modules/module', 'accommodation');?>
+
 
                         <?php endif; ?>
 
@@ -28,11 +34,13 @@ get_header(); ?>
 
                             <?php get_template_part('template-parts/modules/module', 'transport');?>
 
+
                         <?php endif; ?>
 
                         <?php if (get_row_layout() == 'equipment_hire'):?>
 
                             <?php get_template_part('template-parts/modules/module', 'equipment');?>
+
 
                         <?php endif; ?>
 
@@ -46,17 +54,20 @@ get_header(); ?>
 
                             <?php get_template_part('template-parts/modules/module', 'massage');?>
 
+
                         <?php endif; ?>
 
                         <?php if (get_row_layout() == 'extra_activities'):?>
 
                             <?php get_template_part('template-parts/modules/module', 'extras');?>
 
+
                         <?php endif; ?>
 
                         <?php if (get_row_layout() == 'additional_treats'):?>
 
                             <?php get_template_part('template-parts/modules/module', 'treats');?>
+
 
                         <?php endif; ?>
 
@@ -81,7 +92,7 @@ get_header(); ?>
 
 
         </div>
-    </div>
+
 
     <script>
 

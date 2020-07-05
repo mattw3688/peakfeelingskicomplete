@@ -1,9 +1,11 @@
-.primary-menu {
+.top-menu {
   margin: 0;
   padding: 0;
   list-style: none;
   width: 100%;
   text-align: center;
+
+
   ul {
     list-style-type: none;
     li {
@@ -12,19 +14,25 @@
       padding: 10px;
 
       a {
-        color: black;
+        color: #e9e985;
         text-transform: uppercase;
 
         &:hover{
           text-decoration: none;
-          color : red;
+          color : $themeblue;
         }
       }
 
     }
   }
 }
-
+.container #header-logo {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+img #main-logo {
+  position: center;
+}
 
 
 

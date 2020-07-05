@@ -16,7 +16,9 @@ Gallery link on image click in customer page...
 
 Look at Twisper for styling
 
-Setup G Suite
+STYLING
+    Background images need portrait mode for mobile
+    Adjust Padding for different screen sizes
 
 Add pricing field to individual product blocks in customer page
 
@@ -34,8 +36,13 @@ Different functionality for different products?
     Separate Pricing!
     Different Layout...
     Links to ski schools / lift pass price list
+    Change category heading to dropdown
+
+    Add ability to add logos to the description for different facilities. Use a select multiple field to allow them to add them
 
 Integrate Booking form on contact page
+
+Use loop to fill an array for gallery
 
 
 Use an invisible form to record the boxes checked and send to an email?
@@ -47,5 +54,3 @@ Categories...
 Accommodation       Transport       Ski Hire       Ski School       Child Care       Massage and Spa       Extra Activities       Additional Treats
 Correct?
 
-Gsuite, Setup ok?
-       Login Details...
