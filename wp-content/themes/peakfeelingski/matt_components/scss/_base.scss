@@ -1,6 +1,60 @@
+@import "variables";
+@media (min-width: 600px) {
+  #home-page {
+
+    background-image: url("http://peakfeelingski.test/wp-content/uploads/2020/07/Homepage.jpg");
+    background-position: top ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
 
 
-body {
-  font: $themefont;
-  color: black;
+  }
+  .toptext__module {
+    margin-top: 50px;
+    margin-bottom:300px ;
+    font-size: 20px;
+    p {
+      color: whitesmoke;
+    }
+
+  }
+  .textwheading__module {
+    margin-bottom: 60px;
+  }
+  body {
+    p, h1 {
+      color: $themeblue;
+      font-family: $themefont;
+      font-weight: bold;
+    }
+  }
+
+
 }
+
+@media (max-width: 599px) {
+  #home-page {
+    body, html {
+      height: 100%;
+    }
+    background-image: url("http://peakfeelingski.test/wp-content/uploads/2020/07/Homepage-Mobile-1-scaled.jpg");
+    background-position: top ;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  body {
+    p, h1 {
+      color: #153942;
+      font-family: $themefont;
+      font-weight: bold;
+    }
+  }
+
+}
+
+
+
+
+

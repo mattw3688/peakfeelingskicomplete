@@ -1,0 +1,164 @@
+@import "variables";
+
+footer {
+  h5 {
+    font-family: $themefont;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+
+#home-page {
+  footer {
+    background: $footerblue !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}
+
+
+#accommodation-page {
+  footer {
+    background: yellow !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}
+
+#transport-page {
+  footer {
+    background: magenta !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}
+
+#equipment-page {
+  footer {
+    background: cyan !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}
+
+#tuition-page {
+  footer {
+    background: orange !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}
+
+#childcare-page {
+  footer {
+    background: darkred !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}
+
+#massage-page {
+  footer {
+    background: violet !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}
+
+#extras-page {
+  footer {
+    background: sandybrown !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}
+
+#treats-page {
+  footer {
+    background: palegoldenrod !important;
+  }
+
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+
+}

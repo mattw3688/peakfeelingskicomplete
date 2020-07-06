@@ -1,5 +1,5 @@
 <?php ?>
-<div class home-footer__module>
+<div class footer__module>
 
     <footer id="sticky-footer" class="py-4  " style="background: rgb(166, 209, 218);">
         <div class="container text-center">
@@ -10,6 +10,8 @@
             <a href=""><i class="fab fa-twitter fa-2x"></i></a>
             <a href=""><i class="fab fa-youtube fa-2x"></i></a>
             <a href=""><i class="fab fa-tripadvisor fa-2x"></i></a>
+
+
         </div>
     </footer>
 </div>

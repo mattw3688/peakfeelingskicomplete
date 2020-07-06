@@ -1,38 +1,94 @@
-.top-menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  text-align: center;
+@import "variables";
+
+.container #nav-container {
+  display: block;
+  position: center;
+}
 
 
-  ul {
-    list-style-type: none;
-    li {
 
-      display: inline;
-      padding: 10px;
-
+@media (min-width: 600px ) {
+  #home-page{
+    #top-menu {
       a {
-        color: #e9e985;
-        text-transform: uppercase;
-
-        &:hover{
+        color: $themeblue;
+        font-size: 20px;
+        font-family: $themefont;
+        font-weight: 600;
+        &:hover {
           text-decoration: none;
-          color : $themeblue;
+          color: whitesmoke;
         }
       }
-
     }
   }
 }
+
+@media (max-width: 599px ) {
+  #home-page{
+    #top-menu {
+      a {
+        color: $themeblue;
+        font-weight: 600;
+        font-family: $themefont;
+        &:hover {
+          text-decoration: none;
+          color: $themeblue;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
 .container #header-logo {
   margin: 0 auto;
   margin-top: 10px;
 }
+
 img #main-logo {
   position: center;
 }
+
+@media (max-width: 1000px) {
+  .header__module {
+    .contact-info {
+      h6 {
+        display: none;
+      }
+    }
+  }
+}
+
+.header__module {
+  .contact-info {
+    padding-right: 10px;
+    padding-top: 10px;
+    h6 {
+      color: $themeblue;
+      font-family: $themefont;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    #email, #phone {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 

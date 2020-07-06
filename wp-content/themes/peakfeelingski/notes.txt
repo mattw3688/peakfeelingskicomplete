@@ -19,6 +19,8 @@ Look at Twisper for styling
 STYLING
     Background images need portrait mode for mobile
     Adjust Padding for different screen sizes
+    Change IMG href to point to .com not.test
+    Load Logo Image with CSS so not needed to have multiple header files
 
 Add pricing field to individual product blocks in customer page
 
@@ -48,9 +50,18 @@ Use loop to fill an array for gallery
 Use an invisible form to record the boxes checked and send to an email?
     Add a message popup that says thanks and 48hours etc
 
+Bootstrap breakpoints in pixels:
+
+xs = 0-767 pixels
+sm = 768-991 pixels
+md = 992-1199 pixels
+lg = 1200 pixels and up
 
 
-Categories...
-Accommodation       Transport       Ski Hire       Ski School       Child Care       Massage and Spa       Extra Activities       Additional Treats
-Correct?
+xs is for extra small devices (phones, less than 768px)
+sm is for small devices (tablets, 768px and up)
+md is for medium devices (desktops, 992px and up)
+lg is for large devices (large desktops, 1200px and up)
 
+HOMEPAGE....
+link social icons to pages

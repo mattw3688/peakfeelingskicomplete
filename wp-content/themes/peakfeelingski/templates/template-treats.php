@@ -1,22 +1,28 @@
-<?php
+<div id="treats-page">
 
-/* Template Name: Additional Treats */
+    <?php
 
-get_header(); ?>
+    /* Template Name: Additional Treats */
 
-<section class="page">
-    <div class="container">
+    get_header(); ?>
 
-        <h1><?php the_title();?></h1>
-        <?php the_field('phone', 'options'); ?>
-
+    <section class="container-fluid bg-transparent mt-2">
+        <div class="container bg-transparent">
 
 
+            <h1> <?php the_title(); ?></h1>
+
+            <?php if( have_posts() ): while ( have_posts() ): the_post();?>
+
+                <?php the_content()?>
+
+            <?php  endwhile; else: endif;  ?>
 
 
 
 
-    </div>
-</section>
+        </div>
+    </section>
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
+</div>
