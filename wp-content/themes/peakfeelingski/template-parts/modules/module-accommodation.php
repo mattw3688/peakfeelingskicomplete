@@ -35,6 +35,10 @@
 
                             </div>
                             <div class="container description ">
+                                
+                                <div class="container" id="icons"> 
+                                    <i><img src="" alt=""></i>
+                                </div>
 
                                 <?php echo get_field('product_description')?>
                                 <br/>
