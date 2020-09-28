@@ -1,4 +1,4 @@
-<div id="childcare-page">
+<div class="page-wrapper" id="childcare-page">
 
     <?php
 
@@ -7,19 +7,30 @@
     get_header(); ?>
 
     <section class="container-fluid bg-transparent mt-2">
-        <div class="container bg-transparent">
+        <div class="container bg-transparent ">
 
 
-            <h1> <?php the_title(); ?></h1>
+            <?php if (have_rows('content')): ?>
 
-            <?php if( have_posts() ): while ( have_posts() ): the_post();?>
+                <?php while (have_rows('content')): the_row(); ?>
 
-                <?php the_content()?>
+                    <?php if (get_row_layout() == 'bold_text'): ?>
 
-            <?php  endwhile; else: endif;  ?>
+                        <?php get_template_part('template-parts/modules/module', 'bold_text');?>
 
+                    <?php endif; ?>
 
+                    <?php if (get_row_layout() == 'paragraph_text'):?>
 
+                        <?php get_template_part('template-parts/modules/module', 'paragraph_text');?>
+
+                    <?php endif; ?>
+
+                <?php endwhile; ?>
+
+            <?php endif; ?>
+
+            <?php get_template_part('template-parts/modules/module', 'contact_line_skihire'); ?>
 
         </div>
     </section>

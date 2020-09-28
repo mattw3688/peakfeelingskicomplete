@@ -2,7 +2,7 @@
 
 
 
-    <div class="header-bg">
+    <div class="header-bg fixed">
         <div class="header-inner">
             <div class="contact-info float-lg-right">
                 <a href="mailto:info@peakfeelingski.com" id="email"><h6>info@peakfeelingski.com</h6></a>
@@ -13,13 +13,13 @@
 
             </div>
 
-            <div class="container col-xs-6 col-lg-4" id="header-logo">`
+            <div class="container col-xs-6 col-lg-4 text-center" id="header-logo">`
 
-                <?php if (is_front_page()): ?>
+<!--                --><?php //if (is_front_page()): ?>
                     <a href="<?php echo home_url(); ?>">
-                        <img class="img-fluid  " id="main-logo" src="<?php echo home_url();?>/wp-content/uploads/2020/07/PeakLogoSlogan_Aqua.png" alt="Peak Feeling Ski Logo">
+                        <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/peakslogan.svg" alt="Peak Feeling Ski Logo" style="fill: #102143">
                     </a>
-                <?php endif; ?>
+<!--                --><?php //endif; ?>
             </div>
             <div class="container col-lg-4 ">
 

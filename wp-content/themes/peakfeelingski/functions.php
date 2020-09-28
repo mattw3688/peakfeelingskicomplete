@@ -141,7 +141,7 @@ add_action('wp_enqueue_scripts', 'load_stylesheets');
 
 function loadjs() {
 
-	wp_enqueue_script('jquery');
+//	wp_enqueue_script('jquery');
 
 
 	wp_register_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', ['jquery'], false, true);
@@ -230,6 +230,7 @@ function add_google_fonts(){
 
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap', false);
 
+
 }
 
 add_action('wp_enqueue_scripts', 'add_google_fonts');
@@ -249,3 +250,4 @@ function register_navwalker(){
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+

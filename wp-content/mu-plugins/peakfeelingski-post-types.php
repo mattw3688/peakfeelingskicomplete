@@ -39,6 +39,24 @@ function peakfeelingski_post_types()
         )
     ));
 
+//    register_post_type('resort', array(
+//        'hierarchical' => true,
+//        'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
+//        'rewrite' => array('slug' => 'resorts'),
+//        'has_archive' => true,
+//        'public' => true,
+//        'menu_icon' => 'dashicons-airplane',
+//        'labels' => array(
+//            'name' => 'Resorts',
+//            'add_new_item' => 'Add New Resort',
+//            'edit_item' => 'Edit Resort',
+//            'all_items' => 'All Resorts',
+//            'singular_name' => 'Resort',
+//
+//
+//        )
+//    ));
+
 
 
 }
@@ -59,3 +77,20 @@ function product_taxonomy()
 
 }
 add_action('init', 'product_taxonomy');
+
+add_action('init', 'peakfeelingski_post_types');
+
+function customer_taxonomy()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Categories',
+            'singular_name' => 'Category',
+        ),
+        'public' => true,
+        'hierarchical' => true,
+    );
+    register_taxonomy('category', array('customer'), $args);
+
+}
+add_action('init', 'customer_taxonomy');

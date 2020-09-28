@@ -1,67 +1,55 @@
-<?php
+<div class="page-wrapper" id="team-page">
 
-/* Template Name: Team */
+    <?php
 
-get_header(); ?>
+    /* Template Name: Meet the Team */
 
-<section class="page">
-    <div class="container">
+    get_header(); ?>
 
-
-        <h1> <?php the_title(); ?></h1>
-
-
-        <?php if(have_rows('team')): ?>
-
-            <ul class="list-group">
-
-                <?php while(have_rows('team')):the_row();
-                $name =  get_sub_field('name');
-                $bio =  get_sub_field('bio');
-                $image = get_sub_field('profile_picture');
-                $picture = $image['sizes']['thumbnail'];
-                $link = get_sub_field('link');
-                $hourly_rate = get_sub_field('hourly_rate');
+    <section class="container-fluid bg-transparent mt-2">
+        <div class="container bg-transparent ">
 
 
+            <?php if (have_rows('content')): ?>
 
-                ?>
+                <?php while (have_rows('content')): the_row(); ?>
 
-                    <li class="list-group-item" >
-                        <h4><?php echo $name ?></h4>
-                        <br/>
+                    <?php if (get_row_layout() == 'top_quote'): ?>
 
-                        <?php echo $bio ?>
-                        <br/>
+                        <?php get_template_part('template-parts/modules/module', 'topquote');?>
 
-                        <?php if($image): ?>
-                            <img src="<?php echo $picture; ?>" alt="<?php echo $image['alt']; ?>">
-                        <?php endif; ?>
-                        <br/>
+                    <?php endif; ?>
 
-                        <?php if($link): ?>
-                        <a href="<?php echo $link['url']; ?>">
-                           View Profile
-                        </a>
-                        <?php endif; ?>
+                    <?php if (get_row_layout() == 'bold_text'):?>
 
-                        £<?php echo $hourly_rate?>
+                        <?php get_template_part('template-parts/modules/module', 'bold_text');?>
 
+                    <?php endif; ?>
 
-                    </li>
+                <?php endwhile; ?>
 
+            <?php endif; ?>
 
-                <?php  endwhile;  ?>
+            <?php if (have_rows('introduction')): ?>
 
-            </ul>
-        <?php endif; ?>
+                <?php while (have_rows('introduction')): the_row(); ?>
+
+                    <?php if (get_row_layout() == 'paragraph_with_title'): ?>
+
+                        <?php get_template_part('template-parts/modules/module', 'paragraph_title');?>
+
+                    <?php endif; ?>
 
 
 
+                <?php endwhile; ?>
 
+            <?php endif; ?>
 
+            <?php get_template_part('template-parts/modules/module', 'contact_line_skihire'); ?>
 
-    </div>
-</section>
+        </div>
+    </section>
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
+</div>

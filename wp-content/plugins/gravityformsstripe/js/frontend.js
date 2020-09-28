@@ -97,7 +97,7 @@ window.GFStripe = null;
 									}
 									GFStripeObj.scaActionHandler(stripe, formId);
 								} else {
-									card.mount(GFStripeObj.GFCCField.selector);
+									card.mount('#' + GFStripeObj.GFCCField.attr('id'));
 
 									card.on('change', function (event) {
 										GFStripeObj.displayStripeCardError(event);
@@ -175,7 +175,7 @@ window.GFStripe = null;
 								return total;
 							}, 51);
 
-							gformCalculateTotalPrice(formId);
+							gformCalculateTotalPrice(GFStripeObj.formId);
 						}
 
 						GFStripeObj.updatePaymentAmount();

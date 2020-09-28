@@ -1,58 +1,159 @@
 @import "variables";
-@media (min-width: 600px) {
-  #home-page {
 
-    background-image: url("http://peakfeelingski.test/wp-content/uploads/2020/07/Homepage.jpg");
-    background-position: top ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: local;
+@font-face {
+  font-family: 'Coolvetica-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Coolvetica-Regular'), url('../../assets/fonts/coolvetica.woff') format('woff');
+}
 
+@media (min-width: 1000px) {
 
-  }
-  .toptext__module {
-    margin-top: 50px;
-    margin-bottom:300px ;
-    font-size: 20px;
-    p {
-      color: whitesmoke;
-    }
-
-  }
-  .textwheading__module {
-    margin-bottom: 60px;
-  }
   body {
-    p, h1 {
-      color: $themeblue;
-      font-family: $themefont;
-      font-weight: bold;
-    }
+    position: absolute;
+    margin: 0;
+    //overflow: hidden;
+    top: 0;
+    bottom: 0;
+    width: 100%;
   }
-
 
 }
 
-@media (max-width: 599px) {
-  #home-page {
-    body, html {
-      height: 100%;
-    }
-    background-image: url("http://peakfeelingski.test/wp-content/uploads/2020/07/Homepage-Mobile-1-scaled.jpg");
-    background-position: top ;
-    background-size: cover;
-    background-repeat: no-repeat;
+//font sizes
 
+h3 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+
+}
+
+@media( min-width: 600px ) {
+  h3 {
+    font-size: 1.8rem;
   }
-  body {
-    p, h1 {
-      color: #153942;
-      font-family: $themefont;
-      font-weight: bold;
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+* {
+  font-family: $themefont;
+  color: $themeblue;
+
+
+
+  p {
+    //font-size: 20px;
+    font-weight: lighter;
+    a {
+      color: $themefont;
+      text-decoration: none;
     }
+  }
+  a {
+    color: $themefont;
+    text-decoration: none;
+  }
+}
+
+
+
+//@media (min-width: 600px) {
+//  #home-page {
+//
+//    background-image: url("http://peakfeelingski.test/wp-content/uploads/2020/07/Homepage.jpg");
+//    background-position: top ;
+//    background-size: cover;
+//    background-repeat: no-repeat;
+//    background-attachment: local;
+//
+//
+//  }
+//  .toptext__module {
+//    margin-top: 50px;
+//    margin-bottom:300px ;
+//    font-size: 20px;
+//    p {
+//      color: whitesmoke;
+//    }
+//
+//  }
+//  .textwheading__module {
+//    margin-bottom: 60px;
+//  }
+//  body {
+//    p, h1 , h2, h3, h4{
+//      color: $themeblue;
+//      font-family: $themefont;
+//      font-weight: bold;
+//    }
+//  }
+//
+//
+//}
+//
+//@media (max-width: 599px) {
+//  #home-page {
+//    body, html {
+//      height: 100%;
+//    }
+//    background-image: url("http://peakfeelingski.test/wp-content/uploads/2020/07/Homepage-Mobile-1-scaled.jpg");
+//    background-position: top ;
+//    background-size: cover;
+//    background-repeat: no-repeat;
+//
+//  }
+//  body {
+//    p, h1, h2, h3, h4{
+//      color: #153942;
+//      font-family: $themefont;
+//      font-weight: bold;
+//    }
+//  }
+//
+//}
+
+.customer-page {
+  background: url("../../assets/images/customer-page-background.svg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.card-body .price-box {
+  border-radius: 0;
+  border: none;
+  max-width: 200px;
+  max-height: 40px;
+  background-image: url("../../assets/images/price-box.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.container .gallery {
+  display: flex;
+  align-content: center;
+  img {
+    margin-left: 20px;
   }
 
 }
+
+
+
+
 
 
 

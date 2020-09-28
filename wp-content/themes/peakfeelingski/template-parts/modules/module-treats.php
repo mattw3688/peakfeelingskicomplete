@@ -7,55 +7,57 @@
 
     <?php foreach ($products as $post):?>
 
-        <div class="container-fluid text-center">
+    <div class="row justify-content-center">
 
-            <div class="row content">
+        <div class="card col-lg-10 align-self-center ">
 
-                <div class="container-fluid  col-lg-5" id="thumbnail-box">
+            <div class="card-body ">
 
-                    <div class="text-block">
-                        <h3 class=>
-                            <?php echo the_title(); ?>
-                        </h3>
-                        <h6> <?php echo get_sub_field('image_overlay_text') ?> </h6>
+                <div class="row content">
+
+                    <div class="container-fluid  col-lg-5" id="thumbnail-box">
+
+                        <div class="text-block">
+                            <h3 class=>
+                                <?php echo the_title(); ?>
+                            </h3>
+                            <h6> <?php echo get_sub_field('image_overlay_text') ?> </h6>
+                        </div>
+                        <a href="">
+                            <img class="img-fluid main-image " src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
+                        </a>
                     </div>
-                    <a href="
 
-">
-                        <img class="img-fluid main-image " src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
-                    </a>
-                </div>
+                    <div class="container-fluid col-lg-6">
 
-                <div class="container-fluid col-lg-6">
+                        <div class="description">
 
-                    <div class="description">
+                            <?php echo the_field('product_description')?>
+                            <br/>
+                            <h6>Total Price €<?php echo the_field('price')?></h6>
+                            <input type="checkbox" id="checkbox_treats">
+                            <label for="checkbox_treats">Tick here to confirm</label>
 
-                        <?php echo the_field('product_description')?>
-                        <br/>
-                        <h6>Total Price €<?php echo the_field('price')?></h6>
-                        <input type="checkbox" id="checkbox_accommodation">
-                        <label for="checkbox_accommodation">Tick here to confirm</label>
-
-                    </div>
-                    <div class="container-fluid gallery col-lg-9 justify-content-center">
+                        </div>
+                        <div class="container-fluid gallery col-lg-9 justify-content-center">
 
 
-                        <?php $images = get_field('gallery');?>
+                            <?php $images = get_field('gallery');?>
 
-                        <?php if ($images): ?>
+                            <?php if ($images): ?>
 
-                            <?php foreach ($images as $image): ?>
+                                <?php foreach ($images as $image): ?>
 
-                                <a href="<?php echo $image['sizes']['large']?>" title="<?php echo $image['caption'] ?>">
-                                    <img src=" <?php echo $image['sizes']['thumbnail']?>"
-                                         title="<?php echo $image['caption'] ?>" class="img-fluid">
-                                </a>
+                                    <a href="<?php echo $image['sizes']['large']?>" title="<?php echo $image['caption'] ?>">
+                                        <img src=" <?php echo $image['sizes']['thumbnail']?>"
+                                             title="<?php echo $image['caption'] ?>" class="img-fluid">
+                                    </a>
 
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
 
-                        <?php endif; ?>
+                            <?php endif; ?>
 
-                    </div>
+                        </div>
 
                 </div>
 
@@ -64,5 +66,5 @@
         </div>
 
         <?php wp_reset_postdata(); endforeach; ?>
-
+    </div>
 </div>

@@ -10,7 +10,11 @@
         <?php foreach ($products as $post):?>
             <?php setup_postdata($post); ?>
 
-            <div class="container-fluid text-center">
+    <div class="row justify-content-center">
+
+        <div class="card col-lg-10 align-self-center " >
+
+            <div class="card-body " >
 
                 <div class="row content">
 
@@ -30,21 +34,22 @@
                             <?php echo $information?>
                             <br/>
                             <h6>Total Price €<?php echo $price?></h6>
-                            <input type="checkbox" id="checkbox_accommodation">
-                            <label for="checkbox_accommodation">Tick here to confirm</label>
+                            <input type="checkbox" id="checkbox_passes">
+                            <label for="checkbox_passes">Tick here to confirm</label>
 
                         </div>
                         <div class="container-fluid gallery col-lg-9 justify-content-center">
 
 
+                    </div>
                 </div>
-
-
 
             </div>
 
-        <?php wp_reset_postdata(); endforeach; ?>
+        </div>
 
+        <?php wp_reset_postdata(); endforeach; ?>
+    </div>
 
 </div>
 

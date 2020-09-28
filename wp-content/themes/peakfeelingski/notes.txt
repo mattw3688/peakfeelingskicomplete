@@ -1,4 +1,5 @@
 Siteground
+peakfeelingski@gmail.com
 Tignes123
 
 Gsuite
@@ -10,23 +11,34 @@ Morzine321!
 
 To Do...
 
-Gallery link on image click in customer page...
-    - Change to featherlight gallery
-    - Use jQuery to hide / show it
+CUSTOMER PAGE
 
-Look at Twisper for styling
+Checkbox Design
+Boxes Below
+JQuery Calculations
+Icons for facilities
+Mobile Styling
+
+Styling all pages
+
+
+
+BLOG PAGE
+Looks like peak pack
+
+
 
 STYLING
     Background images need portrait mode for mobile
     Adjust Padding for different screen sizes
-    Change IMG href to point to .com not.test
-    Load Logo Image with CSS so not needed to have multiple header files
+
+
 
 Add pricing field to individual product blocks in customer page
 
 jQuery for calculations on customer page
 
-Setup Gravity Forms & Stripe
+
 
 Thoughts for product page....
     Lift passes & tuition have a custom text field for you guys to personalize
@@ -34,17 +46,33 @@ Thoughts for product page....
     Al the rest to have custom prices per customer? Or a set price?
     Add a product header field and remove the hard coded ones? This can help with multiple blocks of the same type.
 
-Different functionality for different products?
-    Separate Pricing!
-    Different Layout...
-    Links to ski schools / lift pass price list
-    Change category heading to dropdown
+Add ability to add logos to the description for different facilities.
+- Decide which are on every product.. ie capacity, distance to slopes
+- Enable check box system to add all the rest.
+- Specific for product type
 
-    Add ability to add logos to the description for different facilities. Use a select multiple field to allow them to add them
 
-Integrate Booking form on contact page
 
-Use loop to fill an array for gallery
+PEAK PACK PAGE
+
+When tick box, you also agree to t's and c's
+Inside each box a t's and c's link
+tick box underneath, "please tick to select this product. (by ticking you agree to the suppliers t's and c's)"
+At the bottom.... Please tick to confirm your selections and our t's and c's
+Would you like to add any other products or see any other options? Then a box pops up
+Get rid of navbar.
+Confirmation message...  Thank you for making your holiday choices. We will just go and firm up your booking with the suppliers and will be back to you very soon to confirm your booking and take your initial deposit
+
+
+PRODUCTS
+
+Add t's and c's option
+Open in lightbox
+
+
+MOBILE PAGES
+Need work....
+Ski hire
 
 
 Use an invisible form to record the boxes checked and send to an email?

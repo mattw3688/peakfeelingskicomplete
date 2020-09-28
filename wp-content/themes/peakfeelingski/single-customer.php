@@ -1,97 +1,103 @@
+<div class="customer-page">
+    <?php get_header(); ?>
+    <div class="page-wrapper">
+
+        <div class="container col-lg-12 text-center mt-2" id="customer-page">
+            <h1><?php the_field('top_heading') ?></h1>
+        </div>
+        <br/>
 
 
-<?php get_header(); ?>
-<div class="page-wrapper">
+        <?php if (have_rows('product_block')): ?>
 
-            <div class="container col-lg-12 text-center mt-2" id="customer-page">
-                <h1><?php the_field('top_heading')?></h1>
-            </div>
+            <?php while (have_rows('product_block')): the_row(); ?>
 
+<!--                --><?php //if (get_row_layout() == 'category_heading'): ?>
+<!--                    <br/>-->
+<!--                    <div class="container-fluid text-left ml-3">-->
+<!--                        <h2>--><?php //echo get_sub_field('heading') ?><!--</h2>-->
+<!--                    </div>-->
+<!--                    <br/>-->
+<!---->
+<!---->
+<!--                --><?php //endif; ?>
 
+                <?php if (get_row_layout() == 'accommodation'): ?>
 
-                <?php if (have_rows('product_block')): ?>
-
-                    <?php while (have_rows('product_block')): the_row(); ?>
-
-                        <?php if (get_row_layout() == 'category_heading'):?>
-                            <br/>
-                            <div class="container-fluid text-left ml-3">
-                                <h2><?php echo get_sub_field('heading') ?></h2>
-                            </div>
-                            <br/>
-
-
-                        <?php endif; ?>
-
-                        <?php if (get_row_layout() == 'accommodation'):?>
-
-                            <?php get_template_part('template-parts/modules/module', 'accommodation');?>
+                    <?php get_template_part('template-parts/modules/module', 'accommodation'); ?>
+                    <br/>
 
 
-                        <?php endif; ?>
+                <?php endif; ?>
 
-                        <?php if (get_row_layout() == 'transport'):?>
+                <?php if (get_row_layout() == 'transport'): ?>
 
-                            <?php get_template_part('template-parts/modules/module', 'transport');?>
+                    <?php get_template_part('template-parts/modules/module', 'transport'); ?>
+                    <br/>
 
+                <?php endif; ?>
 
-                        <?php endif; ?>
+                <?php if (get_row_layout() == 'equipment_hire'): ?>
 
-                        <?php if (get_row_layout() == 'equipment_hire'):?>
-
-                            <?php get_template_part('template-parts/modules/module', 'equipment');?>
-
-
-                        <?php endif; ?>
-
-                        <?php if (get_row_layout() == 'child_care'):?>
-
-                            <?php get_template_part('template-parts/modules/module', 'childcare');?>
-
-                        <?php endif; ?>
-
-                        <?php if (get_row_layout() == 'massage_and_spa'):?>
-
-                            <?php get_template_part('template-parts/modules/module', 'massage');?>
+                    <?php get_template_part('template-parts/modules/module', 'equipment'); ?>
+                    <br/>
 
 
-                        <?php endif; ?>
+                <?php endif; ?>
 
-                        <?php if (get_row_layout() == 'extra_activities'):?>
+                <?php if (get_row_layout() == 'child_care'): ?>
 
-                            <?php get_template_part('template-parts/modules/module', 'extras');?>
+                    <?php get_template_part('template-parts/modules/module', 'childcare'); ?>
+                    <br/>
 
+                <?php endif; ?>
 
-                        <?php endif; ?>
+                <?php if (get_row_layout() == 'massage_and_spa'): ?>
 
-                        <?php if (get_row_layout() == 'additional_treats'):?>
-
-                            <?php get_template_part('template-parts/modules/module', 'treats');?>
-
-
-                        <?php endif; ?>
+                    <?php get_template_part('template-parts/modules/module', 'massage'); ?>
+                    <br/>
 
 
-                        <?php if (get_row_layout() == 'lift_passes'): ?>
+                <?php endif; ?>
 
-                            <?php get_template_part('template-parts/modules/module', 'passes');?>
+                <?php if (get_row_layout() == 'extra_activities'): ?>
 
-                        <?php endif; ?>
+                    <?php get_template_part('template-parts/modules/module', 'extras'); ?>
 
-                        <?php if (get_row_layout() == 'tuition'):?>
+                    <br/>
 
-                            <?php get_template_part('template-parts/modules/module', 'tuition');?>
+                <?php endif; ?>
 
-                        <?php endif; ?>
+                <?php if (get_row_layout() == 'additional_treats'): ?>
 
+                    <?php get_template_part('template-parts/modules/module', 'treats'); ?>
 
-
-                    <?php endwhile; ?>
+                    <br/>
 
                 <?php endif; ?>
 
 
-        </div>
+                <?php if (get_row_layout() == 'lift_passes'): ?>
+
+                    <?php get_template_part('template-parts/modules/module', 'passes'); ?>
+                    <br/>
+
+                <?php endif; ?>
+
+                <?php if (get_row_layout() == 'tuition'): ?>
+
+                    <?php get_template_part('template-parts/modules/module', 'tuition'); ?>
+                    <br/>
+
+                <?php endif; ?>
+
+
+            <?php endwhile; ?>
+
+        <?php endif; ?>
+
+
+    </div>
 
 
     <script>
@@ -101,32 +107,30 @@
         function lift_pass_calculator($value) {
 
             console.log('within selected products');
-            $('.total').val( $value );
+            $('.total').val($value);
         }
 
-        $( ".liftpass__module select" ).each(function( index ) {
-            console.log( index + ": " + $( this ).text() );
+        $(".liftpass__module select").each(function (index) {
+            console.log(index + ": " + $(this).text());
         });
 
 
+        // this is watching ALL select elements... you can use classes or ID's instead..
+        $(".liftpass__module select").on("click keyup change", function () {
 
+            console.log('Oh wow you clicked a select within lift passes...');
 
-            // this is watching ALL select elements... you can use classes or ID's instead..
-            $( ".liftpass__module select" ).on( "click keyup change", function() {
+            lift_pass_calculator($(this).val());
 
-                console.log('Oh wow you clicked a select within lift passes...');
+            //$(this).css('background','red');
+            // bubbling! dom travelsal
+            // $('.status').toggleClass('active');
 
-                lift_pass_calculator( $(this).val() );
+        });
 
-                //$(this).css('background','red');
-                // bubbling! dom travelsal
-                $('.status').toggleClass('active');
+        $(document).ready(function () {
 
-            });
-
-        $( document ).ready(function() {
-
-            console.log( "Look I'm in your console...." );
+            console.log("Look I'm in your console....");
 
 
             //$jquery_variable = <?php //echo $count; ?>;
@@ -160,4 +164,5 @@
     </script>
 
     <input type="text" class="total">
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
+</div>

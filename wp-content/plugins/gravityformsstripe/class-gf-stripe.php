@@ -560,9 +560,8 @@ class GFStripe extends GFPaymentAddOn {
 	 */
 	public function api_settings_fields() {
 		$api_mode = '';
-		if ( rgget( 'auth_payload' ) ) {
-			$auth_payload = unserialize( base64_decode( rgget( 'auth_payload' ) ) );
-			$api_mode     = $auth_payload['livemode'] ? 'live' : 'test';
+		if ( rgpost( 'access_token' ) ) {
+			$api_mode = ( rgpost( 'livemode' ) === true ) ? 'live' : 'test';
 		} elseif ( $this->is_detail_page() && empty( $api_mode ) ) {
 			$api_mode = $this->get_plugin_setting( 'api_mode' );
 		}
@@ -809,7 +808,7 @@ class GFStripe extends GFPaymentAddOn {
 		} else {
 			// don't display the button in the add-on settings when Stripe Connect is not enabled.
 			if ( ! $this->is_stripe_connect_enabled() ) {
-				return;
+				return '';
 			}
 
 			$settings = $this->get_plugin_settings();
@@ -835,10 +834,11 @@ class GFStripe extends GFPaymentAddOn {
 
 		// Get authentication URL.
 		$license_key = GFCommon::get_key();
-		$auth_url    = add_query_arg( array(
+		$auth_url = add_query_arg( array(
 			'mode'        => $api_mode,
 			'redirect_to' => rawurlencode( $settings_url ),
 			'license'     => $license_key,
+			'state'       => wp_create_nonce( $this->get_authentication_state_action() ),
 		), $this->get_gravity_api_url( '/auth/stripe' ) );
 
 		// Create connect button markup.
@@ -1000,6 +1000,7 @@ class GFStripe extends GFPaymentAddOn {
 	 * Store auth tokens when we get auth payload from Stripe Connect.
 	 *
 	 * @since 2.8
+	 * @since 3.5.1 Added support for the state param.
 	 */
 	public function maybe_update_auth_tokens() {
 		if ( rgget( 'subview' ) !== $this->get_slug() ) {
@@ -1007,8 +1008,21 @@ class GFStripe extends GFPaymentAddOn {
 		}
 
 		// If access token is provided, save it.
-		if ( rgget( 'auth_payload' ) && ! $this->is_save_postback() ) {
-			$auth_payload = unserialize( base64_decode( rgget( 'auth_payload' ) ) );
+		if ( rgpost( 'auth_payload' ) ) {
+			$auth_payload = json_decode( base64_decode( rgpost( 'auth_payload' ) ), true );
+
+			// If state does not match, do not save.
+			if ( ! wp_verify_nonce( rgpost( 'state' ), $this->get_authentication_state_action() ) ) {
+
+				// Add error message.
+				GFCommon::add_error_message( esc_html__( 'Unable to connect to Stripe due to mismatched state.', 'gravityformsstripe' ) );
+
+				return;
+
+			}
+
+			// Get access token.
+			$access_token = rgar( $auth_payload, 'access_token' );
 
 			$is_feed_settings = $this->is_detail_page() ? true : false;
 
@@ -1019,19 +1033,19 @@ class GFStripe extends GFPaymentAddOn {
 				$settings = (array) $this->get_plugin_settings();
 			}
 
-			$settings['api_mode'] = $auth_payload['livemode'] ? 'live' : 'test';
+			$settings['api_mode'] = ( rgar( $auth_payload, 'livemode' ) === true ) ? 'live' : 'test';
 			$auth_token           = $this->get_auth_token( $settings, $settings['api_mode'] );
 
-			if ( empty( $auth_token ) || rgar( $settings, $settings['api_mode'] . '_secret_key' ) !== $auth_payload['access_token'] ) {
+			if ( empty( $auth_token ) || rgar( $settings, $settings['api_mode'] . '_secret_key' ) !== $access_token ) {
 				// Add auth info to plugin settings.
 				$settings[ $settings['api_mode'] . '_auth_token' ]               = array(
-					'stripe_user_id' => $auth_payload['stripe_user_id'],
-					'refresh_token'  => $auth_payload['refresh_token'],
+					'stripe_user_id' => rgar( $auth_payload, 'stripe_user_id' ),
+					'refresh_token'  => rgar( $auth_payload, 'refresh_token' ),
 					'date_created'   => time(),
 				);
-				$settings[ $settings['api_mode'] . '_secret_key' ]               = $auth_payload['access_token'];
+				$settings[ $settings['api_mode'] . '_secret_key' ]               = $access_token;
 				$settings[ $settings['api_mode'] . '_secret_key_is_valid' ]      = '1';
-				$settings[ $settings['api_mode'] . '_publishable_key' ]          = $auth_payload['stripe_publishable_key'];
+				$settings[ $settings['api_mode'] . '_publishable_key' ]          = rgar( $auth_payload, 'stripe_publishable_key' );
 				$settings[ $settings['api_mode'] . '_publishable_key_is_valid' ] = '1';
 
 				// Save settings.
@@ -1041,15 +1055,12 @@ class GFStripe extends GFPaymentAddOn {
 					$this->update_plugin_settings( $settings );
 				}
 			}
-
-			wp_redirect( remove_query_arg( 'auth_payload' ) );
-			exit();
 		}
 
 		// If error is provided, display message.
-		if ( rgget( 'auth_error' ) ) {
+		if ( rgpost( 'auth_error' ) ) {
 			// Add error message.
-			GFCommon::add_error_message( esc_html__( 'Unable to authenticate with Stripe.', 'gravityformszohocrm' ) );
+			GFCommon::add_error_message( esc_html__( 'Unable to authenticate with Stripe.', 'gravityformsstripe' ) );
 		}
 	}
 
@@ -4957,7 +4968,7 @@ class GFStripe extends GFPaymentAddOn {
 
 				if ( $response_code === 200 ) {
 					$auth_payload = json_decode( wp_remote_retrieve_body( $response ), true );
-					$auth_payload = unserialize( base64_decode( $auth_payload['auth_payload'] ) );
+					$auth_payload = json_decode( base64_decode( $auth_payload['auth_payload'] ), true );
 					if ( rgar( $auth_payload, 'stripe_user_id' ) === $stripe_user_id ) {
 						// Log that we revoked the access token.
 						$this->log_debug( __METHOD__ . '(): Stripe access token revoked.' );
@@ -5979,6 +5990,17 @@ class GFStripe extends GFPaymentAddOn {
 		$this->log_debug( __METHOD__ . '(): The current IP has card errors in total of ' . $error_count . ' times' );
 
 		return false;
+	}
+
+	/**
+	 * Get the authentication state, which was created from a wp nonce.
+	 *
+	 * @since 3.5.1
+	 *
+	 * @return string
+	 */
+	public function get_authentication_state_action() {
+		return 'gform_stripe_authentication_state';
 	}
 
 }

@@ -1,22 +1,45 @@
-<?php
+<div class="page-wrapper" id="contact-page">
 
-/* Template Name: Contact */
+    <?php
 
-get_header(); ?>
+    /* Template Name: Contact */
 
-<section class="page">
-    <div class="container">
+    get_header(); ?>
 
-        <h1><?php the_title();?></h1>
-        <?php the_field('phone', 'options'); ?>
-
+    <section class="container-fluid bg-transparent ">
+        <div class="container bg-transparent ">
 
 
+            <?php if (have_rows('content')): ?>
+
+                <?php while (have_rows('content')): the_row(); ?>
+
+                    <?php if (get_row_layout() == 'bold_text'): ?>
+
+                        <?php get_template_part('template-parts/modules/module', 'bold_text_central');?>
+
+                    <?php endif; ?>
+
+                    <?php if (get_row_layout() == 'paragraph_text'):?>
+
+                        <?php get_template_part('template-parts/modules/module', 'paragraph_text');?>
+
+                    <?php endif; ?>
+
+                <?php endwhile; ?>
+
+            <?php endif;
 
 
 
+            get_template_part('template-parts/modules/module', 'contact_page');
 
-    </div>
-</section>
+            gravity_form( 3, false, false, false, '', false ); ?>
 
-<?php get_footer(); ?>
+
+        </div>
+    </section>
+
+    <?php get_footer(); ?>
+</div>
+

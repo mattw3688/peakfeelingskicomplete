@@ -11,34 +11,39 @@ get_header(); ?>
 
         <h1> <?php the_title(); ?></h1>
 
-        <?php if( have_posts() ): while ( have_posts() ): the_post();?>
+        <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
-            <?php the_content()?>
+            <?php the_content() ?>
 
-        <?php  endwhile; else: endif;  ?>
+        <?php endwhile; else: endif; ?>
 
-<!--        --><?php //var_dump($images) ?>
-        <?php if($images):?>
+        <!--        --><?php //var_dump($images) ?>
+        <?php if ($images): ?>
 
-            <div class="gallery">
-                <div class="row">
+        <div class="gallery">
+            <div class="row">
+                <?php $count = 1 ?>
+                <?php foreach ($images as $image):?>
 
-                    <?php foreach ($images as $image):?>
+                    <?php if($count == 1 || $count == 2 || $count == 3): ?>
 
-                       <div class="col-lg-3">
+                        <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                            <img src=" <?php echo $image['sizes']['thumbnail'] ?>"
+                            title="<?php echo $image['caption'] ?>" class="img-fluid">
+                        </a>
 
-                            <a href="<?php echo $image['sizes']['large']?>" title="<?php echo $image['caption'] ?>">
-                                <img src=" <?php echo $image['sizes']['thumbnail']?>"
-                                title="<?php echo $image['caption'] ?>" class="img-fluid">
-                            </a>
+                    <?php else:?>
+                    <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                    </a>
 
-                       </div>
+                    <?php endif; ?>
+                    <?php $count++ ?>
 
-                    <?php endforeach;?>
-                </div>
+                <?php endforeach;?>
             </div>
+        </div>
 
-        <?php endif;?>
+    <?php endif; ?>
 
     </div>
 </section>

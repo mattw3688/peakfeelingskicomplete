@@ -1,55 +1,1019 @@
 @import "variables";
-.test__module {
-  background: $primary;
-  padding: 100px;
-  min-height: 200px;
-}
+
 .container-fluid {
   padding: 0 !important;
 }
 
 .customer-section {
   width: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+
   .img-fluid .main-image {
     width: 300px !important;
     display: block;
     padding: 0;
   }
-  .fit-image{
+
+  .fit-image {
     width: 100%;
     object-fit: cover;
     height: 100%;
   }
-  .container-fluid #thumbnail-box{
+
+  .container-fluid #thumbnail-box {
     position: relative;
   }
+}
+
+* {
+  font-size: 1rem;
+}
+
+// Customer Page
+
+
+.accommodation__module {
+  .card {
+    border: $cardborderthickness $accommodationcard;
+    border-radius: $cardradius;
+  }
+
   .text-block {
 
     position: absolute;
     //top: 20px;
     //left: 20px;
-    background-color: $textoverlaybg;
+    background-color: $accommodationcard;
+    color: $textoverlay;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: inherit;
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+    max-height: 500px;
+
+  }
+}
+
+.childcare__module {
+  .card {
+    border: $cardborderthickness $childcarecard;
+    border-radius: $cardradius;
+  }
+
+  .text-block {
+
+    position: absolute;
+    //top: 20px;
+    //left: 20px;
+    background-color: $childcarecard;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
   }
 
+  .main-image {
+    border-radius: $cardradius;
+  }
+}
+
+.equipment__module {
+  .card {
+    border: $cardborderthickness $equipmentcard;
+    border-radius: $cardradius;
+  }
+
+  .text-block {
+
+    position: absolute;
+    //top: 20px;
+    //left: 20px;
+    background-color: $equipmentcard;
+    color: $textoverlay;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+  }
+}
+
+.extras__module {
+  .card {
+    border: $cardborderthickness sandybrown;
+    border-radius: $cardradius;
+  }
+
+  .text-block {
+
+    position: absolute;
+    //top: 20px;
+    //left: 20px;
+    background-color: sandybrown;
+    color: $textoverlay;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+  }
+}
+
+.massage__module {
+  .card {
+    border: $cardborderthickness $massagecard;
+    border-radius: $cardradius;
+  }
+
+  .text-block {
+
+    position: absolute;
+    //top: 20px;
+    //left: 20px;
+    background-color: $massagecard;
+    color: $textoverlay;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+  }
+}
+
+.liftpass__module {
+  .card {
+    border: $cardborderthickness $passcard;
+    border-radius: $cardradius;
+  }
+
+  .text-block {
+
+    position: absolute;
+    //top: 20px;
+    //left: 20px;
+    background-color: $passcard;
+    color: $textoverlay;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+  }
+}
+
+.transport__module {
+  .card {
+    border: $cardborderthickness $transportcard;
+    border-radius: $cardradius;
+  }
+
+  .text-block {
+
+    position: absolute;
+    //top: 20px;
+    //left: 20px;
+    background-color: $transportcard;
+    color: $textoverlay;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: $cardradius
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+  }
+}
+
+.treats__module {
+  .card {
+    border: $cardborderthickness $transportcard;
+    border-radius: $cardradius;
+  }
+
+  .text-block {
+
+    position: absolute;
+    //top: 20px;
+    //left: 20px;
+    background-color: $transportcard;
+    color: $textoverlay;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+  }
 }
 
 
+// Pages
 
-.gallery {
-  img {
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    display: block;
+//Intro Page
 
+#intro-page {
+
+  background: url("../../assets/images/intro_mobile.svg") no-repeat;
+  background-size: 100%;
+
+  .bold_text__module {
+    padding-top: 10vh;
+  }
+}
+
+/* laptop/desktop */
+@media (min-width: 992px) {
+  #intro-page {
+    background: url("../../assets/images/intro_desktop.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+  #intro-page {
+    .bold_text__module {
+      padding-top: 10px;
+      padding-left: 300px;
+      padding-right: 50px;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+      padding-right: 100px;
+    }
+  }
+
+}
+
+// Large desktop
+@media (min-width: 1200px) {
+  #intro-page {
+    background: url("../../assets/images/intro_desktop.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+  #intro-page {
+    .bold_text__module {
+      padding-top: 30vh;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+      padding-right: 50px;
+    }
   }
 
 }
 
 
+//accommodation
 
+#accommodation-page {
+  background: url("../../assets/images/accommodation_mobile.svg") no-repeat;
+  background-size: 100%;
+
+  .bold_text__module {
+    padding-top: 15vh;
+    padding-bottom: 5px;
+
+
+  }
+
+  .paragraph_text__module {
+
+    text-align: center !important;
+    padding-left: 3vw;
+  }
+
+
+  padding-top: 0;
+
+}
+
+#contact-line {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+/* Small ... Portrait tablets & large phones  */
+@media (min-width: 600px) {
+
+}
+
+
+/*  medium .. landscape tablets  */
+@media (min-width: 768px) {
+
+}
+
+/* laptop/desktop */
+@media (min-width: 992px) {
+  #accommodation-page {
+    background: url("../../assets/images/accommodation_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+  #accommodation-page {
+    .bold_text__module {
+      padding-top: 37vh;
+      padding-bottom: 5px;
+
+
+    }
+
+    .paragraph_text__module {
+
+
+      padding-left: 3vw;
+    }
+
+
+    padding-top: 0;
+
+  }
+
+  #contact-line {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Large laptop
+@media (min-width: 1200px) {
+  #accommodation-page {
+    background: url("../../assets/images/accommodation_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+  }
+  #accommodation-page {
+    .bold_text__module {
+      padding-top: 43vh;
+    }
+
+    .paragraph_text__module {
+      padding-top: 3vh;
+    }
+  }
+
+}
+
+//xl desktop
+@media (min-width: 1700px) {
+  #accommodation-page {
+    background: url("../../assets/images/accommodation_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+  }
+  #accommodation-page {
+    .bold_text__module {
+      padding-top: 42vh;
+    }
+
+    .paragraph_text__module {
+      padding-top: 0;
+    }
+  }
+
+}
+
+//Transport Page
+
+#transport-page {
+  background: url("../../assets/images/transport_mobile.svg") no-repeat;
+  background-size: 100%;
+
+  #bold_text {
+    padding-top: 10vh;
+  }
+
+  .paragraph_text__module {
+    padding-top: 2vh;
+  }
+
+  .top_paragraph__module {
+    padding-top: 2vh;
+  }
+
+  .bottom_paragraph__module {
+
+  }
+}
+
+/* Small ... Portrait tablets & large phones  */
+@media (min-width: 600px) {
+
+}
+
+
+/*  medium .. landscape tablets  */
+@media (min-width: 768px) {
+
+}
+
+
+/* laptop/desktop */
+@media (min-width: 992px) {
+  #transport-page {
+    background: url("../../assets/images/transport_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+
+  }
+  #transport-page {
+    #bold_text {
+      padding-top: 180px;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+    }
+
+    .top_paragraph__module {
+      padding-top: 50px;
+    }
+
+    .bottom_paragraph__module {
+      padding-left: 135px;
+    }
+  }
+
+}
+
+// Large desktop
+@media (min-width: 1200px) {
+  #transport-page {
+    background: url("../../assets/images/transport_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+
+  }
+  #transport-page {
+    .bold_text__module {
+      padding-top: 450px;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+    }
+  }
+
+}
+
+//Equipment Hire
+
+#equipment-page {
+  background: url("../../assets/images/skihire_mobile.svg") no-repeat;
+
+  background-size: 100%;
+
+}
+
+#equipment-page {
+  .bold_text__module {
+    padding-top: 8vh;
+  }
+
+  .paragraph_text__module {
+    padding-top: 1vh;
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+
+/* Small ... Portrait tablets & large phones  */
+@media (min-width: 600px) {
+
+}
+
+
+/*  medium .. landscape tablets  */
+@media (min-width: 768px) {
+
+}
+
+
+/* laptop/desktop */
+@media (min-width: 992px) {
+  #equipment-page {
+    background: url("../../assets/images/ski-hire_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+
+  }
+  #equipment-page {
+    .bold_text__module {
+      padding-top: 200px;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+    }
+  }
+
+}
+
+// Large desktop
+@media (min-width: 1200px) {
+  #equipment-page {
+    background: url("../../assets/images/ski-hire_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+
+  }
+  #equipment-page {
+    .bold_text__module {
+      padding-top: 25vh;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+    }
+  }
+
+}
+
+// Childcare Page
+
+#childcare-page {
+  background: url("../../assets/images/childcare_mobile.svg") no-repeat;
+
+  background-size: 100%;;
+
+}
+
+#childcare-page {
+  .bold_text__module {
+    padding-top: 20vh;
+    padding-bottom: 0;
+  }
+
+  .paragraph_text__module {
+    padding-top: 0;
+    padding-left: 0;
+
+    #left-spacing {
+      padding: 0;
+    }
+
+    #paragraph-container {
+      padding-left: 0;
+    }
+
+    p {
+      font-size: 19px;
+      font-weight: 400;
+    }
+  }
+
+  .contact-line-skihiire__module {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Small ... Portrait tablets & large phones  */
+  @media (min-width: 600px) {
+
+  }
+
+
+  /*  medium .. landscape tablets  */
+  @media (min-width: 768px) {
+
+  }
+
+
+  /* laptop/desktop */
+  @media (min-width: 992px) {
+    #childcare-page {
+      background: url("../../assets/images/childcare_desktop.svg") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;;
+
+    }
+    #childcare-page {
+      .bold_text__module {
+        padding-top: 150px;
+        padding-bottom: 0;
+      }
+
+      .paragraph_text__module {
+        padding-top: 0;
+        padding-right: 120px;
+        padding-left: 0;
+
+        #left-spacing {
+          padding: 0;
+        }
+
+        #paragraph-container {
+          padding-left: 0;
+        }
+
+        p {
+          font-size: 19px;
+          font-weight: 400;
+        }
+      }
+
+      .contact-line-skihiire__module {
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+
+  // Large desktop
+  @media (min-width: 1200px) {
+    #childcare-page {
+      background: url("../../assets/images/childcare_desktop.svg") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;;
+
+    }
+    #childcare-page {
+      .bold_text__module {
+        padding-top: 20vh;
+      }
+
+      .paragraph_text__module {
+        padding-top: 3vh;
+        padding-right: 5vh;
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+
+  }
+}
+
+  // Contact Page
+#contact-page {
+  background: url("../../assets/images/contact_mobile.svg");
+}
+/* Small ... Portrait tablets & large phones  */
+//@media (min-width: 600px) {
+//
+//}
+
+
+/*  medium .. landscape tablets  */
+//@media (min-width: 768px) {
+//
+//}
+
+
+/* laptop/desktop */
+@media (min-width: 992px) {
+  #contact-page {
+    background: url("../../assets/images/contact_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain;
+
+  }
+  #contact-page {
+    .bold_text_central__module {
+      padding-top: 150px;
+
+    }
+
+    .contact-page__module {
+      padding-top: 15px;
+      padding-right: 100px;
+    }
+  }
+
+}
+
+// Large desktop
+@media (min-width: 1200px) {
+  #contact-page {
+    background: url("../../assets/images/contact_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+
+  }
+  #contact-page {
+    .bold_text_central__module {
+      padding-top: 5vh;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+      padding-right: 50px;
+    }
+
+    .gform_footer.top_label {
+      text-align: center !important;
+    }
+  }
+
+}
+
+//Team Page
+#team-page {
+  background: url("../../assets/images/team_mobile.svg") no-repeat;
+  background-size: 100%;
+}
+
+/* Small ... Portrait tablets & large phones  */
+@media (min-width: 600px) {
+
+}
+
+
+/*  medium .. landscape tablets  */
+@media (min-width: 768px) {
+
+}
+
+
+/* laptop/desktop */
+@media (min-width: 992px) {
+  #team-page {
+
+    background: url("../../assets/images/team_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+
+  }
+
+}
+
+// Large desktop
+@media (min-width: 1200px) {
+  #team-page {
+    background: url("../../assets/images/team_desktop.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+
+  }
+
+
+}
+
+  // Customer Details Page
+
+  /* Small ... Portrait tablets & large phones  */
+  @media (min-width: 600px) {
+
+  }
+
+
+  /*  medium .. landscape tablets  */
+  @media (min-width: 768px) {
+
+  }
+
+
+  /* laptop/desktop */
+  @media (min-width: 992px) {
+    #customer-details {
+      background: url("../../assets/images/customer-page-background.svg") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+
+      background-size: cover;
+
+    }
+    #customer-details {
+      .bold_text_central__module {
+        padding-top: 150px;
+
+      }
+
+      .contact-page__module {
+        padding-top: 15px;
+        padding-right: 100px;
+      }
+    }
+
+  }
+
+  // Large desktop
+  @media (min-width: 1200px) {
+    //#contact-page {
+    //  background: url("../../assets/images/contact_desktop.svg") no-repeat;
+    //  -webkit-background-size: cover;
+    //  -moz-background-size: cover;
+    //  -o-background-size: cover;
+    //  background-size: cover;;
+
+  }
+
+  #customer-details {
+    .bold_text_central__module {
+      padding-top: 5vh;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+      padding-right: 50px;
+    }
+
+    .gform_footer.top_label {
+      text-align: center !important;
+    }
+  }
+
+  // Resorts
+#resorts-page {
+  background: url("../../assets/images/resorts_mobile.svg") no-repeat;
+  background-size: 100%;
+}
+  /* laptop/desktop */
+@media (min-width: 992px) {
+  #resorts-page {
+    background: url("../../assets/images/resorts_desktop.svg") no-repeat;
+
+
+    background-size: cover;
+
+    #resorts-heading {
+      padding-top: 25vh;
+    }
+
+  }
+}
+
+  // Extras
+#extras-page {
+  background: url("../../assets/images/extras_mobile.svg") no-repeat;
+  background-size: 100%;
+  .bold_text_central__module {
+    padding-top: 10vh;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .bullet-list__module {
+    padding-top: 2vh;
+
+    li {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      margin: 0;
+    }
+  }
+}
+  /* laptop/desktop */
+@media (min-width: 992px) {
+  #extras-page {
+    background: url("../../assets/images/extras_desktop.svg") no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+
+    background-size: contain;
+
+    .bold_text_central__module {
+      padding-top: 10vh;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .bullet-list__module {
+      padding-top: 35vh;
+
+      li {
+        font-size: 1.2rem;
+      }
+
+      .container {
+        margin: 0;
+      }
+    }
+  }
+}
+
+  // Tuition
+#tuition-page {
+  background: url("../../assets/images/skischool_mobile.svg") no-repeat;
+  background-size: 100%;
+}
+  /* laptop/desktop */
+@media (min-width: 992px) {
+  #tuition-page {
+    background: url("../../assets/images/ski-school_desktop.svg") no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+
+    background-size: contain;
+
+    .bold_text_central__module {
+      padding-top: 15vh;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .bullet-list__module {
+      padding-top: 10vh;
+
+      li {
+        font-size: 1.2rem;
+      }
+
+      .container {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Resort Template Styling
+#resort_info-page {
+  background: url("../../assets/images/customer-page-background.svg") no-repeat;
+  background-size: cover;
+  .card {
+    border: $cardborderthickness $accommodationcard;
+    border-radius: $cardradius;
+  }
+}
+
+//basic template styling
+#basic-template {
+  background: url("../../assets/images/customer-page-background.svg") no-repeat;
+  background-size: cover;
+  p {
+    padding-top: 5vh;
+  }
+}
+
+//icons
+#espace-lolly {
+  position: relative;
+
+  top: 100px;
+
+}
+#tignes-lolly {
+  position: relative;
+  bottom: 50px;
+}
+
+#val-lolly {
+  position: relative;
+  bottom: 50px;
+
+}

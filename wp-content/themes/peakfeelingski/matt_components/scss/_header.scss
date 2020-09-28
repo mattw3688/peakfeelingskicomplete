@@ -5,41 +5,76 @@
   position: center;
 }
 
+#main-logo {
+  max-width: 50vw;
+}
+
 
 
 @media (min-width: 600px ) {
-  #home-page{
+    #main-logo {
+      max-width: 25vw;
+    }
     #top-menu {
       a {
         color: $themeblue;
         font-size: 20px;
         font-family: $themefont;
         font-weight: 600;
+        padding-left: 1vw;
         &:hover {
           text-decoration: none;
-          color: whitesmoke;
+          color: black;
         }
       }
     }
-  }
+
 }
 
-@media (max-width: 599px ) {
-  #home-page{
-    #top-menu {
-      a {
+@media (min-width: 1100px ) {
+  #top-menu {
+    a {
+      color: $themeblue;
+      font-size: 20px;
+      font-family: $themefont;
+      font-weight: 600;
+      padding-left: 2vw;
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 599px) {
+  #top-menu {
+    a {
+      color: $themeblue;
+      font-weight: 600;
+      font-family: $themefont;
+
+      &:hover {
+        text-decoration: none;
         color: $themeblue;
-        font-weight: 600;
-        font-family: $themefont;
-        &:hover {
-          text-decoration: none;
-          color: $themeblue;
-        }
       }
     }
   }
 }
 
+
+#social-icons{
+  a i, h5 a {
+    color: $themeblue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a i {
+    margin-left: 10px;
+  }
+}
 
 
 
