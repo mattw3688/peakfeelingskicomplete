@@ -127,6 +127,19 @@
 
     <script>
 
+        $(" #accommodation-box input ").on( "click keyup change", function() {
+
+            console.log('Oh wow you clicked a select within Accommodation...');
+
+            // lift_pass_calculator( $(this).val() );
+            //
+            // //$(this).css('background','red');
+            // // bubbling! dom travelsal
+            // $('.status').toggleClass('active');
+
+        });
+
+
         var sum = 0
 
         function lift_pass_calculator($value) {

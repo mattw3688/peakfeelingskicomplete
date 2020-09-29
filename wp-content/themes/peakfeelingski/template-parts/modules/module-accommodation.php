@@ -92,7 +92,7 @@
                                 <p><?php echo get_field('product_description')?></p>
 
 
-                                <p><?php echo get_field('terms_and_conditions')?></p>
+<!--                                <p>--><?php //echo get_field('terms_and_conditions')?><!--</p>-->
                             </div>
 
 
@@ -163,7 +163,7 @@
 
 <script>
 
-    $(" .accommodation__module input ").on( "click keyup change", function() {
+    $(" .accommodation__module select ").on( "click keyup change", function() {
 
         console.log('Oh wow you clicked a select within Accommodation...');
 
