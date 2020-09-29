@@ -1,11 +1,17 @@
+<?php
+    $products = get_sub_field('product_post');
+    $customer_price = get_sub_field('price');
+?>
+
+<?php foreach ($products as $post):?>
+
+<?php 
+    $terms_and_conditions_text = '<p>' . get_field('terms_and_conditions') . '</p>';
+?>
+    
+
 <div class="customer-section tuition__module">
 
-    <?php
-    $products = get_sub_field('product_post');
-    $price = get_sub_field('price');
-    ?>
-
-    <?php foreach ($products as $post):?>
 
         <div class="container-fluid text-center">
 
@@ -63,6 +69,16 @@
 
         </div>
 
-        <?php wp_reset_postdata(); endforeach; ?>
 
 </div>
+
+
+<div class="container text-center">
+    <div class="form-row mt-2">
+        <input class="mt-1 mr-2 price-checkbox" type="checkbox" data-customer-price="<?php echo $customer_price; ?>" data-product-name="<?php the_title(); ?>">
+
+        <label for="accommodation-box"><h5>Check the box to select this tuition and confirm you have read and accept the <a href="#" data-featherlight="<?php echo $terms_and_conditions_text; ?>">terms and conditions</a> associated with it.</h5></label>
+    </div>
+</div>
+
+<?php wp_reset_postdata(); endforeach; ?>

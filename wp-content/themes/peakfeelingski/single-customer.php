@@ -8,137 +8,53 @@
         <br/>
 
 
-        <?php if (have_rows('product_block')): ?>
+        <?php 
 
-            <?php while (have_rows('product_block')): the_row(); ?>
+        if (have_rows('product_block')): 
+            while (have_rows('product_block')): the_row(); 
 
-<!--                --><?php //if (get_row_layout() == 'category_heading'): ?>
-<!--                    <br/>-->
-<!--                    <div class="container-fluid text-left ml-3">-->
-<!--                        <h2>--><?php //echo get_sub_field('heading') ?><!--</h2>-->
-<!--                    </div>-->
-<!--                    <br/>-->
-<!---->
-<!---->
-<!--                --><?php //endif; ?>
+                if (get_row_layout() == 'accommodation'): 
+                    get_template_part('template-parts/modules/module', 'accommodation'); 
+                endif; 
 
-                <?php if (get_row_layout() == 'accommodation'): ?>
+                if (get_row_layout() == 'transport'): 
+                    get_template_part('template-parts/modules/module', 'transport'); 
+                endif; 
 
-                    <?php get_template_part('template-parts/modules/module', 'accommodation'); ?>
-                    <div class="container text-center">
-                        <div class="form-row mt-2">
-                            <input class="mt-1 mr-2" type="checkbox" id="accommodation-box" name="'accomodation-box" value="<?php get_sub_field('price') ?>">
-                            <label for="accommodation-box"><h5>Check the box to select this accommodation and confirm you have read and accept the terms and conditions associated with it.</h5></label>
-                        </div>
-                    </div>
+                if (get_row_layout() == 'equipment_hire'): 
+                    get_template_part('template-parts/modules/module', 'equipment'); 
+                endif; 
 
-                <?php endif; ?>
+                if (get_row_layout() == 'child_care'): 
+                    get_template_part('template-parts/modules/module', 'childcare'); 
+                endif; 
 
-                <?php if (get_row_layout() == 'transport'): ?>
+                if (get_row_layout() == 'massage_and_spa'): 
+                    get_template_part('template-parts/modules/module', 'massage'); 
+                endif; 
 
-                    <?php get_template_part('template-parts/modules/module', 'transport'); ?>
-                    <div class="container text-center">
-                        <div class="form-row mt-2">
-                            <input class="mt-1 mr-2" type="checkbox" id="transport-box" name="'transport-box" value="<?php get_sub_field('price') ?>">
-                            <label for="transport-box"><h5>Check the box to select this transport option and confirm you have read and accept the terms and conditions associated with it.</h5></label>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                if (get_row_layout() == 'extra_activities'): 
+                    get_template_part('template-parts/modules/module', 'extras'); 
+                endif; 
 
-                <?php if (get_row_layout() == 'equipment_hire'): ?>
+                if (get_row_layout() == 'lift_passes'): 
+                    get_template_part('template-parts/modules/module', 'passes'); 
+                endif; 
 
-                    <?php get_template_part('template-parts/modules/module', 'equipment'); ?>
-                    <div class="container text-center">
-                        <div class="form-row mt-2">
-                            <input class="mt-1 mr-2" type="checkbox" id="equipment-box" name="equipment-box" value="<?php get_sub_field('price') ?>">
-                            <label for="equipment-box"><h5>Check the box to select this equipment and confirm you have read and accept the terms and conditions associated with it.</h5></label>
-                        </div>
-                    </div>
+                if (get_row_layout() == 'tuition'): 
+                    get_template_part('template-parts/modules/module', 'tuition'); 
+                endif; 
 
-                <?php endif; ?>
+            endwhile; 
+        endif; 
 
-                <?php if (get_row_layout() == 'child_care'): ?>
-
-                    <?php get_template_part('template-parts/modules/module', 'childcare'); ?>
-                    <div class="container text-center">
-                        <div class="form-row mt-2">
-                            <input class="mt-1 mr-2" type="checkbox" id="childcare-box" name="childcare-box" value="<?php get_sub_field('price') ?>">
-                            <label for="childcare-box"><h5>Check the box to select this childcare and confirm you have read and accept the terms and conditions associated with it.</h5></label>
-                        </div>
-                    </div>
-                <?php endif; ?>
-
-                <?php if (get_row_layout() == 'massage_and_spa'): ?>
-
-                    <?php get_template_part('template-parts/modules/module', 'massage'); ?>
-                    <div class="container text-center">
-                        <div class="form-row mt-2">
-                            <input class="mt-1 mr-2" type="checkbox" id="spa-box" name="spa-box" value="<?php get_sub_field('price') ?>">
-                            <label for="spa-box"><h5>Check the box to select this option and confirm you have read and accept the terms and conditions associated with it.</h5></label>
-                        </div>
-                    </div>
-
-
-                <?php endif; ?>
-
-                <?php if (get_row_layout() == 'extra_activities'): ?>
-
-                    <?php get_template_part('template-parts/modules/module', 'extras'); ?>
-
-                    <div class="container text-center">
-                        <div class="form-row mt-2">
-                            <input class="mt-1 mr-2" type="checkbox" id="extras-box" name="extras-box" value="<?php get_sub_field('price') ?>">
-                            <label for="extras-box"><h5>Check the box to select this option and confirm you have read and accept the terms and conditions associated with it.</h5></label>
-                        </div>
-                    </div>
-                <?php endif; ?>
-
-
-                <?php if (get_row_layout() == 'lift_passes'): ?>
-
-                    <?php get_template_part('template-parts/modules/module', 'passes'); ?>
-                    <div class="container text-center">
-                        <div class="form-row mt-2">
-                            <input class="mt-1 mr-2" type="checkbox" id="liftpass-box" name="liftpass-box" value="<?php get_sub_field('price') ?>">
-                            <label for="liftpass-box"><h5>Check the box to select these lift passes and confirm you have read and accept the terms and conditions associated with it.</h5></label>
-                        </div>
-                    </div>
-                <?php endif; ?>
-
-                <?php if (get_row_layout() == 'tuition'): ?>
-
-                    <?php get_template_part('template-parts/modules/module', 'tuition'); ?>
-                    <div class="container text-center">
-                        <div class="form-row mt-2">
-                            <input class="mt-1 mr-2" type="checkbox" id="accommodation-box" name="'accomodation-box" value="<?php get_sub_field('price') ?>">
-                            <label for="accommodation-box"><h5>Check the box to select this accommodation and confirm you have read and accept the terms and conditions associated with it.</h5></label>
-                        </div>
-                    </div>
-                <?php endif; ?>
-
-
-            <?php endwhile; ?>
-
-        <?php endif; ?>
+        ?>
 
 
     </div>
 
 
     <script>
-
-        $(" #accommodation-box input ").on( "click keyup change", function() {
-
-            console.log('Oh wow you clicked a select within Accommodation...');
-
-            // lift_pass_calculator( $(this).val() );
-            //
-            // //$(this).css('background','red');
-            // // bubbling! dom travelsal
-            // $('.status').toggleClass('active');
-
-        });
-
 
         var sum = 0
 
@@ -201,6 +117,83 @@
 
     </script>
 
-    <input type="text" class="total">
-    <?php get_footer(); ?>
+
+
+        <div class="container client-selection__module">
+            <div class="row">
+                    
+                <div class="column col-md-6">
+
+                   <h2>Your Selection:</h2>
+                   <div class="dynamic-client-summary">
+                        <!-- replaced automatically -->
+                   </div>  
+
+                </div>            
+                <div class="column col-md-6">
+                    <?php 
+                        echo do_shortcode('[gravityform id="5" title="false" description="false"]');
+                     ?>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    <script>
+
+        function single_customer() {
+
+            // setup clean variables
+            var $client_total = 0;
+            var $client_summary = '';
+
+            // for all checkboxes on the page
+            $('input[type=checkbox]').each(function () {
+
+                // if they are checked 
+                if(this.checked) {
+
+                    // add to total
+                    $client_total = $client_total + $(this).data('customer-price');
+
+                    // add to summary 
+                    $client_summary += '<li>' + $(this).data('product-name') + ' - €' + $(this).data('customer-price') + '</li>';
+
+                }
+            });
+
+            // create html summary
+            $html_summary =  '<ul>' + $client_summary + '</ul>' +'<h3>Total €' +$client_total + '</h3>';
+
+            // populate clients view
+            $('.dynamic-client-summary').html($html_summary); 
+
+            // populate form
+            $('.total-price input').val($client_total);
+            $('.summary textarea').val($html_summary);
+
+        }
+
+        // once the page is loaded
+        $(document).ready(function() {
+
+            // if any checkboxes on the page change
+            $('input:checkbox').change(function() {
+               
+                // run function
+                single_customer();
+                
+            });
+
+        });
+
+
+    </script>        
+        
+
+
 </div>
+<?php get_footer(); ?>

@@ -1,11 +1,15 @@
+<?php
+    $products = get_sub_field('product_post');
+    $customer_price = get_sub_field('price');
+?>
+
+<?php foreach ($products as $post):?>
+
 <div class="customer-section massage__module">
 
-    <?php
-    $products = get_sub_field('product_post');
-    $price = get_sub_field('price');
+    <?php 
+        $terms_and_conditions_text = '<p>' . get_field('terms_and_conditions') . '</p>';
     ?>
-
-    <?php foreach ($products as $post):?>
 
     <div class="row justify-content-center">
 
@@ -75,7 +79,7 @@
 
                             <div class="card card-body d-flex price-box justify-content-center align-items-center mb-2 id="accommodation-price">
 
-                            <h5 style="padding-top: 6px"><?php echo $price?></h5>
+                            <h5 style="padding-top: 6px"><?php echo $customer_price?></h5>
 
                             <!--                                <input type="checkbox" id="checkbox_accommodation">-->
                             <!--                                <label for="checkbox_accommodation">Tick here to confirm</label>-->
@@ -118,7 +122,17 @@
 
         </div>
 
-        <?php wp_reset_postdata(); endforeach; ?>
 
     </div>
 </div>
+
+
+<div class="container text-center">
+    <div class="form-row mt-2">
+        <input class="mt-1 mr-2 price-checkbox" type="checkbox" data-customer-price="<?php echo $customer_price; ?>" data-product-name="<?php the_title(); ?>">
+
+        <label for="spa-box"><h5>Check the box to select this option and confirm you have read and accept the <a href="#" data-featherlight="<?php echo $terms_and_conditions_text; ?>">terms and conditions</a> associated with it.</h5></label>
+    </div>
+</div>
+
+<?php wp_reset_postdata(); endforeach; ?>
