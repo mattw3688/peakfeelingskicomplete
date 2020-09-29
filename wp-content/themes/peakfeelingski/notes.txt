@@ -14,10 +14,12 @@ To Do...
 CUSTOMER PAGE
 
 Checkbox Design
-Boxes Below
+
 JQuery Calculations
-Icons for facilities
+
 Mobile Styling
+T's and C's Add and make lightbox
+Fix Image Overlay Text & move to centre
 
 Styling all pages
 
@@ -31,27 +33,6 @@ Looks like peak pack
 STYLING
     Background images need portrait mode for mobile
     Adjust Padding for different screen sizes
-
-
-
-Add pricing field to individual product blocks in customer page
-
-jQuery for calculations on customer page
-
-
-
-Thoughts for product page....
-    Lift passes & tuition have a custom text field for you guys to personalize
-        Any other products to have that?
-    Al the rest to have custom prices per customer? Or a set price?
-    Add a product header field and remove the hard coded ones? This can help with multiple blocks of the same type.
-
-Add ability to add logos to the description for different facilities.
-- Decide which are on every product.. ie capacity, distance to slopes
-- Enable check box system to add all the rest.
-- Specific for product type
-
-
 
 PEAK PACK PAGE
 

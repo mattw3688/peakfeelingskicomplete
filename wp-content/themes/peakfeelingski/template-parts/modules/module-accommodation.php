@@ -28,24 +28,75 @@
                         </div>
 
                         <div class="container-fluid col-lg-6 justify-content-center">
-                            <div class="container d-flex icons">
-                                <div class="container">
-                                    <img class="distance-icon" id="distance-icon">
+
+                            <div class="container d-flex flex-row ">
+
+                                <div class="container col-lg-2" id="icons">
+                                    <div class="icon">
+                                        <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sleep-Capacity.svg" alt="Sleep Capacity" ></i>
+                                        <p class="bottom-center"><?php echo get_field('capacity') ?></p>
+                                    </div>
+                                </div>
+                                <div class="container col-lg-2" id="icons">
+                                    <div class="icon">
+                                        <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Nearest-Gondola-Lift-distance.svg" alt="Nearest Lift" ></i>
+                                        <p class="bottom-center"><?php echo get_field('distance_to_lift')?>m</p>
+                                    </div>
+                                </div>
+                                <div class="container col-lg-2" id="icons">
+                                    <div class="icon">
+                                        <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Chalet-Size.svg" alt="Chalet Size" ></i>
+                                        <p class="bottom-center"><?php echo get_field('accommodation_size')?>m<sup>2</sup></p>
+                                    </div>
                                 </div>
 
+                                <?php
+                                $facilities = get_field('extra_facilities');
+                                foreach ($facilities as $facility):
+                                    if ($facility == 'catered'):?>
+                                        <div class="container col-lg-2" id="icons">
+                                            <div class="icon">
+                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Catered.svg" alt="Catered Accommodation" ></i>
+
+                                            </div>
+                                        </div>
+                                    <?php elseif ($facility == 'hot-tub'): ?>
+                                        <div class="container col-lg-2" id="icons">
+                                            <div class="icon">
+                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub.svg" alt="Hot Tub" ></i>
+
+                                            </div>
+                                        </div>
+                                    <?php elseif ($facility == 'wifi'): ?>
+                                        <div class="container col-lg-2" id="icons">
+                                            <div class="icon">
+                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Wifi.svg" alt="Hot Tub" ></i>
+
+                                            </div>
+                                        </div>
+                                    <?php elseif ($facility == 'sauna'): ?>
+                                        <div class="container col-lg-2" id="icons">
+                                            <div class="icon">
+                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna.svg" alt="Hot Tub" ></i>
+
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endforeach;
+                                ?>
+
+
+
                             </div>
-                            <div class="container description ">
-                                
-                                <div class="container" id="icons"> 
-                                    <i><img src="" alt=""></i>
-                                </div>
-
-                                <?php echo get_field('product_description')?>
-                                <br/>
+                            <div class="container  description ">
+                                <p><?php echo get_field('product_description')?></p>
 
 
-
+                                <p><?php echo get_field('terms_and_conditions')?></p>
                             </div>
+
+
+
                             <div class="row justify-content-end ">
 
                                 <div class="card card-body d-flex price-box justify-content-center align-items-center mb-2 id="accommodation-price">
@@ -67,7 +118,7 @@
 
                                     foreach ($images as $image):
 
-                                        if($count == 1 || $count == 2 || $count == 3): ?>
+                                        if($count < 4 ): ?>
 
                                             <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
                                                 <img src=" <?php echo $image['sizes']['thumbnail'] ?>"

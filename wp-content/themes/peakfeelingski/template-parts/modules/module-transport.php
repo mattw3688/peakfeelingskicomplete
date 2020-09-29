@@ -23,41 +23,86 @@
                             </h3>
                             <h6> <?php echo get_sub_field('image_overlay_text') ?> </h6>
                         </div>
-                        <a href="">
+
                             <img class="img-fluid main-image " src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
-                        </a>
+
                     </div>
 
-                    <div class="container-fluid col-lg-6">
+                    <div class="container-fluid col-lg-6 justify-content-center">
 
-                        <div class="description">
+                        <div class="container d-flex flex-row ">
 
-                            <?php echo the_field('product_description')?>
-                            <br/>
-                            <h6>Total Price €<?php echo the_field('price')?></h6>
-                            <input type="checkbox" id="checkbox_transport">
-                            <label for="checkbox_transport">Tick here to confirm</label>
+                            <div class="container col-lg-2" id="icons">
+                                <div class="icon">
+                                    <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Vehicle-Capacity.svg" alt="Vehicle Capacity" ></i>
+                                    <p class="bottom-center"><?php echo get_field('capacity') ?></p>
+                                </div>
+                            </div>
+
+                            <?php $facilities = get_field('extra_facilities');
+                            foreach ($facilities as $facility):
+                                if ($facility == 'wifi'):?>
+                                    <div class="container col-lg-2" id="icons">
+                                        <div class="icon">
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Wifi.svg" alt="Wifi Available" ></i>
+
+                                        </div>
+                                    </div>
+
+                                <?php endif; ?>
+                            <?php endforeach;
+                            ?>
+
+
 
                         </div>
-                        <div class="container-fluid gallery col-lg-9 justify-content-center">
+
+                        <div class="description">
+                            <p><?php echo the_field('product_description')?></p>
+                            <br/>
+                        </div>
+
+                        <div class="row justify-content-end ">
+
+                            <div class="card card-body d-flex price-box justify-content-center align-items-center mb-2 id="transport-price">
+
+                            <h5 style="padding-top: 6px"><?php echo $price?></h5>
+
+                            <!--                                <input type="checkbox" id="checkbox_accommodation">-->
+                            <!--                                <label for="checkbox_accommodation">Tick here to confirm</label>-->
+                        </div>
+
+                    </div>
+
+                    <div class="container justify-content-center align-self-baseline gallery col-lg-12 ">
 
 
-                            <?php $images = get_field('gallery');?>
+                        <?php $images = get_field('gallery');
 
-                            <?php if ($images): ?>
+                        if ($images):
+                            $count = 1;
 
-                                <?php foreach ($images as $image): ?>
+                            foreach ($images as $image):
 
-                                    <a href="<?php echo $image['sizes']['large']?>" title="<?php echo $image['caption'] ?>">
-                                        <img src=" <?php echo $image['sizes']['thumbnail']?>"
+                                if($count < 4 ): ?>
+
+                                    <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                                        <img src=" <?php echo $image['sizes']['thumbnail'] ?>"
                                              title="<?php echo $image['caption'] ?>" class="img-fluid">
                                     </a>
 
-                                <?php endforeach; ?>
+                                <?php else:?>
+                                    <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                                    </a>
 
-                            <?php endif; ?>
+                                <?php endif; ?>
+                                <?php $count++ ?>
 
-                        </div>
+                            <?php endforeach;?>
+
+                        <?php endif; ?>
+
+                    </div>
 
                 </div>
 
@@ -69,4 +114,4 @@
     </div>
 
 </div>
-</div>
+

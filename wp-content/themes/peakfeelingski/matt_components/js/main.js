@@ -13,3 +13,6 @@ $('.gallery').magnificPopup({
     // other options
 });
 
+$(function($) {
+    $('#tnc').modal();
+});

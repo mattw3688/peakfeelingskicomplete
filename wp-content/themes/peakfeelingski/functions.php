@@ -131,6 +131,8 @@ function load_stylesheets() {
     wp_enqueue_style('magnificcss');
 
 
+
+
 }
 
 add_action('wp_enqueue_scripts', 'load_stylesheets');
@@ -152,6 +154,8 @@ function loadjs() {
 
 	wp_register_script('mainjs', get_template_directory_uri() . '/assets/js/main.js', [], 1, true);
 	wp_enqueue_script('mainjs');
+
+
 
 
 }

@@ -25,37 +25,58 @@
                 <?php if (get_row_layout() == 'accommodation'): ?>
 
                     <?php get_template_part('template-parts/modules/module', 'accommodation'); ?>
-                    <br/>
-
+                    <div class="container text-center">
+                        <div class="form-row mt-2">
+                            <input class="mt-1 mr-2" type="checkbox" id="accommodation-box" name="'accomodation-box" value="<?php get_sub_field('price') ?>">
+                            <label for="accommodation-box"><h5>Check the box to select this accommodation and confirm you have read and accept the terms and conditions associated with it.</h5></label>
+                        </div>
+                    </div>
 
                 <?php endif; ?>
 
                 <?php if (get_row_layout() == 'transport'): ?>
 
                     <?php get_template_part('template-parts/modules/module', 'transport'); ?>
-                    <br/>
-
+                    <div class="container text-center">
+                        <div class="form-row mt-2">
+                            <input class="mt-1 mr-2" type="checkbox" id="transport-box" name="'transport-box" value="<?php get_sub_field('price') ?>">
+                            <label for="transport-box"><h5>Check the box to select this transport option and confirm you have read and accept the terms and conditions associated with it.</h5></label>
+                        </div>
+                    </div>
                 <?php endif; ?>
 
                 <?php if (get_row_layout() == 'equipment_hire'): ?>
 
                     <?php get_template_part('template-parts/modules/module', 'equipment'); ?>
-                    <br/>
-
+                    <div class="container text-center">
+                        <div class="form-row mt-2">
+                            <input class="mt-1 mr-2" type="checkbox" id="equipment-box" name="equipment-box" value="<?php get_sub_field('price') ?>">
+                            <label for="equipment-box"><h5>Check the box to select this equipment and confirm you have read and accept the terms and conditions associated with it.</h5></label>
+                        </div>
+                    </div>
 
                 <?php endif; ?>
 
                 <?php if (get_row_layout() == 'child_care'): ?>
 
                     <?php get_template_part('template-parts/modules/module', 'childcare'); ?>
-                    <br/>
-
+                    <div class="container text-center">
+                        <div class="form-row mt-2">
+                            <input class="mt-1 mr-2" type="checkbox" id="childcare-box" name="childcare-box" value="<?php get_sub_field('price') ?>">
+                            <label for="childcare-box"><h5>Check the box to select this childcare and confirm you have read and accept the terms and conditions associated with it.</h5></label>
+                        </div>
+                    </div>
                 <?php endif; ?>
 
                 <?php if (get_row_layout() == 'massage_and_spa'): ?>
 
                     <?php get_template_part('template-parts/modules/module', 'massage'); ?>
-                    <br/>
+                    <div class="container text-center">
+                        <div class="form-row mt-2">
+                            <input class="mt-1 mr-2" type="checkbox" id="spa-box" name="spa-box" value="<?php get_sub_field('price') ?>">
+                            <label for="spa-box"><h5>Check the box to select this option and confirm you have read and accept the terms and conditions associated with it.</h5></label>
+                        </div>
+                    </div>
 
 
                 <?php endif; ?>
@@ -64,31 +85,35 @@
 
                     <?php get_template_part('template-parts/modules/module', 'extras'); ?>
 
-                    <br/>
-
-                <?php endif; ?>
-
-                <?php if (get_row_layout() == 'additional_treats'): ?>
-
-                    <?php get_template_part('template-parts/modules/module', 'treats'); ?>
-
-                    <br/>
-
+                    <div class="container text-center">
+                        <div class="form-row mt-2">
+                            <input class="mt-1 mr-2" type="checkbox" id="extras-box" name="extras-box" value="<?php get_sub_field('price') ?>">
+                            <label for="extras-box"><h5>Check the box to select this option and confirm you have read and accept the terms and conditions associated with it.</h5></label>
+                        </div>
+                    </div>
                 <?php endif; ?>
 
 
                 <?php if (get_row_layout() == 'lift_passes'): ?>
 
                     <?php get_template_part('template-parts/modules/module', 'passes'); ?>
-                    <br/>
-
+                    <div class="container text-center">
+                        <div class="form-row mt-2">
+                            <input class="mt-1 mr-2" type="checkbox" id="liftpass-box" name="liftpass-box" value="<?php get_sub_field('price') ?>">
+                            <label for="liftpass-box"><h5>Check the box to select these lift passes and confirm you have read and accept the terms and conditions associated with it.</h5></label>
+                        </div>
+                    </div>
                 <?php endif; ?>
 
                 <?php if (get_row_layout() == 'tuition'): ?>
 
                     <?php get_template_part('template-parts/modules/module', 'tuition'); ?>
-                    <br/>
-
+                    <div class="container text-center">
+                        <div class="form-row mt-2">
+                            <input class="mt-1 mr-2" type="checkbox" id="accommodation-box" name="'accomodation-box" value="<?php get_sub_field('price') ?>">
+                            <label for="accommodation-box"><h5>Check the box to select this accommodation and confirm you have read and accept the terms and conditions associated with it.</h5></label>
+                        </div>
+                    </div>
                 <?php endif; ?>
 
 

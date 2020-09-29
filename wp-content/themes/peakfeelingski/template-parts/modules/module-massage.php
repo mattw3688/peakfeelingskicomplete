@@ -28,32 +28,85 @@
                         </a>
                     </div>
 
-                    <div class="container-fluid col-lg-6">
+                    <div class="container-fluid col-lg-6 justify-content-center">
+
+                        <div class="container d-flex flex-row ">
+
+                            <?php
+                            $facilities = get_field('extra_facilities');
+                            foreach ($facilities as $facility):
+                                if ($facility == 'hot-tub-spa'):?>
+                                    <div class="container col-lg-2" id="icons">
+                                        <div class="icon">
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub-Spa.svg" alt="Hot Tub" ></i>
+
+                                        </div>
+                                    </div>
+                                <?php elseif ($facility == 'sauna-spa'): ?>
+                                    <div class="container col-lg-2" id="icons">
+                                        <div class="icon">
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna-Spa.svg" alt="Sauna" ></i>
+
+                                        </div>
+                                    </div>
+                                <?php elseif ($facility == 'massage-spa'): ?>
+                                    <div class="container col-lg-2" id="icons">
+                                        <div class="icon">
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Massage.svg" alt="Massage" ></i>
+
+                                        </div>
+                                    </div>
+
+
+                                <?php endif; ?>
+                            <?php endforeach;
+                            ?>
+
+                        </div>
 
                         <div class="description">
 
-                            <?php echo the_field('product_description')?>
+                            <p><?php echo the_field('product_description')?></p>
                             <br/>
-                            <h6>Total Price €<?php echo $price?></h6>
-                            <input type="checkbox" id="checkbox_massage">
-                            <label for="checkbox_massage">Tick here to confirm</label>
+
 
                         </div>
-                        <div class="container-fluid gallery col-lg-9 justify-content-center">
+                        <div class="row justify-content-end ">
+
+                            <div class="card card-body d-flex price-box justify-content-center align-items-center mb-2 id="accommodation-price">
+
+                            <h5 style="padding-top: 6px"><?php echo $price?></h5>
+
+                            <!--                                <input type="checkbox" id="checkbox_accommodation">-->
+                            <!--                                <label for="checkbox_accommodation">Tick here to confirm</label>-->
+                        </div>
+
+                    </div>
+                        <div class="container justify-content-center align-self-baseline gallery col-lg-12 ">
 
 
-                            <?php $images = get_field('gallery');?>
+                            <?php $images = get_field('gallery');
 
-                            <?php if ($images): ?>
+                            if ($images):
+                                $count = 1;
 
-                                <?php foreach ($images as $image): ?>
+                                foreach ($images as $image):
 
-                                    <a href="<?php echo $image['sizes']['large']?>" title="<?php echo $image['caption'] ?>">
-                                        <img src=" <?php echo $image['sizes']['thumbnail']?>"
-                                             title="<?php echo $image['caption'] ?>" class="img-fluid">
-                                    </a>
+                                    if($count < 4 ): ?>
 
-                                <?php endforeach; ?>
+                                        <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                                            <img src=" <?php echo $image['sizes']['thumbnail'] ?>"
+                                                 title="<?php echo $image['caption'] ?>" class="img-fluid">
+                                        </a>
+
+                                    <?php else:?>
+                                        <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                                        </a>
+
+                                    <?php endif; ?>
+                                    <?php $count++ ?>
+
+                                <?php endforeach;?>
 
                             <?php endif; ?>
 

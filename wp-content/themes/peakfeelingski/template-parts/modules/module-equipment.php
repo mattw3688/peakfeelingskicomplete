@@ -36,21 +36,53 @@
                     </div>
 
 
-                    <div class="container col-lg-6">
+                    <div class="container-fluid col-lg-6 justify-content-center">
 
-                        <div class="description text-center">
+                        <div class="container description">
 
-                            <?php echo $information ?>
+                            <p><?php echo $information ?></p>
                             <br/>
-                            <h6>Total Price €<?php echo $price ?></h6>
-                            <input type="checkbox" id="checkbox_equipment">
-                            <label for="checkbox_equipment">Tick here to confirm</label>
 
                         </div>
-                        <div class="container-fluid gallery col-lg-9 justify-content-center">
 
+                        <div class="row justify-content-end ">
 
+                            <div class="card card-body d-flex price-box justify-content-center align-items-center mb-2 id="equipment-price">
+
+                            <h5 style="padding-top: 6px"><?php echo $price?></h5>
+
+                            <!--                                <input type="checkbox" id="checkbox_accommodation">-->
+                            <!--                                <label for="checkbox_accommodation">Tick here to confirm</label>-->
                         </div>
+                    </div>
+                    <div class="container justify-content-center align-self-baseline gallery col-lg-12 ">
+
+
+                        <?php $images = get_field('gallery');
+
+                        if ($images):
+                            $count = 1;
+
+                            foreach ($images as $image):
+
+                                if($count == 1 || $count == 2 || $count == 3): ?>
+
+                                    <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                                        <img src=" <?php echo $image['sizes']['thumbnail'] ?>"
+                                             title="<?php echo $image['caption'] ?>" class="img-fluid">
+                                    </a>
+
+                                <?php else:?>
+                                    <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                                    </a>
+
+                                <?php endif; ?>
+                                <?php $count++ ?>
+
+                            <?php endforeach;?>
+
+                        <?php endif; ?>
+
                     </div>
 
                 </div>

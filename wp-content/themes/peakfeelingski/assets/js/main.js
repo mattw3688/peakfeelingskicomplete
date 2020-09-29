@@ -1,6 +1,6 @@
 // write your jquery here...
 
-jQuery('.gallery').magnificPopup({
+$('.gallery').magnificPopup({
     delegate: 'a', // child items selector, by clicking on it popup will open
     type: 'image',
     gallery: {
@@ -13,5 +13,8 @@ jQuery('.gallery').magnificPopup({
     // other options
 });
 
+$(function($) {
+    $('#tnc').modal();
+});
 
 //# sourceMappingURL=main.js.map
