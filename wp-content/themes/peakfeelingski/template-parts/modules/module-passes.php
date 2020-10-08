@@ -5,9 +5,16 @@
 
 <?php foreach ($products as $post):?>
 
-<?php 
-    $terms_and_conditions_text = '<p>' . get_field('terms_and_conditions') . '</p>';
-?>
+    <?php
+    $term_id = 'term' . '-' . $post->ID;
+    ?>
+
+    <div id="<?php echo $term_id; ?>" style="display:none;">
+        <div class="content">
+            <h3>Terms and Conditions</h3>
+                <?php echo get_field('terms_and_conditions'); ?>
+        </div>
+    </div>
 
 <div class="customer-section liftpass__module">
 
@@ -94,7 +101,7 @@
     <div class="form-row mt-2">
         <input class="mt-1 mr-2 price-checkbox" type="checkbox" data-customer-price="<?php echo $customer_price; ?>" data-product-name="<?php the_title(); ?>">
 
-        <label for="liftpass-box"><h5>Check the box to select these lift passes and confirm you have read and accept the <a href="#" data-featherlight="<?php echo $terms_and_conditions_text; ?>">terms and conditions</a> associated with it.</h5></label>
+        <label for="liftpass-box"><h5>Check the box to select these lift passes and confirm you have read and accept the <a href="#" data-featherlight="#<?php echo $term_id; ?> .content">terms and conditions</a> associated with it.</h5></label>
     </div>
 </div>
 
