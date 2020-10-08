@@ -63,23 +63,6 @@ function peakfeelingski_post_types()
 
 add_action('init', 'peakfeelingski_post_types');
 
-function product_taxonomy()
-{
-    $args = array(
-        'labels' => array(
-            'name' => 'Categories',
-            'singular_name' => 'Category',
-        ),
-        'public' => true,
-        'hierarchical' => true,
-    );
-    register_taxonomy('category', array('product'), $args);
-
-}
-add_action('init', 'product_taxonomy');
-
-add_action('init', 'peakfeelingski_post_types');
-
 function customer_taxonomy()
 {
     $args = array(
@@ -94,3 +77,22 @@ function customer_taxonomy()
 
 }
 add_action('init', 'customer_taxonomy');
+
+add_action('init', 'peakfeelingski_post_types');
+
+function product_taxonomy()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Categories',
+            'singular_name' => 'Category',
+        ),
+        'public' => true,
+        'hierarchical' => true,
+    );
+    register_taxonomy('category', array('product'), $args);
+
+
+}
+add_action('init', 'product_taxonomy');
+

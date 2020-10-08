@@ -42,9 +42,10 @@
   .text-block {
 
     position: absolute;
-    //top: 20px;
-    //left: 20px;
-    background-color: $accommodationcard;
+    left: 25%;
+
+
+    background-color: $accommodationfaint;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
@@ -67,9 +68,8 @@
   .text-block {
 
     position: absolute;
-    //top: 20px;
-    //left: 20px;
-    background-color: $childcarecard;
+    left: 25%;
+    background-color: $childcarefaint;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
@@ -89,9 +89,8 @@
   .text-block {
 
     position: absolute;
-    //top: 20px;
-    //left: 20px;
-    background-color: $equipmentcard;
+    left: 25%;
+    background-color: $equipmentfaint;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
@@ -104,16 +103,15 @@
 
 .extras__module {
   .card {
-    border: $cardborderthickness sandybrown;
+    border: $cardborderthickness $extrascard;
     border-radius: $cardradius;
   }
 
   .text-block {
 
     position: absolute;
-    //top: 20px;
-    //left: 20px;
-    background-color: sandybrown;
+    left: 25%;
+    background-color: $extrasfaint;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
@@ -133,9 +131,8 @@
   .text-block {
 
     position: absolute;
-    //top: 20px;
-    //left: 20px;
-    background-color: $massagecard;
+    left: 25%;
+    background-color: $massagefaint;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
@@ -155,9 +152,8 @@
   .text-block {
 
     position: absolute;
-    //top: 20px;
-    //left: 20px;
-    background-color: $passcard;
+    left: 25%;
+    background-color: $passfaint;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
@@ -177,13 +173,12 @@
   .text-block {
 
     position: absolute;
-    //top: 20px;
-    //left: 20px;
-    background-color: $transportcard;
+    left: 25%;
+    background-color: $transportfaint;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
-    border-radius: $cardradius
+
   }
 
   .main-image {
@@ -193,16 +188,15 @@
 
 .treats__module {
   .card {
-    border: $cardborderthickness $transportcard;
+    border: $cardborderthickness $treatscard;
     border-radius: $cardradius;
   }
 
   .text-block {
 
     position: absolute;
-    //top: 20px;
-    //left: 20px;
-    background-color: $transportcard;
+    left: 25%;
+    background-color: $treatsfaint;
     color: $textoverlay;
     padding-right: 20px;
     padding-left: 20px;
@@ -252,27 +246,45 @@
     padding-top: 10vh;
   }
 }
+@media  (min-width: 400px){
+  #intro-page {
+    .bold_text__module {
+      padding-top: 12vh;
+    }
+  }
+}
+@media  (min-width: 600px){
+  #intro-page {
+    .bold_text__module {
+      padding-top: 25vh;
+    }
+  }
+}
 
 /* laptop/desktop */
 @media (min-width: 992px) {
   #intro-page {
-    background: url("../../assets/images/intro_desktop.svg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url("../../assets/images/intro_desktop.svg") no-repeat;
+    //-webkit-background-size: cover;
+    //-moz-background-size: cover;
+    //-o-background-size: cover;
+    background-size: cover
 
   }
   #intro-page {
     .bold_text__module {
       padding-top: 10px;
-      padding-left: 300px;
-      padding-right: 50px;
+      position: relative;
+      padding-left: 20vw;
+
     }
 
     .paragraph_text__module {
       padding-top: 15px;
-      padding-right: 100px;
+      padding-left: 25vw;
+    }
+    .contact-line-intro__module {
+      padding-left: 25vw;
     }
   }
 
@@ -290,7 +302,7 @@
   }
   #intro-page {
     .bold_text__module {
-      padding-top: 30vh;
+      padding-top: 35vh;
     }
 
     .paragraph_text__module {
@@ -306,7 +318,7 @@
 
 #accommodation-page {
   background: url("../../assets/images/accommodation_mobile.svg") no-repeat;
-  background-size: 100%;
+  //background-size: 100%;
 
   .bold_text__module {
     padding-top: 15vh;
@@ -348,10 +360,8 @@
 @media (min-width: 992px) {
   #accommodation-page {
     background: url("../../assets/images/accommodation_desktop.svg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+    background-size: 100%;
 
   }
   #accommodation-page {
@@ -385,16 +395,16 @@
 @media (min-width: 1200px) {
   #accommodation-page {
     background: url("../../assets/images/accommodation_desktop.svg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 
 
   }
   #accommodation-page {
     .bold_text__module {
-      padding-top: 43vh;
+      padding-top: 55vh;
     }
 
     .paragraph_text__module {
@@ -411,7 +421,7 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: contain;
 
 
   }
@@ -474,15 +484,15 @@
   }
   #transport-page {
     #bold_text {
-      padding-top: 180px;
+      padding-top: 22vh;
     }
 
     .paragraph_text__module {
-      padding-top: 15px;
+      padding-top: 5vh;
     }
 
     .top_paragraph__module {
-      padding-top: 50px;
+      padding-top: 1vh;
     }
 
     .bottom_paragraph__module {
@@ -520,6 +530,12 @@
   background: url("../../assets/images/skihire_mobile.svg") no-repeat;
 
   background-size: 100%;
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
 
 }
 
@@ -529,31 +545,33 @@
   }
 
   .paragraph_text__module {
-    padding-top: 1vh;
+    padding-top: 0.1vh;
 
-    p {
-      font-size: 0.8rem;
-    }
+
   }
 }
 
 
 /* Small ... Portrait tablets & large phones  */
 @media (min-width: 600px) {
+  #equipment-page {
+    .bold_text__module {
+      padding-top: 25vh;
+      padding-left: 5vw;
+      padding-right: 5vw
+    }
 
+    .paragraph_text__module {
+      padding-top: 15px;
+    }
+  }
 }
 
 
 /*  medium .. landscape tablets  */
 @media (min-width: 768px) {
-
-}
-
-
-/* laptop/desktop */
-@media (min-width: 992px) {
   #equipment-page {
-    background: url("../../assets/images/ski-hire_desktop.svg") no-repeat;
+    background: url("../../assets/images/ski-hire_square.svg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -562,7 +580,29 @@
   }
   #equipment-page {
     .bold_text__module {
-      padding-top: 200px;
+      padding-top: 40vh;
+    }
+
+    .paragraph_text__module {
+      padding-top: 15px;
+    }
+  h3 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  }
+
+}
+
+
+/* laptop/desktop */
+@media (min-width: 992px) {
+
+  #equipment-page {
+    .bold_text__module {
+      padding-top: 12vh;
     }
 
     .paragraph_text__module {
@@ -575,20 +615,21 @@
 // Large desktop
 @media (min-width: 1200px) {
   #equipment-page {
-    background: url("../../assets/images/ski-hire_desktop.svg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;;
+    background: url("../../assets/images/ski-hire_square.svg") no-repeat;
+
+    background-size: 100%;;
 
   }
   #equipment-page {
     .bold_text__module {
-      padding-top: 25vh;
+      padding-top: 28vh;
     }
 
     .paragraph_text__module {
-      padding-top: 15px;
+      padding-top: 5vh;
+      padding-left: 8vw;
+      padding-bottom: 8vh;
+
     }
   }
 
@@ -599,7 +640,7 @@
 #childcare-page {
   background: url("../../assets/images/childcare_mobile.svg") no-repeat;
 
-  background-size: 100%;;
+  background-size: 100%;
 
 }
 
@@ -648,11 +689,11 @@
   /* laptop/desktop */
   @media (min-width: 992px) {
     #childcare-page {
-      background: url("../../assets/images/childcare_desktop.svg") no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;;
+      background: url("../../assets/images/childcare_square.svg") no-repeat;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;;
 
     }
     #childcare-page {
@@ -692,11 +733,11 @@
   // Large desktop
   @media (min-width: 1200px) {
     #childcare-page {
-      background: url("../../assets/images/childcare_desktop.svg") no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;;
+      background: url("../../assets/images/childcare_square.svg") no-repeat;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;;
 
     }
     #childcare-page {
@@ -788,6 +829,20 @@
 #team-page {
   background: url("../../assets/images/team_mobile.svg") no-repeat;
   background-size: 100%;
+  h2 {
+    padding-left: 20vw;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .bold_text__module {
+    padding-top: 8vh;
+    padding-right: 20vw;
+  }
 }
 
 /* Small ... Portrait tablets & large phones  */
@@ -799,6 +854,31 @@
 /*  medium .. landscape tablets  */
 @media (min-width: 768px) {
 
+  #team-page {
+    background: url("../../assets/images/team_desktop.svg") no-repeat;
+    background-size: 100%;
+    h2 {
+      padding-left: 0;
+      padding-top: 10vh;
+      text-align: center;
+      font-size: 2.6rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .bold_text__module {
+      padding-top: 8vh;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  #title {
+    padding-left: 8vw;
+    padding-right: 3vw;
+  }
+  }
 }
 
 
@@ -911,6 +991,16 @@
     #resorts-heading {
       padding-top: 25vh;
     }
+  #tignes-lolly {
+    width: 30vw;
+
+  }
+  #val-lolly {
+    width: 30vw;
+  }
+  #espace-lolly {
+    width: 30vw;
+  }
 
   }
 }

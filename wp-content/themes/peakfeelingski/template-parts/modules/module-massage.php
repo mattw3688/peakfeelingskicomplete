@@ -86,7 +86,7 @@
                         </div>
 
                     </div>
-                        <div class="container justify-content-center align-self-baseline gallery col-lg-12 ">
+                    <div class="container text-center align-self-baseline gallery col-lg-12 ">
 
 
                             <?php $images = get_field('gallery');

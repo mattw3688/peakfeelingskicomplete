@@ -41,9 +41,9 @@
 
                 <div class="container ml-4 col-lg-9 col-xl-10 text-left">
 
-                    <p>
+                    <h3>
                         <?php echo $list_title ?>
-                    </p>
+                    </h3>
 
                 </div>
 
@@ -61,8 +61,8 @@
 
                     <ul>
 
-                        <li><h4>A shared transfer</h4></li>
-                        <li><h4>A private minibus for your group</h4></li>
+                        <li><p>A shared transfer</p></li>
+                        <li><p>A private minibus for your group</p></li>
 
                     </ul>
 
@@ -70,8 +70,8 @@
 
                 <div class="container-fluid col-lg-5  text-left">
                     <ul>
-                        <li><h4>A private taxi</h4></li>
-                        <li><h4>A helicopter ride over the mountains</h4></li>
+                        <li><p>A private taxi</p></li>
+                        <li><p>A helicopter ride over the mountains</p></li>
                     </ul>
 
                 </div>

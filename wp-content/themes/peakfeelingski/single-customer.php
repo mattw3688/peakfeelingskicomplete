@@ -2,7 +2,7 @@
     <?php get_header(); ?>
     <div class="page-wrapper">
 
-        <div class="container col-lg-12 text-center mt-2" id="customer-page">
+        <div class="container-fluid text-center mt-2" id="customer-page">
             <h1><?php the_field('top_heading') ?></h1>
         </div>
         <br/>

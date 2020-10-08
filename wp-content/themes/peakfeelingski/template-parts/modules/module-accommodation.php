@@ -1,4 +1,4 @@
-<div class="customer-section accommodation__module">
+<div class="customer-section container-fluid accommodation__module">
 
     <?php
         $products = get_sub_field('product_post');
@@ -16,14 +16,14 @@
 
 
         <div class="row justify-content-center">
-            <div class="card col-lg-10 align-self-center " >
+            <div class="card col-lg-10 col-xs-10 align-self-center " >
                 <div class="card-body " >
 
                     <div class="row content">
 
                         <div class="container-fluid  col-lg-5" id="thumbnail-box">
 
-                            <div class="text-block ">
+                            <div class="text-block text-center">
                                 <h3 class=>
                                     <?php echo the_title(); ?>
                                 </h3>
@@ -112,7 +112,7 @@
                                 </div>
 
                             </div>
-                            <div class="container justify-content-center align-self-baseline gallery col-lg-12 ">
+                            <div class="container text-center align-self-baseline gallery col-lg-12 ">
 
 
                                 <?php $images = get_field('gallery');

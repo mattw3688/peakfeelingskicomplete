@@ -11,14 +11,23 @@ Morzine321!
 
 To Do...
 
+PAGES....
+Info
+Accommodation
+Transport
+Ski Hire
+Ski School
+Childcare
+Extras
+Resorts
+Team
+Contact
+
+
+RESORTPAGE STYLING
+
 CUSTOMER PAGE
 
-Checkbox Design
-
-JQuery Calculations
-
-Mobile Styling
-T's and C's Add and make lightbox
 Fix Image Overlay Text & move to centre
 
 Styling all pages
@@ -29,6 +38,9 @@ BLOG PAGE
 Looks like peak pack
 
 
+NAVBAR
+Change breakpoint
+Style dropdown and button
 
 STYLING
     Background images need portrait mode for mobile
@@ -36,8 +48,7 @@ STYLING
 
 PEAK PACK PAGE
 
-When tick box, you also agree to t's and c's
-Inside each box a t's and c's link
+
 tick box underneath, "please tick to select this product. (by ticking you agree to the suppliers t's and c's)"
 At the bottom.... Please tick to confirm your selections and our t's and c's
 Would you like to add any other products or see any other options? Then a box pops up

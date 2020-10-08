@@ -16,21 +16,21 @@
         <div class="row d-flex flex-row justify-content-center text-center">
             <div class="row d-flex flex-row justify-content-center text-center">
 
-                <div class="container col-2" style="margin: 0">
-                    <a href=""><img class="img" id="espace-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-espace.svg" alt="Espace killy ski area sign" style="display: block"></a>
+                <div class="container col-4" style="margin: 0">
+                    <a href=""><img class="img" id="espace-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-espace.svg" alt="Espace killy ski area sign" ></a>
                 </div>
 
             </div>
         </div>
 
         <div class="row d-flex flex-row justify-content-center text-center">
-            <div class="container col-2" style="margin: 0">
-                <a href="<?php echo get_home_url('','/tignes') ?>"><img class="img" id="tignes-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-tignes.svg" alt="Tignes sign" style="display: block"></a>
-            </div>
 
-            <div class="container col-2" style="margin: 0">
-                <a href="<?php echo get_home_url('','/val-disere') ?>"><img class="img" id="val-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-val.svg" alt="Val d'isere sign" style="display: block"></a>
-            </div>
+            <a href="<?php echo get_home_url('','/tignes') ?>"><img class="img" id="tignes-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-tignes.svg" alt="Tignes sign" style="float: right"></a>
+
+
+
+            <a href="<?php echo get_home_url('','/val-disere') ?>"><img class="img" id="val-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-val.svg" alt="Val d'isere sign" style="float: left; z-index: 2 " ></a>
+
         </div>
 
 

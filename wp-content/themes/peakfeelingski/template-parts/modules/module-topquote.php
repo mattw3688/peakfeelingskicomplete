@@ -10,9 +10,9 @@
 
         <div class="container col-lg-11 text-left">
 
-            <h1>
+            <h2>
                 <?php echo $text ?>
-            </h1>
+            </h2>
 
         </div>
 
