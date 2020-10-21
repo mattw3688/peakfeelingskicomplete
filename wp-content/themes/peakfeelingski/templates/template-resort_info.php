@@ -15,37 +15,36 @@
 
 
     ?>
-    <div class="row justify-content-center">
-        <div class="card col-lg-10 " id="resort-card">
+    <div class="container text-center justify-content-center" >
+        <div class="card" id="resort-card">
             <div class="card-body ">
-                <div class="row-cols-2">
+                <div class="row-content d-flex d-inline">
 
-                    <div class="container">
+                    <div class="container col-md-4 col-xs-12">
 
                         <h1><?php echo $name?></h1>
-
-                    </div>
-
-                    <div class="container-fluid">
-                        <img src="<?php echo $logisticspicture ?>" alt="">
-                    </div>
-
-
                         <div class="container-fluid">
+                            <img src="<?php echo $logisticspicture ?>" alt="">
+                        </div>
+                        <div class="container-fluid mt-4">
                             <img src="<?php echo $skipicture ?>" alt="">
                         </div>
 
+                    </div>
+
+                    <div class="container col-md-8 col-xs-12">
+                        <img class="img-fluid main-image rounded-corners" id="resort-thumbnail" src="<?php the_post_thumbnail_url('large'); ?>" alt="" " >
+                    </div>
+
 
                 </div>
-                <div class="container col-md-6">
-                        <img class="img-fluid main-image rounded-corners" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="" " >
-                </div>
+
 
 
                 </div>
 
 
-                <div class="container justify-content-center gallery col-lg-12 ">
+                <div class="container text-center align-self-center gallery col-lg-12 ">
                     <?php $topimages = get_field('top_gallery');
 
                      if ($topimages):
@@ -104,7 +103,7 @@
 
 
 
-                <div class="container justify-content-center align-self-baseline gallery col-lg-12 ">
+                <div class="container-fluid text-center align-self-baseline gallery col-lg-12 mb-4">
 
 
                     <?php if ($bottomimages):
@@ -112,7 +111,7 @@
 
                     foreach ($bottomimages as $bottomimage):
 
-                    if($count == 1 || $count == 2 || $count == 3): ?>
+                    if($count < 5): ?>
 
                     <a href="<?php echo $bottomimage['sizes']['large'] ?>" title="<?php echo $bottomimage['caption'] ?>">
                         <img src=" <?php echo $bottomimage['sizes']['thumbnail'] ?>"

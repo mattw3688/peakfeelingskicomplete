@@ -6,7 +6,7 @@
         ?>
 
 
-        <div class="container col-lg-9 col-xl-10 text-center">
+        <div class="container col-lg-9 col-xl-10 text-center" id="bold-text-continer">
 
             <h3>
                 <?php echo $text ?>

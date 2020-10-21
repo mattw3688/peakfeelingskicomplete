@@ -1,6 +1,26 @@
 <div class="customer-page">
-    <?php get_header(); ?>
+    <div class="container" style="display: none">
+        <?php get_header(); ?>
+    </div>
     <div class="page-wrapper">
+    </div>
+    <div class="container  col-lg-4">
+
+    </div>
+
+    <div class="container col-xs-6 col-lg-4 text-center" id="header-logo">`
+
+        <!--                --><?php //if (is_front_page()): ?>
+        <a href="<?php echo home_url(); ?>">
+            <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/peakslogan.svg" alt="Peak Feeling Ski Logo" style="fill: #102143">
+        </a>
+        <!--                --><?php //endif; ?>
+    </div>
+    <div class="container col-lg-4 ">
+
+
+
+    </div>
 
         <div class="container-fluid text-center mt-2" id="customer-page">
             <h1><?php the_field('top_heading') ?></h1>
@@ -196,4 +216,6 @@
 
 
 </div>
-<?php get_footer(); ?>
+<div class="container" style="display: none">
+    <?php get_footer(); ?>
+</div>

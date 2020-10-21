@@ -22,7 +22,9 @@
                     <?php endif; ?>
 
                     <?php if (get_row_layout() == 'bullet_list'): ?>
-
+                        <div class="container" id="list-heading">
+                            <h3>Are you interested in:</h3>
+                        </div>
                         <?php get_template_part('template-parts/modules/module', 'bullet_list');?>
 
                     <?php endif; ?>
@@ -32,7 +34,11 @@
                 <?php endwhile; ?>
 
             <?php endif; ?>
+            <div class="container" id="contact-us">
 
+                <p>Click <a href="">here</a> to get the right lessons booked in for you.</p>
+
+            </div>
         </div>
 
     </section>

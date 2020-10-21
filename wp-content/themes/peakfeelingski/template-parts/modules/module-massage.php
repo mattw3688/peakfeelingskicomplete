@@ -28,7 +28,7 @@
 
                     <div class="container-fluid  col-lg-5" id="thumbnail-box">
 
-                        <div class="text-block">
+                        <div class="text-block text-center">
                             <h3 class=>
                                 <?php echo the_title(); ?>
                             </h3>

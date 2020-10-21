@@ -18,12 +18,16 @@
     width: 100%;
   }
 
+  * {
+    color: $themeblue;
+  }
+
 }
 
 //font sizes
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 
@@ -32,18 +36,11 @@ h4 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 
 }
 
-@media( min-width: 600px ) {
-  h3 {
-    font-size: 1.8rem;
-  }
-  p {
-    font-size: 1.2rem;
-  }
-}
+
 
 * {
   font-family: $themefont;

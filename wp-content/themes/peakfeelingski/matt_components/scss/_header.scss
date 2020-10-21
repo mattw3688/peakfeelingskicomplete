@@ -1,24 +1,30 @@
 @import "variables";
 
-.container #nav-container {
+#nav-container {
   display: block;
   position: center;
+
 }
 
 #main-logo {
   max-width: 50vw;
 }
 
-
+@media (min-width: 992px) and (max-width: 1040px) {
+  .collapse {
+    display: none !important;
+  }
+}
 
 @media (min-width: 600px ) {
     #main-logo {
       max-width: 25vw;
     }
     #top-menu {
+      text-align: center;
       a {
-        color: $themeblue;
-        font-size: 20px;
+
+        font-size: 1.2rem;
         font-family: $themefont;
         font-weight: 600;
         padding-left: 1vw;
@@ -31,10 +37,12 @@
 
 }
 
-@media (min-width: 1100px ) {
+
+
+@media (min-width: 1150px ) {
   #top-menu {
     a {
-      color: $themeblue;
+
       font-size: 20px;
       font-family: $themefont;
       font-weight: 600;
@@ -51,13 +59,13 @@
 @media (max-width: 599px) {
   #top-menu {
     a {
-      color: $themeblue;
+
       font-weight: 600;
       font-family: $themefont;
 
       &:hover {
         text-decoration: none;
-        color: $themeblue;
+
       }
     }
   }
@@ -115,6 +123,7 @@ img #main-logo {
     }
   }
 }
+
 
 
 
