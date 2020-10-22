@@ -7,6 +7,15 @@
   src: local('Coolvetica-Regular'), url('../../assets/fonts/coolvetica.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Didactt-Gothic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Didact-Gothic'), url('../../assets/fonts/didactgothic.woff') format('woff');
+}
+
+
+
 @media (min-width: 1000px) {
 
   body {

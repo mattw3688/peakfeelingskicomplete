@@ -32,12 +32,62 @@
 
 // Customer Page
 
+.customer-page {
+
+
+
+  #thumbnail-box {
+    margin-left: 0;
+    * {
+      color: white !important;
+      font-family: $cardfont;
+    }
+  }
+  p {
+    color: black;
+    font-family: $cardfont;
+    font-size: 0.5rem;
+  }
+  a {
+    color: #1970d9;
+    font-family: $cardfont;
+    font-size: 1rem;
+  }
+  h3 {
+    color: #1D3B60;
+  }
+  h1 {
+    color: #1D3B60;
+    font-size: 3rem;
+  }
+  h5 {
+    color: #1D3B60;
+    font-family: $cardfont;
+    font-weight: 500;
+    font-size: 1rem;
+
+  }
+  h2 {
+    color: #1D3B60
+  }
+  input {
+    position: relative;
+    left: 5vw;
+  }
+  .terms {
+    position: relative;
+    left: 5vw;
+  }
+
+}
+
 
 .accommodation__module {
   .card {
     border: $cardborderthickness $greycard;
     border-radius: $cardradius;
   }
+
 
   .text-block {
 
@@ -62,8 +112,8 @@
   .main-image {
     border-radius: $cardradius;
     max-height: 50vh;
-
   }
+
 }
 
 .childcare__module {
@@ -231,10 +281,10 @@
   }
 }
 
-.card {
-  border: $cardborderthickness $greycard;
-  border-radius: $cardradius;
-}
+//.card {
+//  border: $cardborderthickness $greycard;
+//  border-radius: $cardradius;
+//}
 
 .text-block {
 
@@ -581,7 +631,7 @@
   }
   #accommodation-page {
     .bold_text__module {
-      padding-top: 45vh;
+      padding-top: 55vh;
     }
 
     .paragraph_text__module {
@@ -1461,9 +1511,121 @@
   #team-page {
     background: url("../../assets/images/team_square.svg") no-repeat;
     background-size: 100% auto;
+    h2 {
+      padding-top: 12vh;
+    }
+    .bold_text__module {
+      padding-bottom: 25vh;
+    }
   }
+}
+
+@media (min-width: 1030px) {
+  #team-page {
+    .bold_text__module {
+      padding-bottom: 30vh;
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  #team-page {
+    .bold_text__module {
+      padding-top : 0;
+      padding-left: 5vw;
+      padding-bottom: 0;
+      h3 {
+        padding: 0;
+      }
+    }
+    h2 {
+      padding: 5vh;
+
+    }
+    .paragraph_text__module {
+      padding-left: 18vw;
+    }
+    .contact-line-skihiire__module {
+      padding-top: 5vh;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #team-page {
+
+
+    .contact-line-skihiire__module {
+      padding-left: 15vw;
+    }
+    h2 {
+      padding: 5vh;
+    }
+    .bold_text__module {
+      padding-left: 8vw;
+      padding-bottom: 5vh;
+      padding-top: 0;
+    }
+
+    .paragraph_text__module {
+      padding-left: 20vw;
+    }
+
+  }
+}
+
+@media (min-width: 1300px) {
+  #team-page {
+    h2 {
+      padding: 10vh;
+    }
+    .paragraph_text__module {
+      padding-left: 15vw;
+      padding-right: 10vw;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+    #team-page {
+      background: url("../../assets/images/team_desktop.svg") no-repeat;
+      background-size: 100% auto;
+
+      h2 {
+        padding-top: 5vh;
+        padding-bottom: 0;
+      }
+
+      .bold_text__module {
+        padding: 0 0 0 10vw;
+      }
+      .paragraph_text__module {
+        padding: 5vh 5vw 0 8vw;
+      }
+
+      .contact-line-skihiire__module {
+        padding: 5vh 0 0 5vw;
+      }
+    }
 
 }
+
+@media (min-width: 1500px) {
+  #team-page {
+    .bold_text__module {
+      padding: 5vh 0 0 8vw;
+    }
+  }
+}
+
+@media (min-width: 1650px) {
+  #team-page {
+    h2 {
+      padding-top: 15vh;
+    }
+  }
+}
+
 
 // Customer Details Page
 
@@ -1533,43 +1695,125 @@
 // Resorts
 #resorts-page {
   background: url("../../assets/images/resorts_mobile.svg") no-repeat;
-  background-size: 100%;
+  background-size: 100% auto !important;
   * {
     color: #184740;
   }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #resorts-heading {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  #tignes-lolly {
+    width: 50vw;
+    position: relative;
+    left: 5vw;
+    top: 2vh;
+
+
+  }
+
+  #val-lolly {
+    width: 50vw;
+    position: relative;
+    right: 5vw;
+    top: 2vh;
+
+
+
+  }
+
+  #espace-lolly {
+    width: 40vw;
+    position: relative;
+    top: 0;
+    right: 15vw;
+    bottom: 5vh;
+    z-index: 98;
+
+  }
 }
+
+@media (min-width: 600px) {
+  #resorts-page {
+    #resorts-heading {
+      padding-top: 15vh;
+      padding-bottom: 5vh;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  #resorts-page {
+    #tignes-lolly {
+      width: 40vw;
+      position: relative;
+      left: 5vw;
+      top: 2vh;
+
+
+    }
+
+    #val-lolly {
+      width: 40vw;
+      position: relative;
+      right: 5vw;
+      top: 2vh;
+
+
+
+    }
+
+    #espace-lolly {
+      width: 30vw;
+      position: relative;
+      top: 0;
+      right: 15vw;
+      bottom: 5vh;
+      z-index: 98;
+
+    }
+  }
+}
+
 /* laptop/desktop */
 @media (min-width: 992px) {
   #resorts-page {
     background: url("../../assets/images/resorts_square.svg") no-repeat;
-    background-size: 100% auto;
+    background-size: cover ;
 
     h1 {
       font-size: 1.8rem;
     }
 
     #resorts-heading {
-      padding-top: 30vh;
+      padding-top: 25vh;
     }
 
     #tignes-lolly {
       width: 30vw;
       position: relative;
-      left: 10vw;
-      bottom: 20vh;
+      left: 5vw;
+      bottom: 25vh;
     }
 
     #val-lolly {
       width: 30vw;
       position: relative;
-      left: 12vw;
-      bottom: 20vh;
+      left: 10vw;
+      bottom: 25vh;
     }
 
     #espace-lolly {
-      width: 15vw;
+      width: 25vw;
       position: relative;
-      top: 20vh;
+      top: 5vh;
+      right: 2vw;
       z-index: 99;
 
     }
@@ -1834,6 +2078,39 @@
   }
 }
 
+@media (min-width: 1200px) {
+  #tuition-page {
+    .bold_text_central__module {
+      padding-top: 10vh;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  #tuition-page {
+    .bold_text_central__module {
+      padding-top: 13vh;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  #tuition-page {
+    .bold_text_central__module {
+      padding-top: 18vh;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  #tuition-page {
+    .bold_text_central__module {
+      padding-top: 22vh;
+      padding-left: 15vw;
+    }
+  }
+}
+
 
 
   // Resort Template Styling
@@ -1880,3 +2157,7 @@
 
 }
 
+.card .price-box {
+  border: none !important;
+  border-radius: 0 0 0 0 !important ;
+}

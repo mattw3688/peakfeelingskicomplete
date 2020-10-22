@@ -12,7 +12,7 @@
 
         <!--                --><?php //if (is_front_page()): ?>
         <a href="<?php echo home_url(); ?>">
-            <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/peakslogan.svg" alt="Peak Feeling Ski Logo" style="fill: #102143">
+            <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/logos/peakpack-logo.svg" alt="Peak Feeling Ski Logo" style="width: 45vw">
         </a>
         <!--                --><?php //endif; ?>
     </div>

@@ -43,7 +43,7 @@
 
                         <div class="container-fluid col-lg-6 justify-content-center">
 
-                            <div class="container d-flex flex-row ">
+                            <div class="container d-flex flex-row" >
 
                                 <div class="container col-lg-2" id="icons">
                                     <div class="icon">
@@ -176,7 +176,7 @@
 <div class="container text-center">
     <div class="form-row mt-2">
         <input class="mt-1 mr-2 price-checkbox" type="checkbox" data-customer-price="<?php echo $customer_price; ?>" data-product-name="<?php the_title(); ?>">
-        <label for="accommodation-box"><h5>Check the box to select this accommodation and confirm you have read and accept the <a href="#" data-featherlight="#<?php echo $term_id; ?> .content">terms and conditions</a> associated with it.</h5></label>
+        <label for="accommodation-box"><h5 class="terms">Check the box to select this accommodation and confirm you have read and accept the <a href="#" data-featherlight="#<?php echo $term_id; ?> .content">terms and conditions</a> associated with it.</h5></label>
     </div>
 </div>
 
