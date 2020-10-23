@@ -186,7 +186,7 @@
             });
 
             // create html summary
-            $html_summary =  '<ul>' + $client_summary + '</ul>' +'<h3>Total €' +$client_total + '</h3>';
+            $html_summary =  '<ul>' + $client_summary + '</ul>' +'  <h3>Total €' + $client_total + '</h3>';
 
             // populate clients view
             $('.dynamic-client-summary').html($html_summary); 

@@ -33,7 +33,7 @@
 
                     <div class="container-fluid  col-lg-5" id="thumbnail-box">
 
-                        <div class="text-block text-center">
+                        <div class="text-block text-left">
                             <h3 class=>
                                 <?php echo the_title(); ?>
                             </h3>
@@ -48,7 +48,7 @@
 
                     <div class="container-fluid col-lg-6 justify-content-center">
 
-                        <div class="container d-flex flex-row ">
+                        <div class="container d-flex flex-row text-left">
 
                             <?php $facilities = get_field('extra_facilities');
                             foreach ($facilities as $facility):
@@ -106,7 +106,7 @@
                             <?php endforeach;
                             ?>
                         </div>
-                        <div class="container  description ">
+                        <div class="container-fluid  description ">
                             <p><?php echo $information?></p>
                             <br/>
                         </div>

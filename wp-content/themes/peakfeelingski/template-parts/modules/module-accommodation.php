@@ -30,7 +30,7 @@
 
                         <div class="container-fluid  col-lg-5" id="thumbnail-box">
 
-                            <div class="text-block text-center">
+                            <div class="text-block text-left">
                                 <h3 class=>
                                     <?php echo the_title(); ?>
                                 </h3>
@@ -39,11 +39,7 @@
 
                             <img class="img-fluid main-image rounded-corners" src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
 
-                        </div>
-
-                        <div class="container-fluid col-lg-6 justify-content-center">
-
-                            <div class="container d-flex flex-row" >
+                            <div class="container-fluid d-flex flex-row mt-2 " >
 
                                 <div class="container col-lg-2" id="icons">
                                     <div class="icon">
@@ -54,13 +50,13 @@
                                 <div class="container col-lg-2" id="icons">
                                     <div class="icon">
                                         <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Nearest-Gondola-Lift-distance.svg" alt="Nearest Lift" ></i>
-                                        <p class="bottom-center"><?php echo get_field('distance_to_lift')?>m</p>
+                                        <p class="bottom-center"><?php echo get_field('distance_to_lift')?></p>
                                     </div>
                                 </div>
                                 <div class="container col-lg-2" id="icons">
                                     <div class="icon">
                                         <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Chalet-Size.svg" alt="Chalet Size" ></i>
-                                        <p class="bottom-center"><?php echo get_field('accommodation_size')?>m<sup>2</sup></p>
+                                        <p class="bottom-center"><?php echo get_field('accommodation_size')?></p>
                                     </div>
                                 </div>
 
@@ -102,7 +98,13 @@
 
 
                             </div>
-                            <div class="container  description ">
+
+                        </div>
+
+                        <div class="container-fluid col-lg-6 justify-content-center">
+
+
+                            <div class="container-fluid  description " >
                                 <p><?php echo get_field('product_description')?></p>
                             </div>
 

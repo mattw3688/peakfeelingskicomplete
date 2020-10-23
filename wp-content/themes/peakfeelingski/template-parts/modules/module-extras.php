@@ -27,7 +27,7 @@
 
                     <div class="container-fluid  col-lg-5" id="thumbnail-box">
 
-                        <div class="text-block text-center">
+                        <div class="text-block text-left">
                             <h3 class=>
                                 <?php echo the_title(); ?>
                             </h3>
@@ -40,7 +40,7 @@
 
                     <div class="container-fluid col-lg-6">
 
-                        <div class="description">
+                        <div class="container-fluid description">
 
                             <p><?php echo the_field('product_description')?></p>
 

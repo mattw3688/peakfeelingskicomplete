@@ -30,7 +30,7 @@
                                 <?php elseif (is_page('child-care')): ?>
                                     <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/logos/Childcare-logo.svg" alt="Peak Feeling Ski Logo" style="">
 
-                                <?php elseif (is_page('extras')): ?>
+                                <?php elseif (is_page('extra-activities')): ?>
                                     <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/logos/Extras-logo.svg" alt="Peak Feeling Ski Logo" style="">
 
                                 <?php elseif (is_page('resorts')): ?>

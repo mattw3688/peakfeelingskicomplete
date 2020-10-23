@@ -13,7 +13,7 @@
 
             <p>
 
-                Please have a look around our website then hit  <a href="<?php echo get_home_url('contact', '/contact') ?>" target="_blank">Contact us</a> to discuss your requirements.
+                Please have a look around our website then hit  <a class="contact-link" href="<?php echo get_home_url('contact', '/contact') ?>" target="_blank">contact us</a> to discuss your requirements.
                 We can then get on to plan and book your perfect ski holiday.
 
             </p>

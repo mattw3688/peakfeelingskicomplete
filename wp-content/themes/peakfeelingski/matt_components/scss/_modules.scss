@@ -34,20 +34,37 @@
 
 .customer-page {
 
+  #customer-total {
 
+  }
+
+  .description {
+    p {
+      color: black;
+      font-family: $cardfont;
+      font-size: 0.8rem;
+      font-weight: bolder;
+    }
+  }
 
   #thumbnail-box {
     margin-left: 0;
-    * {
+    p {
+      color: black !important;
+    }
+    h6 {
+      color: white !important;
+    }
+    h3 {
       color: white !important;
       font-family: $cardfont;
     }
+    h6 {
+      font-family: 'Roboto-Condensed', sans-serif;
+      font-style: italic;
+    }
   }
-  p {
-    color: black;
-    font-family: $cardfont;
-    font-size: 0.5rem;
-  }
+
   a {
     color: #1970d9;
     font-family: $cardfont;
@@ -356,6 +373,10 @@
     color: #184740;
   }
 
+  .contact-link {
+    font-size: 1.1rem;
+  }
+
 
   .bold_text__module {
     padding-top: 10vh;
@@ -487,6 +508,10 @@
 
   * {
     color:  #102244;
+  }
+
+  .contact-link {
+    font-size: 1.1rem;
   }
 
   .bold_text__module {
@@ -763,7 +788,7 @@
 
 
 // Large desktop
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
 
   #transport-page {
     #bold_text {
@@ -778,16 +803,23 @@
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1150px) {
 
   #transport-page {
     #bold_text {
-      padding-top: 25vh;
+      padding-top: 15vh;
 
     }
 
     .top_paragraph__module {
-      padding-top: 18vh;
+      padding-top: 0;
+      padding-left: 8vw;
+    }
+
+    .bottom_paragraph__module {
+      padding-top: 0;
+      padding-left: 12vw;
+      padding-right: 0;
     }
 
     #list_title {
@@ -806,12 +838,18 @@
   #transport-page {
 
     #bold_text {
-      padding-top: 25vh;
+      padding-top: 23vh;
 
     }
 
     .top_paragraph__module {
-      padding-top: 25vh;
+      padding-top: 0;
+      padding-left: 15vw;
+    }
+
+    .bottom_paragraph__module {
+      padding-top: 0;
+      padding-left: 20vw;
     }
 
     #list_title {
@@ -831,6 +869,7 @@
   #transport-page {
     background: url("../../assets/images/transport_desktop.svg");
     background-size: cover;
+
     .top_paragraph__module {
       padding-top: 0;
       padding-left: 15vw;
@@ -849,6 +888,26 @@
   }
 }
 
+@media (min-width: 1700px) {
+
+  #transport-page {
+
+    #bold_text {
+      padding-top: 30vh;
+
+    }
+
+    .top_paragraph__module {
+      padding-top: 10vh;
+      padding-left: 0;
+    }
+
+    .bottom_paragraph__module {
+
+      padding-left: 5vw;
+    }
+  }
+}
 
 
 
@@ -860,6 +919,10 @@
   background-size: 100% auto;
   * {
     color: #153942;
+  }
+
+  .contact-link {
+    font-size: 1.1rem;
   }
 
 }
@@ -1083,6 +1146,10 @@
   * {
     color: #144C7F;
   }
+
+  .contact-link {
+    font-size: 1.1rem;
+  }
 }
 
 #childcare-page {
@@ -1274,6 +1341,10 @@
     color: #53859B;
   }
 
+  .contact-link {
+    font-size: 1.5rem;
+  }
+
   .bold_text_central__module {
     padding-top: 10vh;
 
@@ -1309,21 +1380,17 @@
   #contact-page {
     .bold_text_central__module {
       padding-top: 150px;
-      * {
-        color: $themeblue;
-      }
+
 
     }
 
     .contact-page__module {
       padding-top: 15px;
       padding-right: 100px;
-      * {
-        color: $themeblue;
-      }
+
     }
     label {
-      color: $themeblue;
+      color: #144C7F;
     }
   }
 
@@ -1903,7 +1970,7 @@
     background-size: 100% auto;
 
     .bold_text_central__module {
-      padding-top: 40vh;
+      padding-top: 45vh;
 
       h3 {
         font-size: 1.5rem;
@@ -1935,7 +2002,7 @@
 @media (min-width: 1200px) {
   #extras-page {
     .bold_text_central__module {
-      padding-top: 10vh;
+      padding-top: 15vh;
       padding-left: 10vw;
     }
     .bullet-list__module {
@@ -1959,7 +2026,7 @@
 @media (min-width: 1400px) {
   #extras-page {
     .bold_text_central__module {
-      padding-top: 15vh;
+      padding-top: 20vh;
       padding-left: 0;
     }
     .bullet-list__module {
@@ -1975,6 +2042,10 @@
 
   * {
     color: #266575;
+  }
+
+  .contact-link {
+    font-size: 1.1rem;
   }
 
   .bold_text_central__module {
@@ -2061,7 +2132,7 @@
     background-size: 100% auto;
 
     .bold_text_central__module {
-      padding-top: 8vh;
+      padding-top: 12vh;
       padding-left: 10vw;
 
 
@@ -2081,7 +2152,7 @@
 @media (min-width: 1200px) {
   #tuition-page {
     .bold_text_central__module {
-      padding-top: 10vh;
+      padding-top: 15vh;
     }
   }
 }

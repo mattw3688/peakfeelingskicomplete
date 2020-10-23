@@ -36,7 +36,7 @@
             <?php endif; ?>
             <div class="container" id="contact-us">
 
-                <p>Click <a href="">here</a> to get the right lessons booked in for you.</p>
+                <p>Click <a class="contact-link" href="">here</a> to get the right lessons booked in for you.</p>
 
             </div>
         </div>

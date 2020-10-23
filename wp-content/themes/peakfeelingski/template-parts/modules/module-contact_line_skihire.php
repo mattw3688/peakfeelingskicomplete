@@ -11,7 +11,7 @@
         <div class="container col-lg-11 text-left">
 
 
-            <p>Click <a href="<?php echo get_home_url('contact', '/contact') ?>" target="_blank">Here</a> to get in touch now and start booking.</p>
+            <p>Click <a class="contact-link" href="<?php echo get_home_url('contact', '/contact') ?>" target="_blank">here</a> to get in touch now and start booking.</p>
 
 
         </div>

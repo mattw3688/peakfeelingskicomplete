@@ -16,84 +16,32 @@ Team_Mobile, much longer!!
 
 NIKKI COMMENTS>>>
 
-
-
-TITLE FONT ARIAL ROUNDED CHANGE
 CHECK NAVBAR FITS ON WIDTH CONTACT US GOES BELOW ON NIKKIS
 
 PAGES TO TWEAK
 
-TRANSPORT ---
+
 
 SHI SCHOOL>>>
     BUMP TEXT DOWN, LIST OVER FURTHER RIGHT
-
-EXTRAS>>>
-    LOGO COLOUR
-    BUMP ALL TEXT DOWN
 
 RESORTS PAGE>>>
     ALL BUMPED UP
 
 CONTACT>>>
     CHANGE WORDING
-
+    CHANGE PHONE NUMBER
 
 BACK END >>>>
     CUSTOMERS CHANGED TO PEAK PACKS
 
 PEAK PACK>>>
-    MAIN IMAGE TO HUG CORNER MORE.
-    CHANGE ALL FONTS AND COLOURS TO MATCH CHARLIES DESIGN
     ICON FOR TOTAL
-
     ICONS HUG LEFT WHEN NOT FULL
-
     COMMENTS BOX STYLED LIKE PRICE BOXES
-
-    HEADING COLOUR HEX #1D3B60
-    SMALL TEXT COLOUR Black
-    BIG HEADING AND SUBHEADING COLOUR WHITE
-
-    t'S AND c'S TEXT SAME FONT AS INSIDE BOX
-
-    FONTS TO CHANGE!!>>>>
-
-    DESCRIPTION TEXT - FONT - FUTURA MEDIUM
-    BIG TITLE TEXT - FONT - FUTURA BOLD
-    SUB TITLE TEXT - FONT FUTURA ITALIC
-
-    CLOSEST IS DIDACT GOTHIC
-
-
-
-LINKS, HERE IS SMALL AND HAS CAPITAL AT THE START
-
-
-
-
-
-
-
-To Do...
-
-PAGES....
-
-Ski School
-Childcare
-Extras
-Resorts
-Team
-Contact
 
 
 RESORTPAGE STYLING
-
-CUSTOMER PAGE
-
-Fix Image Overlay Text & move to centre
-
-Styling all pages
 
 Things we need to finish up with:
 
@@ -122,42 +70,7 @@ STYLING
     Background images need portrait mode for mobile
     Adjust Padding for different screen sizes
 
-PEAK PACK PAGE
 
-
-tick box underneath, "please tick to select this product. (by ticking you agree to the suppliers t's and c's)"
-At the bottom.... Please tick to confirm your selections and our t's and c's
-Would you like to add any other products or see any other options? Then a box pops up
-Get rid of navbar.
-Confirmation message...  Thank you for making your holiday choices. We will just go and firm up your booking with the suppliers and will be back to you very soon to confirm your booking and take your initial deposit
-
-
-PRODUCTS
-
-Add t's and c's option
-Open in lightbox
-
-
-MOBILE PAGES
-Need work....
-Ski hire
-
-
-Use an invisible form to record the boxes checked and send to an email?
-    Add a message popup that says thanks and 48hours etc
-
-Bootstrap breakpoints in pixels:
-
-xs = 0-767 pixels
-sm = 768-991 pixels
-md = 992-1199 pixels
-lg = 1200 pixels and up
-
-
-xs is for extra small devices (phones, less than 768px)
-sm is for small devices (tablets, 768px and up)
-md is for medium devices (desktops, 992px and up)
-lg is for large devices (large desktops, 1200px and up)
 
 HOMEPAGE....
 link social icons to pages

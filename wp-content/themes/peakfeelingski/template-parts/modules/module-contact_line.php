@@ -11,7 +11,7 @@
         <div class="container col-lg-11 text-left" id="contact-line">
 
 
-            <p>Click on <a href="<?php echo get_home_url('contact', '/contact') ?>" target="_blank">Contact Us</a> so we can get started researching and sourcing your perfect accommodation</p>
+            <p>Click on <a class="contact-link" href="<?php echo get_home_url('contact', '/contact') ?>" target="_blank">contact us</a> so we can get started researching and sourcing your perfect accommodation</p>
 
 
         </div>
