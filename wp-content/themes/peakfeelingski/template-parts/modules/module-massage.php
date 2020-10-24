@@ -1,5 +1,6 @@
 <?php
     $products = get_sub_field('product_post');
+    $information = get_sub_field('information');
     $customer_price = get_sub_field('price');
 ?>
 
@@ -41,45 +42,43 @@
 
                     <div class="container-fluid col-lg-6 justify-content-center">
 
-                        <div class="container d-flex flex-row ">
+<!--                        <div class="container d-flex flex-row ">-->
+<!---->
+<!--                            --><?php
+//                            $facilities = get_field('extra_facilities');
+//                            foreach ($facilities as $facility):
+//                                if ($facility == 'hot-tub-spa'):?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub-Spa.svg" alt="Hot Tub" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                --><?php //elseif ($facility == 'sauna-spa'): ?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna-Spa.svg" alt="Sauna" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                --><?php //elseif ($facility == 'massage-spa'): ?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Massage.svg" alt="Massage" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!---->
+<!---->
+<!--                                --><?php //endif; ?>
+<!--                            --><?php //endforeach;
+//                            ?>
+<!---->
+<!--                        </div>-->
 
-                            <?php
-                            $facilities = get_field('extra_facilities');
-                            foreach ($facilities as $facility):
-                                if ($facility == 'hot-tub-spa'):?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub-Spa.svg" alt="Hot Tub" ></i>
-
-                                        </div>
-                                    </div>
-                                <?php elseif ($facility == 'sauna-spa'): ?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna-Spa.svg" alt="Sauna" ></i>
-
-                                        </div>
-                                    </div>
-                                <?php elseif ($facility == 'massage-spa'): ?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Massage.svg" alt="Massage" ></i>
-
-                                        </div>
-                                    </div>
-
-
-                                <?php endif; ?>
-                            <?php endforeach;
-                            ?>
-
-                        </div>
-
-                        <div class="container-fluid description">
-
-                            <p><?php echo the_field('product_description')?></p>
-                            <br/>
-
+                        <div class="container-fluid  description ">
+                            <p><?php echo get_field('product_description')?></p>
+                            <p><?php echo $information?></p>
 
                         </div>
                         <div class="row justify-content-end ">

@@ -36,7 +36,7 @@
                             <h3 class=>
                                 <?php echo the_title(); ?>
                             </h3>
-                            <h6> <?php echo get_sub_field('image_overlay_text') ?> </h6>
+                            <h6> <?php echo get_field('image_overlay_text') ?> </h6>
                         </div>
 
 
@@ -49,9 +49,9 @@
                     <div class="container-fluid col-lg-6 justify-content-center">
 
                         <div class="container-fluid description">
-
+                            <p><?php echo get_field('product_description')?></p>
                             <p><?php echo $information ?></p>
-                            <br/>
+
 
                         </div>
 

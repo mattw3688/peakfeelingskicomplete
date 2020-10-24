@@ -48,67 +48,69 @@
 
                     <div class="container-fluid col-lg-6 justify-content-center">
 
-                        <div class="container d-flex flex-row text-left">
-
-                            <?php $facilities = get_field('extra_facilities');
-                            foreach ($facilities as $facility):
-                                if ($facility == 'art_class'):?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Art-Classes.svg" alt="Art Classes" ></i>
-
-                                        </div>
-                                    </div>
-                                <?php elseif ($facility == 'music'): ?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Music.svg" alt="Music" ></i>
-
-                                        </div>
-                                    </div>
-                                <?php elseif ($facility == 'catered-kids'): ?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Catered-Kids.svg" alt="Kids Meals Provided" ></i>
-
-                                        </div>
-                                    </div>
-                                <?php elseif ($facility == 'hot-tub-spa'): ?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub-Spa.svg" alt="Hot Tub" ></i>
-
-                                        </div>
-                                    </div>
-                                <?php elseif ($facility == 'sauna-spa'): ?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna-Spa.svg" alt="Sauna" ></i>
-
-                                        </div>
-                                    </div>
-                                <?php elseif ($facility == 'massage-spa'): ?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Massage.svg" alt="Massage" ></i>
-
-                                        </div>
-                                    </div>
-                                <?php elseif ($facility == 'wifi'): ?>
-                                    <div class="container col-lg-2" id="icons">
-                                        <div class="icon">
-                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Wifi.svg" alt="WiFi Available" ></i>
-
-                                        </div>
-                                    </div>
-
-                                <?php endif; ?>
-                            <?php endforeach;
-                            ?>
-                        </div>
+<!--                        <div class="container d-flex flex-row text-left">-->
+<!---->
+<!--                            --><?php //$facilities = get_field('extra_facilities');
+//                            foreach ($facilities as $facility):
+//                                if ($facility == 'art_class'):?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Art-Classes.svg" alt="Art Classes" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                --><?php //elseif ($facility == 'music'): ?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Music.svg" alt="Music" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                --><?php //elseif ($facility == 'catered-kids'): ?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Catered-Kids.svg" alt="Kids Meals Provided" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                --><?php //elseif ($facility == 'hot-tub-spa'): ?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub-Spa.svg" alt="Hot Tub" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                --><?php //elseif ($facility == 'sauna-spa'): ?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna-Spa.svg" alt="Sauna" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                --><?php //elseif ($facility == 'massage-spa'): ?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Massage.svg" alt="Massage" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                --><?php //elseif ($facility == 'wifi'): ?>
+<!--                                    <div class="container col-lg-2" id="icons">-->
+<!--                                        <div class="icon">-->
+<!--                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Wifi.svg" alt="WiFi Available" ></i>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!---->
+<!--                                --><?php //endif; ?>
+<!--                            --><?php //endforeach;
+//                            ?>
+<!--                        </div>-->
                         <div class="container-fluid  description ">
+                            <p><?php echo get_field('product_description')?></p>
+
                             <p><?php echo $information?></p>
-                            <br/>
+
                         </div>
 
                         <div class="row justify-content-end ">

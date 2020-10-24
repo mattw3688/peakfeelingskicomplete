@@ -13,25 +13,25 @@
 
         </div>
 
-        <div class="row d-flex flex-row justify-content-center text-center">
-            <div class="row d-flex flex-row justify-content-center text-center">
+        <div class="row sign-row d-flex flex-row justify-content-center text-center">
 
-                <div class="container col-4" style="margin: 0">
-                    <a href=""><img class="img" id="espace-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-espace.svg" alt="Espace killy ski area sign" ></a>
-                </div>
 
+            <div class="container col-4" style="margin: 0">
+                <a href="<?php echo get_home_url('','/tignes') ?>"><img class="img" id="tignes-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-tignes.svg" alt="Tignes sign" style="float: right"></a>
             </div>
+
+            <div class="container col-4" style="margin: 0">
+                <a href=""><img class="img" id="espace-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-espace.svg" alt="Espace killy ski area sign" ></a>
+            </div>
+
+            <div class="container col-4" style="margin: 0">
+                <a href="<?php echo get_home_url('','/val-disere') ?>"><img class="img" id="val-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-val.svg" alt="Val d'isere sign" style="float: left; z-index: 2 " ></a>
+            </div>
+
+
         </div>
 
-        <div class="row d-flex flex-row justify-content-center text-center">
 
-            <a href="<?php echo get_home_url('','/tignes') ?>"><img class="img" id="tignes-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-tignes.svg" alt="Tignes sign" style="float: right"></a>
-
-
-
-            <a href="<?php echo get_home_url('','/val-disere') ?>"><img class="img" id="val-lolly" src="../../../wp-content/themes/peakfeelingski/assets/images/icons/lolly-val.svg" alt="Val d'isere sign" style="float: left; z-index: 2 " ></a>
-
-        </div>
 
 
     </section>

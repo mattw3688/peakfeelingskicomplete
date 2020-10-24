@@ -1858,26 +1858,31 @@
       font-size: 1.8rem;
     }
 
+    .sign-row {
+      padding-bottom: 25vh;
+    }
+
     #resorts-heading {
-      padding-top: 25vh;
+      padding-top: 5vh;
     }
 
     #tignes-lolly {
-      width: 30vw;
+      width: 25vw;
       position: relative;
-      left: 5vw;
-      bottom: 25vh;
+      left: 15vw;
+
     }
 
     #val-lolly {
-      width: 30vw;
+      width: 25vw;
       position: relative;
-      left: 10vw;
-      bottom: 25vh;
+      right: 5vw;
+
+
     }
 
     #espace-lolly {
-      width: 25vw;
+      width: 15vw;
       position: relative;
       top: 5vh;
       right: 2vw;

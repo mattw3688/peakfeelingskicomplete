@@ -1,5 +1,6 @@
 <?php
     $products = get_sub_field('product_post');
+    $information = get_sub_field('information');
     $customer_price = get_sub_field('price');
 ?>
 
@@ -31,7 +32,7 @@
                             <h3 class=>
                                 <?php echo the_title(); ?>
                             </h3>
-                            <h6> <?php echo get_sub_field('image_overlay_text') ?> </h6>
+                            <h6> <?php echo get_field('image_overlay_text') ?> </h6>
                         </div>
                         <a href="">
                             <img class="img-fluid main-image " src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
@@ -40,9 +41,9 @@
 
                     <div class="container-fluid col-lg-6">
 
-                        <div class="container-fluid description">
-
-                            <p><?php echo the_field('product_description')?></p>
+                        <div class="container-fluid  description ">
+                            <p><?php echo get_field('product_description')?></p>
+                            <p><?php echo $information?></p>
 
                         </div>
                         <div class="row justify-content-end ">
