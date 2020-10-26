@@ -13,11 +13,11 @@ function peakfeelingski_post_types()
         'public' => true,
         'menu_icon' => 'dashicons-universal-access',
         'labels' => array(
-            'name' => 'Customers',
-            'add_new_item' => 'Add New Customer',
-            'edit_item' => 'Edit Customer',
-            'all_items' => 'All Customers',
-            'singular_name' => 'Customer',
+            'name' => 'Peak Packs',
+            'add_new_item' => 'Add New Peak Pack',
+            'edit_item' => 'Edit Peak Pack',
+            'all_items' => 'All Peak Packs',
+            'singular_name' => 'Peak Pack',
 
 
         )

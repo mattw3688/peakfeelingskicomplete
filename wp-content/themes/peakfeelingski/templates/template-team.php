@@ -46,7 +46,7 @@
 
             <?php endif; ?>
 
-            <?php get_template_part('template-parts/modules/module', 'contact_line_skihire'); ?>
+
 
         </div>
     </section>
