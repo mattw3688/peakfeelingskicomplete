@@ -34,9 +34,9 @@
                             </h3>
                             <h6> <?php echo get_field('image_overlay_text') ?> </h6>
                         </div>
-                        <a href="">
+
                             <img class="img-fluid main-image " src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
-                        </a>
+
                     </div>
 
                     <div class="container-fluid col-lg-6">
@@ -55,7 +55,7 @@
                             <!--                                <input type="checkbox" id="checkbox_accommodation">-->
                             <!--                                <label for="checkbox_accommodation">Tick here to confirm</label>-->
                         </div>
-                        <div class="container text-center align-self-baseline gallery col-lg-12 ">
+                        <div class="container text-center align-self-baseline extrasgallery col-lg-12 ">
 
 
                             <?php $images = get_field('gallery');

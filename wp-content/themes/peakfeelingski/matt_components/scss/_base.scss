@@ -21,6 +21,13 @@
   src: local('Roboto-Condensed'), url('../../assets/fonts/robotoitalic.ttf') format('ttf');
 }
 
+@font-face {
+  font-family: 'Arial-Rounded';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial-Rounded'), url('../../assets/fonts/arialrounded.ttf') format('ttf');
+}
+
 
 
 @media (min-width: 1000px) {

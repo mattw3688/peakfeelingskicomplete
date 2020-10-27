@@ -72,7 +72,7 @@
         <div class="container-fluid " id="nav-container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-menu"  aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
+                <span> MENU</span>
             </button>
 
             <?php

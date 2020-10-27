@@ -1,16 +1,18 @@
 <?php
-$products = get_sub_field('product_post');
-$customer_price = get_sub_field('price');
-$information = get_sub_field('information');
+    $products = get_sub_field('product_post');
+    $customer_price = get_sub_field('price');
+    $information = get_sub_field('information');
 ?>
 
 <?php foreach ($products as $post):?>
+    <?php $post = get_post($post); ?>
 
     <?php
     $term_id = 'term' . '-' . $post->ID;
     ?>
 
     <div id="<?php echo $term_id; ?>" style="display:none;">
+
         <div class="content">
             <h3>Terms and Conditions</h3>
             <?php echo get_field('terms_and_conditions'); ?>
@@ -37,9 +39,9 @@ $information = get_sub_field('information');
                                 </h3>
                                 <h6> <?php echo get_sub_field('image_overlay_text') ?> </h6>
                             </div>
-                            <a href="">
+
                                 <img class="img-fluid main-image " src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
-                            </a>
+
                         </div>
 
                         <div class="container-fluid col-lg-6 justify-content-center">
@@ -97,7 +99,7 @@ $information = get_sub_field('information');
                             </div>
 
                         </div>
-                        <div class="container text-center align-self-baseline gallery col-lg-12 ">
+                        <div class="container text-center align-self-baseline tuitiongallery col-lg-12 " id="<?php $post -> ID ?>">
 
 
                             <?php $images = get_field('gallery');
@@ -147,4 +149,4 @@ $information = get_sub_field('information');
         </div>
     </div>
 
-    <?php wp_reset_postdata(); endforeach; ?>
+<?php wp_reset_postdata(); endforeach; ?>

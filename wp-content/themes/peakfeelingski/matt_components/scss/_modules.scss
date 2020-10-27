@@ -34,13 +34,15 @@
 
 .customer-page {
 
+
+
   #customer-total {
 
   }
 
   .description {
     p {
-      color: black;
+      color: #1D3B60;
       font-family: $cardfont;
       font-size: 0.8rem;
       font-weight: bolder;
@@ -50,7 +52,7 @@
   #thumbnail-box {
     margin-left: 0;
     p {
-      color: black !important;
+      color: #1D3B60 !important;
     }
     h6 {
       color: white !important;
@@ -94,6 +96,8 @@
   .terms {
     position: relative;
     left: 5vw;
+    font-weight: 600;
+
   }
 
 }

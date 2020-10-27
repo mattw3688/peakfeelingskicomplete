@@ -16,11 +16,11 @@
 
     ?>
     <div class="container text-center justify-content-center" >
-        <div class="card" id="resort-card">
+        <div class="card" id="resort-card" style="padding-bottom: 5vh">
             <div class="card-body ">
-                <div class="row-content d-flex d-inline">
+                <div class="row-content d-flex ">
 
-                    <div class="container col-md-4 col-xs-12">
+                    <div class="container col-lg-4 ">
 
                         <h1><?php echo $name?></h1>
                         <div class="container-fluid">
@@ -32,8 +32,8 @@
 
                     </div>
 
-                    <div class="container col-md-8 col-xs-12">
-                        <img class="img-fluid main-image rounded-corners" id="resort-thumbnail" src="<?php the_post_thumbnail_url('large'); ?>" alt="" " >
+                    <div class="container col-lg-8 ">
+                        <img class="img main-image rounded-corners" id="resort-thumbnail" src="<?php the_post_thumbnail_url('large'); ?>" alt="" " >
                     </div>
 
 
@@ -71,10 +71,9 @@
                     <?php endif;?>
                 </div>
 
-                <div class="text">
+                <div class="text text-left" style="padding: 2vh 2vw 2vh 2vw">
                     <?php
-
-                        // Check rows exists.
+                    // Check rows exists.
                         if( have_rows('paragraph_with_heading') ):
 
                             // Loop through rows.
@@ -93,17 +92,8 @@
                         else :
                             // Do something...
                         endif;?>
-
-
-
                 </div>
-
-
-
-
-
-
-                <div class="container-fluid text-center align-self-baseline gallery col-lg-12 mb-4">
+                <div class="container-fluid  align-self-baseline gallery col-lg-12 mb-4">
 
 
                     <?php if ($bottomimages):

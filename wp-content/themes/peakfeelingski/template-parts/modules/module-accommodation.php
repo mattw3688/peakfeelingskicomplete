@@ -121,10 +121,11 @@
                                 </div>
 
                             </div>
-                            <div class="container text-center align-self-baseline accom-gallery col-lg-12 ">
+                            <div class="container text-center accomgallery align-self-baseline col-lg-12 " >
 
 
                                 <?php $images = get_field('gallery');
+
 
                                  if ($images):
                                     $count = 1;
@@ -181,5 +182,8 @@
         <label for="accommodation-box"><h5 class="terms">Check the box to select this accommodation and confirm you have read and accept the <a href="#" data-featherlight="#<?php echo $term_id; ?> .content">terms and conditions</a> associated with it.</h5></label>
     </div>
 </div>
+
+
+
 
 <?php wp_reset_postdata(); endforeach; ?>
