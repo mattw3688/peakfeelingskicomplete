@@ -27,6 +27,12 @@
 
                     <?php endif; ?>
 
+                    <?php if (get_row_layout() == 'call_to_action'):?>
+
+                        <?php get_template_part('template-parts/modules/module', 'calltoaction');?>
+
+                    <?php endif; ?>
+
 
 
                 <?php endwhile; ?>

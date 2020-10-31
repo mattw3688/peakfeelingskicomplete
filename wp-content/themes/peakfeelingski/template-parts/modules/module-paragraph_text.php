@@ -6,7 +6,7 @@
         ?>
 
 
-        <div class="container  text-left" id="paragraph-container">
+        <div class="container  text-center" id="paragraph-container">
 
             <p>
                 <?php echo $text ?>

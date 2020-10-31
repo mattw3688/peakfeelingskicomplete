@@ -45,10 +45,13 @@
                                 <?php elseif (is_page('ski-school')): ?>
                                     <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/logos/SkiSchool-logo.svg" alt="Peak Feeling Ski Logo" style="">
 
+                                <?php elseif (is_page('home')): ?>
+                                    <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/logos/intro-logo.svg" alt="Peak Feeling Ski Logo" style="">
+
 
                         <?php else: ?>
 
-                                    <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/logos/Intro-logo.svg" alt="Peak Feeling Ski Logo" style="">
+                                    <img class="img-fluid mt-3 " id="main-logo" src="../../../wp-content/themes/peakfeelingski/assets/images/logos/peakpack-logo.svg" alt="Peak Feeling Ski Logo" style="">
                              <?php endif;
 
                         ?>

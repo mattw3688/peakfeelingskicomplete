@@ -28,7 +28,7 @@
       a {
 
         font-size: 1.1rem;
-        font-family: $themefont;
+        font-family: 'Wolf-Sans', sans-serif;
         font-weight: 600;
         padding-left: 1vw;
         &:hover {
@@ -40,16 +40,24 @@
 
 }
 
+@media (min-width: 992px) and (max-width: 1190px){
+  #menu-top-menu{
+    a {
+      font-size: 0.8rem;
 
+    }
+  }
 
-@media (min-width: 1150px ) {
+}
+
+@media (min-width: 1191px ) {
   #top-menu {
     a {
 
-      font-size: 1.3rem;
-      font-family: $themefont;
+      font-size: 1rem;
+      font-family: 'Wolf-Sans', sans-serif;
       font-weight: 600;
-      padding-left: 2vw;
+      padding-left: 1vw;
       &:hover {
         text-decoration: none;
         color: black;
@@ -115,9 +123,9 @@ img #main-logo {
     padding-top: 10px;
     h6 {
       color: $themeblue;
-      font-family: $themefont;
+      font-family: 'Wolf-Sans', sans-serif;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 1.1rem;
     }
     #email, #phone {
       &:hover {

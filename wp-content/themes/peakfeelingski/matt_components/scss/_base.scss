@@ -28,7 +28,23 @@
   src: local('Arial-Rounded'), url('../../assets/fonts/arialrounded.ttf') format('ttf');
 }
 
+@font-face {
+  font-family: 'Wolf-Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Wolf-Sans'), url('../../assets/fonts/wolfsans.ttf') format('ttf');
+}
 
+#calltoaction-container {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+
+  a {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-decoration: underline;
+  }
+}
 
 @media (min-width: 1000px) {
 

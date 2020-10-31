@@ -116,6 +116,25 @@
 
                 </div>
 
+
+
+            </div>
+
+            <div class="container-fluid text-center ">
+
+                <?php if (have_rows('contact_line')): ?>
+
+                    <?php while (have_rows('contact_line')): the_row(); ?>
+
+                        <?php if (get_row_layout() == 'call_to_action'):?>
+
+                            <?php get_template_part('template-parts/modules/module', 'calltoaction');?>
+
+                        <?php endif; ?>
+
+                    <?php endwhile; ?>
+                <?php endif; ?>
+
             </div>
 
         </div>

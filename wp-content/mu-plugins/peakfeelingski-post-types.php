@@ -13,11 +13,11 @@ function peakfeelingski_post_types()
         'public' => true,
         'menu_icon' => 'dashicons-universal-access',
         'labels' => array(
-            'name' => 'Peak Packs',
-            'add_new_item' => 'Add New Peak Pack',
-            'edit_item' => 'Edit Peak Pack',
-            'all_items' => 'All Peak Packs',
-            'singular_name' => 'Peak Pack',
+            'name' => 'Customers',
+            'add_new_item' => 'Add New Customer',
+            'edit_item' => 'Edit Customer',
+            'all_items' => 'All Customers',
+            'singular_name' => 'Customer',
 
 
         )
@@ -63,22 +63,7 @@ function peakfeelingski_post_types()
 
 add_action('init', 'peakfeelingski_post_types');
 
-function customer_taxonomy()
-{
-    $args = array(
-        'labels' => array(
-            'name' => 'Categories',
-            'singular_name' => 'Category',
-        ),
-        'public' => true,
-        'hierarchical' => true,
-    );
-    register_taxonomy('category', array('customer'), $args);
-
-}
-add_action('init', 'customer_taxonomy');
-
-add_action('init', 'peakfeelingski_post_types');
+add_action('init', 'product_taxonomy');
 
 function product_taxonomy()
 {
@@ -94,5 +79,4 @@ function product_taxonomy()
 
 
 }
-add_action('init', 'product_taxonomy');
 

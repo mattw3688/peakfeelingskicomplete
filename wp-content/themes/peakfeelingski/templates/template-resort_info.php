@@ -44,7 +44,7 @@
                 </div>
 
 
-                <div class="container text-center align-self-center gallery col-lg-12 ">
+                <div class="container-fluid text-center align-self-center gallery col-lg-12 ">
                     <?php $topimages = get_field('top_gallery');
 
                      if ($topimages):
@@ -52,16 +52,13 @@
 
                         foreach ($topimages as $topimage):
 
-                            if($count < 5): ?>
+                            if($count < 7): ?>
 
-                                <a href="<?php echo $topimage['sizes']['large'] ?>" title="<?php echo $topimage['caption'] ?>">
+
                                     <img src=" <?php echo $topimage['sizes']['thumbnail'] ?>"
                                          title="<?php echo $topimage['caption'] ?>" class="img-fluid">
-                                </a>
 
-                            <?php else:?>
-                                <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $topimage['caption'] ?>">
-                                </a>
+
 
                             <?php endif; ?>
                             <?php $count++ ?>
@@ -101,16 +98,12 @@
 
                     foreach ($bottomimages as $bottomimage):
 
-                    if($count < 5): ?>
+                    if($count < 7): ?>
 
-                    <a href="<?php echo $bottomimage['sizes']['large'] ?>" title="<?php echo $bottomimage['caption'] ?>">
-                        <img src=" <?php echo $bottomimage['sizes']['thumbnail'] ?>"
-                             title="<?php echo $bottomimage['caption'] ?>" class="img-fluid">
-                    </a>
+                    <img src=" <?php echo $bottomimage['sizes']['thumbnail'] ?>"
+                         title="<?php echo $bottomimage['caption'] ?>" class="img-fluid">
 
-                    <?php else:?>
-                    <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $bottomimage['caption'] ?>">
-                    </a>
+
 
                     <?php endif; ?>
                     <?php $count++ ?>

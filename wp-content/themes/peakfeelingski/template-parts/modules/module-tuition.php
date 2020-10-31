@@ -9,6 +9,7 @@
 
     <?php
     $term_id = 'term' . '-' . $post->ID;
+    $id_target = get_the_ID();
     ?>
 
     <div id="<?php echo $term_id; ?>" style="display:none;">
@@ -99,7 +100,7 @@
                             </div>
 
                         </div>
-                        <div class="container text-center align-self-baseline tuitiongallery col-lg-12 " id="<?php $post -> ID ?>">
+                        <div class="<?php echo $id_target ?> container text-center align-self-baseline col-lg-12 " id="<?php $post -> ID ?>">
 
 
                             <?php $images = get_field('gallery');
@@ -148,5 +149,23 @@
             <label for="tuition-box"><h5 class="terms">Check the box to select this tuition and confirm you have read and accept the <a href="#" data-featherlight="#<?php echo $term_id; ?> .content">terms and conditions</a> associated with it.</h5></label>
         </div>
     </div>
+
+    <script>
+
+
+        $('.<?php echo $id_target?>').magnificPopup({
+            delegate: 'a', // child items selector, by clicking on it popup will open
+            type: 'image',
+            gallery: {
+                enabled:true,
+                navigateByImgClick: true,
+            },
+            image:{
+                titleSrc: 'title'
+            }
+            // other options
+        });
+
+    </script>
 
 <?php wp_reset_postdata(); endforeach; ?>

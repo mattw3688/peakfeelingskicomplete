@@ -5,13 +5,18 @@
         $customer_price = get_sub_field('price');
         $totalaccomprice = 0;
         $accomlabel = "";
+
     ?>
 
-    <?php foreach ($products as $post):?>
+    <?php foreach ($products as $post):
+    $post = get_post($post);
+    ?>
 
 
     <?php
     $term_id = 'term' . '-' . $post->ID;
+    $id_target = get_the_ID();
+
     ?>
 
     <div id="<?php echo $term_id; ?>" style="display:none;">
@@ -39,7 +44,7 @@
 
                             <img class="img-fluid main-image rounded-corners" src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
 
-                            <div class="container-fluid d-flex flex-row mt-2 " >
+                            <div class="container-fluid d-flex flex-row flex-wrap mt-2 " >
 
                                 <div class="container col-lg-2" id="icons">
                                     <div class="icon">
@@ -77,17 +82,39 @@
 
                                             </div>
                                         </div>
-                                    <?php elseif ($facility == 'wifi'): ?>
-                                        <div class="container col-lg-2" id="icons">
-                                            <div class="icon">
-                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Wifi.svg" alt="Hot Tub" ></i>
 
-                                            </div>
-                                        </div>
                                     <?php elseif ($facility == 'sauna'): ?>
                                         <div class="container col-lg-2" id="icons">
                                             <div class="icon">
                                                 <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna.svg" alt="Hot Tub" ></i>
+
+                                            </div>
+                                        </div>
+                                    <?php elseif ($facility == 'pet-friendly'): ?>
+                                        <div class="container col-lg-2" id="icons">
+                                            <div class="icon">
+                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Pet-Friendly-Accom.svg" alt="Pet Friendly" ></i>
+
+                                            </div>
+                                        </div>
+                                    <?php elseif ($facility == 'wifi'): ?>
+                                        <div class="container col-lg-2" id="icons">
+                                            <div class="icon">
+                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Wifi-Accom.svg" alt="Wifi Available" ></i>
+
+                                            </div>
+                                        </div>
+                                    <?php elseif ($facility == 'parking'): ?>
+                                        <div class="container col-lg-2" id="icons">
+                                            <div class="icon">
+                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Parking-Accom.svg" alt="Parking Available" ></i>
+
+                                            </div>
+                                        </div>
+                                    <?php elseif ($facility == 'swimming-pool'): ?>
+                                        <div class="container col-lg-2" id="icons">
+                                            <div class="icon">
+                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Swimming-Pool-Accom.svg" alt="Swimming Pool" ></i>
 
                                             </div>
                                         </div>
@@ -121,7 +148,7 @@
                                 </div>
 
                             </div>
-                            <div class="container text-center accomgallery align-self-baseline col-lg-12 " >
+                            <div class="<?php echo $id_target?> container text-center align-self-baseline col-lg-12 " >
 
 
                                 <?php $images = get_field('gallery');
@@ -184,6 +211,22 @@
 </div>
 
 
+<script>
 
+
+    $('.<?php echo $id_target?>').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        gallery: {
+            enabled:true,
+            navigateByImgClick: true,
+        },
+        image:{
+            titleSrc: 'title'
+        }
+        // other options
+    });
+
+</script>
 
 <?php wp_reset_postdata(); endforeach; ?>

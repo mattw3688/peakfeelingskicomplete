@@ -20,21 +20,37 @@
 
                     <?php endif; ?>
 
-                    <?php if (get_row_layout() == 'paragraph_text'):?>
+                    <?php if (get_row_layout() == 'phone_link'): ?>
 
-                        <?php get_template_part('template-parts/modules/module', 'paragraph_text');?>
+                        <?php get_template_part('template-parts/modules/module', 'phone');?>
+
+                    <?php endif; ?>
+
+                    <?php if (get_row_layout() == 'email_link'): ?>
+
+                        <?php get_template_part('template-parts/modules/module', 'email');?>
 
                     <?php endif; ?>
 
                 <?php endwhile; ?>
 
-            <?php endif;
+            <?php endif; ?>
+
+                <div class="container-fluid text-center">
+
+                    <h3>Please submit your details below and we'll get back to you ASAP</h3>
+
+                </div>
 
 
 
-            get_template_part('template-parts/modules/module', 'contact_page');
+                <?php gravity_form( 3, false, false, false, '', false ); ?>
 
-            gravity_form( 3, false, false, false, '', false ); ?>
+                <div class="container-fluid text-center" id="calltoaction-container">
+
+                    <h3>Alternatively click <a href="<?php echo get_home_url('customer-details', '/customer-details') ?>">here</a> to fill out a few basic details</h3>
+
+                </div>
 
 
         </div>

@@ -4,11 +4,8 @@
         <?php
         $text = get_sub_field('text')
         ?>
-        <div class="col-lg-1 d-none d-lg-block">
 
-        </div>
-
-        <div class="container col-lg-9 col-xl-10 text-center">
+        <div class="container col-lg-11 col-xl-10 text-center">
 
             <h3>
                 <?php echo $text ?>
@@ -16,7 +13,7 @@
 
         </div>
 
-        <div class="col-lg-2  d-none d-lg-block "></div>
+
 
     </div>
 

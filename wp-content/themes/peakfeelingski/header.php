@@ -12,7 +12,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
         <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-
+        <link rel="stylesheet" href="../../../wp-content/themes/peakfeelingski/assets/css/magnific.css">
+        <script src="../../../wp-content/themes/peakfeelingski/assets/js/magnific.js"></script>
 	</head>
 
 <body <?php body_class();?>>
