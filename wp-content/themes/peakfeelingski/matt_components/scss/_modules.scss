@@ -32,15 +32,99 @@
 
 // Customer Page
 
+//Checkboxes
+
+
+
 .customer-page {
 
+  .card-body {
+    padding: 10px 10px 10px 10px
+  }
+  .row {
+    padding-bottom: 20px;
+  }
 
+
+
+  * {
+    font-family: 'Wolf-Sans', sans-serif;
+  }
+  h1 {
+    font-family: $themefont !important;
+  }
+  #label_5_6_0 {
+    position: relative;
+    left: 15vw;
+  }
+  #label_5_6_1 {
+    position: relative;
+    left: 15vw;
+  }
+
+  #label_5_6_2 {
+    position: relative;
+    left: 15vw;
+  }
+
+  #label_5_9_0 {
+    position: relative;
+    left: 15vw;
+  }
+  #label_5_9_1 {
+    position: relative;
+    left: 15vw;
+  }
+
+  #label_5_9_2 {
+    position: relative;
+    left: 15vw;
+  }
+
+  #choice_5_6_0 {
+    position: relative;
+    left: 12vw;
+  }
+  #choice_5_6_1 {
+    position: relative;
+    left: 12vw;
+  }
+
+  #choice_5_6_2 {
+    position: relative;
+    left: 12vw;
+  }
+
+  #choice_5_9_0 {
+    position: relative;
+    left: 12vw;
+  }
+  #choice_5_9_1 {
+    position: relative;
+    left: 12vw;
+  }
+
+  #choice_5_9_2 {
+    position: relative;
+    left: 12vw;
+  }
+
+  .gform_button {
+    position: relative;
+    left: 20vw;
+  }
 
   #customer-total {
 
   }
 
+  .right-half {
+    padding: 0;
+    margin: 0;
+  }
+
   .description {
+
     p {
       color: #1D3B60;
       font-family: $cardfont;
@@ -89,14 +173,22 @@
   h2 {
     color: #1D3B60
   }
-  input {
+  input.price-checkbox {
     position: relative;
-    left: 5vw;
+    width: 2vw;
+    height: 2vw;
+    border: 10px solid;
+    left: 10px;
   }
+
+
+
   .terms {
     position: relative;
-    left: 5vw;
-    font-weight: 600;
+    top: 15px;
+    font-weight: 800;
+    font-size: 1.1rem;
+
 
   }
 
@@ -104,6 +196,75 @@
 
 
 .accommodation__module {
+  .card {
+    border: $cardborderthickness $greycard;
+    border-radius: $cardradius;
+  }
+
+
+  .text-block {
+
+    position: absolute;
+    width: 100%;
+
+
+    background-color: $greyfaint;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: $cardradius $cardradius 0 0;
+    h3 {
+      padding-top: 10px;
+      color: whitesmoke;
+    }
+    h6 {
+      padding-bottom: 10px;
+      color: whitesmoke;
+    }
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+    max-height: 50vh;
+  }
+
+}
+
+
+.transport__module {
+  .card {
+    border: $cardborderthickness $greycard;
+    border-radius: $cardradius;
+  }
+
+
+  .text-block {
+
+    position: absolute;
+    width: 100%;
+
+
+    background-color: $greyfaint;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: $cardradius $cardradius 0 0;
+    h3 {
+      padding-top: 10px;
+      color: whitesmoke;
+    }
+    h6 {
+      padding-bottom: 10px;
+      color: whitesmoke;
+    }
+  }
+
+  .main-image {
+    border-radius: $cardradius;
+    max-height: 50vh;
+  }
+
+}
+
+.extras__module {
   .card {
     border: $cardborderthickness $greycard;
     border-radius: $cardradius;
@@ -469,7 +630,9 @@
 @media (min-width: 1020px) {
   #intro-page {
     .bold_text__module {
-      padding-bottom: 10vh;
+      padding: 30vh 10vw 10vh 10vw;
+
+
 
     }
   }
@@ -488,8 +651,9 @@
 @media (min-width: 1200px) {
   #intro-page {
     .bold_text__module {
-      padding-left: 10vw;
-      padding-right: 10vw;
+      padding-left: 15vw;
+      padding-right: 20vw;
+      padding-top: 38vh;
 
     }
   }
@@ -499,7 +663,7 @@
 @media (min-width: 1400px) {
   #intro-page {
     .bold_text__module {
-      padding-top: 45vh;
+      padding-top: 50vh;
       position: relative;
       padding-left: 18vw;
       padding-right: 15vw;
@@ -594,6 +758,18 @@
 
   }
 
+}
+
+@media (min-width: 1200px) {
+  #accommodation-page {
+    .bold_text__module {
+      padding: 50vh 5vw 5px 5vw;
+    }
+    .paragraph_text__module {
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+  }
 }
 
 @media(min-width: 1400px)  {
@@ -733,10 +909,21 @@
 
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   #transport-page {
     #bold_text {
-      padding-top: 20vh;
+      padding-top: 25vh;
+    }
+    #list_items {
+      padding-left: 20vw;
+      padding-right: 10vw;
+    }
+    .bottom_paragraph__module {
+      padding-top: 0;
+      padding-left: 20vw;
+    }
+    #calltoaction-container {
+      padding-top: 0;
     }
   }
 
@@ -951,10 +1138,12 @@
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1150px) {
   #equipment-page {
     .bold_text__module {
-      padding-top: 30vh;
+      padding-top: 35vh;
+      padding-right: 5vw;
+      padding-left: 5vw;
     }
   }
 
@@ -1119,7 +1308,7 @@
   }
   #childcare-page {
     .bold_text__module {
-      padding-top: 32vh;
+      padding-top: 35vh;
       padding-bottom: 0;
       padding-left: 8vw;
     }
@@ -1179,11 +1368,13 @@
     padding: 0;
   }
   @media (max-width: 992px) {
+
     #social-icons {
       i {
         color: #06667e;
       }
-  }
+    }
+
   }
 }
 
@@ -1229,6 +1420,9 @@
     a {
       font-size: 1.5rem;
     }
+    h3 {
+      font-weight: bolder;
+    }
   }
   }
   #contact-page {
@@ -1252,7 +1446,7 @@
 @media (min-width: 1100px) {
   #contact-page {
     .bold_text_central__module {
-      padding-top: 15vh;
+      padding-top: 20vh;
     }
   }
 }
@@ -1345,8 +1539,8 @@
   }
 
   .bold_text__module {
-    padding-top: 2vh;
-    padding-right: 23vw;
+    padding-top: 15vh;
+    padding-right: 25vw;
   }
 }
 
@@ -1488,6 +1682,22 @@
   }
 }
 
+@media (min-width: 1100px) {
+  #team-page {
+
+    h2 {
+      padding-top: 12vh;
+    }
+    .bold_text__module {
+      padding-bottom: 0;
+    }
+    .paragraph_text__module {
+      padding-left: 20vw;
+      padding-right: 20vw;
+    }
+  }
+}
+
 
 
 
@@ -1500,6 +1710,8 @@
   h1 {
     font-size: 2.5rem;
   }
+  background: url("../../assets/images/customer-page-background.svg") no-repeat;
+  background-size: 100% auto;
 }
 /* Small ... Portrait tablets & large phones  */
 @media (min-width: 600px) {
@@ -1515,15 +1727,6 @@
 
 /* laptop/desktop */
 @media (min-width: 992px) {
-  #customer-details {
-    background: url("../../assets/images/customer-page-background.svg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-
-    background-size: cover;
-
-  }
   #customer-details {
     .bold_text_central__module {
       padding-top: 150px;
@@ -1584,7 +1787,7 @@
   #tignes-lolly {
     width: 30vw;
     position: relative;
-    left: 5vw;
+    left: 0;
     top: 2vh;
     padding-bottom: 30vh;
 
@@ -1644,7 +1847,7 @@
     #tignes-lolly {
       width: 15vw;
       position: relative;
-      left: 10vw;
+      left: 5vw;
       padding-bottom: 20vh;
 
     }
@@ -1690,29 +1893,74 @@
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     button {
       position: relative;
-      top: 12vh;
+      top: 15vh;
     }
     #menu-top-menu {
       position: relative;
-      top: 12vh;
+      top: 15vh;
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 650px) {
+    button {
+      position: relative;
+      top: 20vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 20vh;
+    }
+  }
+
+  @media (max-width: 700px) {
+    button {
+      position: relative;
+      top: 25vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 25vh;
+    }
+  }
+
+  @media (max-width: 800px) {
+    button {
+      position: relative;
+      top: 30vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 30vh;
+    }
+  }
+
+  @media (max-width: 950px) {
+    button {
+      position: relative;
+      top: 35vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 35vh;
+    }
+  }
+
+  @media (max-width: 990px) {
     h3 {
       font-weight: 500;
     }
     button {
       position: relative;
-      top: 13vh;
+      top: 40vh;
     }
     #menu-top-menu {
       position: relative;
-      top: 13vh;
+      top: 40vh;
     }
+
 
   }
 
@@ -1744,6 +1992,7 @@
     .bold_text_central__module {
       padding-top: 25vh;
     }
+
   }
 }
 
@@ -1760,6 +2009,7 @@
     .bold_text_central__module {
       padding-top: 35vh;
     }
+
   }
 }
 
@@ -1776,6 +2026,7 @@
     .bold_text_central__module {
       padding-top: 45vh;
     }
+
   }
 }
 
@@ -1825,6 +2076,7 @@
     }
     .bullet-list__module {
       padding-top: 30vh;
+      padding-left: 10vw;
     }
   }
 }
@@ -2150,3 +2402,5 @@
   border-radius: 0 0 0 0 !important ;
 }
 
+
+//custom checkbox

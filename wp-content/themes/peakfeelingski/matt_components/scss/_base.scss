@@ -160,10 +160,7 @@ p {
 
 .customer-page {
   background: url("../../assets/images/customer-page-background.svg") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-size: 100% auto;
 
 }
 
@@ -185,6 +182,9 @@ p {
     margin-left: 20px;
   }
 
+}
+ul {
+  list-style-type: none;
 }
 
 

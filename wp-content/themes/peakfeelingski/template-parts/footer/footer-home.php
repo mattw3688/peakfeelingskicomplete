@@ -12,7 +12,7 @@
         </div>
         <div class="conainer-fluid text-center" id="footer-links">
             <a target="_blank" href="<?php echo get_home_url('', '/terms-and-conditions') ?>" class="mr-2">Terms and Conditions</a>
-            <a target="_blank" href="<?php echo get_home_url('', '/mention-legal') ?>">Mention Legal</a>
+
 
         </div>
     </footer>

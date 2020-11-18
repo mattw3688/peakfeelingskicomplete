@@ -25,7 +25,13 @@
 
     <div class="container-fluid text-center mt-2">
         <h1><?php the_field('top_heading') ?></h1>
+
+
     </div>
+    <div class="container col-lg-10 text-center mt-2">
+        <i><h1 style="font-size: 2.5rem"><?php the_field('customer_details') ?></h1></i>
+    </div>
+
     <br/>
 
 
@@ -70,6 +76,29 @@
     endif;
 
     ?>
+    <div class="container-fluid col-11 client-selection__module">
+        <div class="row  justify-content-end mr-3" >
+
+            <div class="column col-md-4  " style="padding-right: 0 ; margin-right: 0 ">
+
+                <h2 class="text-right">Your Selection:</h2>
+                <div class="dynamic-client-summary text-right">
+                    <!-- replaced automatically -->
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-end">
+
+            <div class="column col-md-4 justify-content-end text-right">
+                <?php
+                echo do_shortcode('[gravityform id="5" title="false" description="false" ajax="true"]');
+                ?>
+            </div>
+        </div>
+
+    </div>
+    <?php get_footer(); ?>
 
 
 </div>
@@ -139,25 +168,7 @@
 </script>
 
 
-<div class="container client-selection__module">
-    <div class="row">
 
-        <div class="column col-md-6">
-
-            <h2>Your Selection:</h2>
-            <div class="dynamic-client-summary">
-                <!-- replaced automatically -->
-            </div>
-
-        </div>
-        <div class="column col-md-6">
-            <?php
-            echo do_shortcode('[gravityform id="5" title="false" description="false"]');
-            ?>
-        </div>
-
-    </div>
-</div>
 
 
 <script>

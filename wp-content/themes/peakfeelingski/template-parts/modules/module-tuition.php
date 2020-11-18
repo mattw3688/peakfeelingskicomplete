@@ -26,13 +26,13 @@
 
         <div class="row justify-content-center">
 
-            <div class="card col-lg-10 align-self-center " >
+            <div class="card col-11 align-self-center " >
 
                 <div class="card-body " >
 
                     <div class="row content">
 
-                        <div class="container-fluid  col-lg-5" id="thumbnail-box">
+                        <div class="container-fluid col-12 col-sm-5" id="thumbnail-box">
 
                             <div class="text-block text-left">
                                 <h3 class=>
@@ -45,90 +45,63 @@
 
                         </div>
 
-                        <div class="container-fluid col-lg-6 justify-content-center">
-
-                            <div class="container d-flex flex-row ">
-
-                                <?php
-                                $facilities = get_field('extra_facilities');
-                                if ($facilities):
-
-                                    foreach ($facilities as $facility):
-                                        if ($facility == 'hot-tub-spa'):?>
-                                            <div class="container col-lg-2" id="icons">
-                                                <div class="icon">
-                                                    <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub-Spa.svg" alt="Hot Tub" ></i>
-
-                                                </div>
-                                            </div>
-                                        <?php elseif ($facility == 'sauna-spa'): ?>
-                                            <div class="container col-lg-2" id="icons">
-                                                <div class="icon">
-                                                    <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna-Spa.svg" alt="Sauna" ></i>
-
-                                                </div>
-                                            </div>
-                                        <?php elseif ($facility == 'massage-spa'): ?>
-                                            <div class="container col-lg-2" id="icons">
-                                                <div class="icon">
-                                                    <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Massage.svg" alt="Massage" ></i>
-
-                                                </div>
-                                            </div>
+                        <!--                        right column-->
+                        <div class="container col-12 col-sm-7 justify-content-center" style="padding-left: 3vw">
 
 
-                                        <?php endif; ?>
-                                    <?php endforeach;
-                                    ?>
-                                <?php endif; ?>
-
-                            </div>
 
                             <div class="container-fluid  description ">
                                 <p><?php echo get_field('product_description')?></p>
                                 <p><?php echo $information?></p>
 
                             </div>
-                            <div class="row justify-content-end ">
 
+                            <div class="<?php echo $id_target?> container-fluid d-flex justify-content-end align-self-baseline col-12 " >
+
+                                <?php $images = get_field('gallery');
+
+                                if ($images):
+                                    $count = 1;
+
+                                    foreach ($images as $image):
+
+                                        if($count < 5 ): ?>
+
+                                            <a class="mr-3" href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                                                <img src=" <?php echo $image['sizes']['thumbnail'] ?>"
+                                                     title="<?php echo $image['caption'] ?>" class="img-fluid">
+                                            </a>
+
+                                        <?php else:?>
+                                            <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
+                                            </a>
+
+                                        <?php endif; ?>
+                                        <?php $count++ ?>
+
+                                    <?php endforeach;?>
+
+                                <?php endif; ?>
+
+                            </div>
+
+                            <div class="row justify-content-end mt-4 mr-2" style="padding-right: 5px">
                                 <div class="card card-body d-flex price-box justify-content-center align-items-center mb-2 id="accommodation-price">
 
                                 <h5 style="padding-top: 6px"><?php echo $customer_price?></h5>
+                            </div>
 
-                                <!--                                <input type="checkbox" id="checkbox_accommodation">-->
-                                <!--                                <label for="checkbox_accommodation">Tick here to confirm</label>-->
+                            <div class="container d-flex align-items-baseline justify-content-end">
+                                <div class="form-row mt-2">
+
+                                    <label for="tuition-box"><h5 class="terms">I confirm this choice and accept the <a href="#" data-featherlight="#<?php echo $term_id; ?> .content">terms and conditions</a></h5></label>
+                                    <input class="mt-1 ml-2 price-checkbox" type="checkbox" data-customer-price="<?php echo $customer_price; ?>" data-product-name="<?php the_title(); ?>">
+
+                                </div>
                             </div>
 
                         </div>
-                        <div class="<?php echo $id_target ?> container text-center align-self-baseline col-lg-12 " id="<?php $post -> ID ?>">
 
-
-                            <?php $images = get_field('gallery');
-
-                            if ($images):
-                                $count = 1;
-
-                                foreach ($images as $image):
-
-                                    if($count < 4 ): ?>
-
-                                        <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
-                                            <img src=" <?php echo $image['sizes']['thumbnail'] ?>"
-                                                 title="<?php echo $image['caption'] ?>" class="img-fluid">
-                                        </a>
-
-                                    <?php else:?>
-                                        <a href="<?php echo $image['sizes']['large'] ?>" title="<?php echo $image['caption'] ?>">
-                                        </a>
-
-                                    <?php endif; ?>
-                                    <?php $count++ ?>
-
-                                <?php endforeach;?>
-
-                            <?php endif; ?>
-
-                        </div>
 
                     </div>
 
@@ -142,13 +115,7 @@
     </div>
 
 
-    <div class="container text-center">
-        <div class="form-row mt-2">
-            <input class="mt-1 mr-2 price-checkbox" type="checkbox" data-customer-price="<?php echo $customer_price; ?>" data-product-name="<?php the_title(); ?>">
 
-            <label for="tuition-box"><h5 class="terms">Check the box to select this tuition and confirm you have read and accept the <a href="#" data-featherlight="#<?php echo $term_id; ?> .content">terms and conditions</a> associated with it.</h5></label>
-        </div>
-    </div>
 
     <script>
 

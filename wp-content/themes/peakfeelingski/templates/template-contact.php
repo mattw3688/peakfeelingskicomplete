@@ -18,6 +18,12 @@
 
                         <?php get_template_part('template-parts/modules/module', 'bold_text_central');?>
 
+                        <div class="container-fluid text-center" id="calltoaction-container">
+
+                            <h3 class="white-text" style="font-size: 2.2rem" >Click <a class="white-text" style="font-size: 2.2rem" href="<?php echo get_home_url('customer-details', '/customer-details') ?>">here</a> to fill out a few basic details</h3>
+
+                        </div>
+
                     <?php endif; ?>
 
                     <?php if (get_row_layout() == 'phone_link'): ?>
@@ -36,9 +42,11 @@
 
             <?php endif; ?>
 
-                <div class="container-fluid text-center">
 
-                    <h3>Please submit your details below and we'll get back to you ASAP</h3>
+
+                <div class="container-fluid text-center" >
+
+                    <h3 >Alternatively submit your details below and we'll get back to you ASAP</h3>
 
                 </div>
 
@@ -46,11 +54,7 @@
 
                 <?php gravity_form( 3, false, false, false, '', false ); ?>
 
-                <div class="container-fluid text-center" id="calltoaction-container">
 
-                    <h3>Alternatively click <a href="<?php echo get_home_url('customer-details', '/customer-details') ?>">here</a> to fill out a few basic details</h3>
-
-                </div>
 
 
         </div>

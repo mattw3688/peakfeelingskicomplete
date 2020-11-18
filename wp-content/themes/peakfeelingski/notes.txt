@@ -10,69 +10,16 @@ Namecheap
 Morzine321!
 
 
-TO ASK CHARLIE ...
-Team_Mobile, much longer!!
-
-SOCIAL LINKS!!
-
-
-NIKKI COMMENTS>>>
-
-CHECK NAVBAR FITS ON WIDTH CONTACT US GOES BELOW ON NIKKIS
-
-PAGES TO TWEAK
 
 
 
-SHI SCHOOL>>>
-    BUMP TEXT DOWN, LIST OVER FURTHER RIGHT
 
-RESORTS PAGE>>>
-    ALL BUMPED UP
-
-CONTACT>>>
-    CHANGE WORDING
-    CHANGE PHONE NUMBER
-
-BACK END >>>>
-    CUSTOMERS CHANGED TO PEAK PACKS
-
-PEAK PACK>>>
-    ICON FOR TOTAL
-    ICONS HUG LEFT WHEN NOT FULL
-    COMMENTS BOX STYLED LIKE PRICE BOXES
-
-
-RESORTPAGE STYLING
-
-Things we need to finish up with:
-
-Tweak thankyou page - change text and add padding to make it fit!
-
-
-
-- Change customer name to Peak Packs & then another with Customer Database
-
-- Subfolders:
-PP Sent
-PP Submitted
-PP Confirmed
-PP Confirmed part payment
-PP Confirmed and paid full
 
 BLOG PAGE
 Looks like peak pack
 
 
-NAVBAR
-Change breakpoint
-Style dropdown and button
-
-STYLING
-    Background images need portrait mode for mobile
-    Adjust Padding for different screen sizes
 
 
 
-HOMEPAGE....
-link social icons to pages
+

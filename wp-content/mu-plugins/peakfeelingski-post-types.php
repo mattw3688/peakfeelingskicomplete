@@ -80,3 +80,19 @@ function product_taxonomy()
 
 }
 
+add_action('init', 'customer_taxonomy');
+
+function customer_taxonomy()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Labels',
+            'singular_name' => 'Label',
+        ),
+        'public' => true,
+        'hierarchical' => true,
+    );
+    register_taxonomy('label', array('customer'), $args);
+
+
+}
