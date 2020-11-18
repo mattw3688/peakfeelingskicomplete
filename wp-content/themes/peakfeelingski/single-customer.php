@@ -77,9 +77,9 @@
 
     ?>
     <div class="container-fluid col-11 client-selection__module">
-        <div class="row  justify-content-end mr-3" >
+        <div class="row  justify-content-end mr-3" style="padding-bottom: 0" >
 
-            <div class="column col-md-4  " style="padding-right: 0 ; margin-right: 0 ">
+            <div class="column col-md-6  " style="padding-right: 0 ; margin-right: 0 ">
 
                 <h2 class="text-right">Your Selection:</h2>
                 <div class="dynamic-client-summary text-right">
@@ -90,7 +90,7 @@
         </div>
         <div class="row justify-content-end">
 
-            <div class="column col-md-4 justify-content-end text-right">
+            <div class="column col-md-6 justify-content-end text-right">
                 <?php
                 echo do_shortcode('[gravityform id="5" title="false" description="false" ajax="true"]');
                 ?>

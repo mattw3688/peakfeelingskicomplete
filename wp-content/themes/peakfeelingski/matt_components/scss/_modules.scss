@@ -55,63 +55,78 @@
   }
   #label_5_6_0 {
     position: relative;
-    left: 15vw;
+    left: 23vw;
   }
   #label_5_6_1 {
     position: relative;
-    left: 15vw;
+    left: 23vw;
   }
 
   #label_5_6_2 {
     position: relative;
-    left: 15vw;
+    left: 23vw;
   }
 
   #label_5_9_0 {
     position: relative;
-    left: 15vw;
+    left: 23vw;
   }
   #label_5_9_1 {
     position: relative;
-    left: 15vw;
+    left: 23vw;
   }
 
   #label_5_9_2 {
     position: relative;
-    left: 15vw;
+    left: 23vw;
+  }
+
+  #label_5_7_0 {
+    position: relative;
+    left: 23vw;
   }
 
   #choice_5_6_0 {
     position: relative;
-    left: 12vw;
+    left: 22vw;
   }
   #choice_5_6_1 {
     position: relative;
-    left: 12vw;
+    left: 22vw;
   }
 
   #choice_5_6_2 {
     position: relative;
-    left: 12vw;
+    left: 22vw;
   }
 
   #choice_5_9_0 {
     position: relative;
-    left: 12vw;
+    left: 22vw;
   }
   #choice_5_9_1 {
     position: relative;
-    left: 12vw;
+    left: 22vw;
   }
 
   #choice_5_9_2 {
     position: relative;
-    left: 12vw;
+    left: 22vw;
+  }
+
+  #choice_5_7_0 {
+    position: relative;
+    left: 22vw;
   }
 
   .gform_button {
     position: relative;
-    left: 20vw;
+    left: 25vw;
+  }
+
+  #gfield_description_5_7 {
+    position: relative;
+    left: 10vw;
   }
 
   #customer-total {
@@ -512,7 +527,23 @@
 #icons {
   position: relative;
   text-align: center;
+  padding: 0 !important;
+  margin: 0 !important;
+
 }
+
+#wifi-icon {
+  position: relative;
+  top: 8px;
+}
+
+#icon-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .bottom-center {
   p {
     position: absolute;
@@ -693,6 +724,61 @@
 
   * {
     color:  #102244;
+  }
+
+  @media (max-width: 500px) {
+    button {
+      position: relative;
+      top: 12vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 12vh;
+    }
+  }
+
+  @media (min-width: 501px) and (max-width: 600px) {
+    button {
+      position: relative;
+      top: 20vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 20vh;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 700px) {
+    button {
+      position: relative;
+      top: 25vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 25vh;
+    }
+  }
+
+  @media (min-width: 701px) and (max-width: 800px) {
+    button {
+      position: relative;
+      top: 30vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 30vh;
+    }
+  }
+
+  @media (min-width: 801px) and (max-width: 990px) {
+    button {
+      position: relative;
+      top: 40vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 40vh;
+    }
   }
 
   #calltoaction-container {
@@ -1197,11 +1283,52 @@
   * {
     color: #144C7F;
   }
-
-  button {
-    position: relative;
-    top: 4vh;
+  @media (max-width: 600px) {
+    button {
+      position: relative;
+      top: 9vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 9vh;
+    }
   }
+
+  @media (min-width: 601px) and (max-width: 700px) {
+    button {
+      position: relative;
+      top: 15vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 15vh;
+    }
+  }
+
+  @media (min-width: 701px) and (max-width: 800px) {
+    button {
+      position: relative;
+      top: 20vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 20vh;
+    }
+  }
+
+  @media (min-width: 801px) and (max-width: 990px) {
+    button {
+      position: relative;
+      top: 30vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 30vh;
+    }
+  }
+
+
+
 
   @media (max-width: 992px) {
     h3 {
@@ -1893,7 +2020,7 @@
     }
   }
 
-  @media (max-width: 600px) {
+  @media (min-width: 451px) and (max-width: 600px) {
     button {
       position: relative;
       top: 15vh;
@@ -1904,18 +2031,7 @@
     }
   }
 
-  @media (max-width: 650px) {
-    button {
-      position: relative;
-      top: 20vh;
-    }
-    #menu-top-menu {
-      position: relative;
-      top: 20vh;
-    }
-  }
-
-  @media (max-width: 700px) {
+  @media (min-width: 601px) and (max-width: 650px) {
     button {
       position: relative;
       top: 25vh;
@@ -1926,7 +2042,18 @@
     }
   }
 
-  @media (max-width: 800px) {
+  @media (min-width: 651px) and (max-width: 700px) {
+    button {
+      position: relative;
+      top: 25vh;
+    }
+    #menu-top-menu {
+      position: relative;
+      top: 25vh;
+    }
+  }
+
+  @media (min-width: 701px) and (max-width: 800px) {
     button {
       position: relative;
       top: 30vh;
@@ -1937,7 +2064,7 @@
     }
   }
 
-  @media (max-width: 950px) {
+  @media (min-width: 801px) and (max-width: 950px) {
     button {
       position: relative;
       top: 35vh;
@@ -1948,7 +2075,7 @@
     }
   }
 
-  @media (max-width: 990px) {
+  @media (min-width: 951px) and (max-width: 990px) {
     h3 {
       font-weight: 500;
     }

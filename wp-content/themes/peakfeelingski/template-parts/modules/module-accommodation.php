@@ -35,7 +35,7 @@
 
                     <div class="row content product-card">
 <!--                        left column-->
-                        <div class="container-fluid  col-12 col-sm-5" id="thumbnail-box">
+                        <div class="container-fluid col-12 col-sm-5" id="thumbnail-box">
 
                             <div class="text-block text-left">
                                 <h3 class=>
@@ -46,25 +46,25 @@
 
                             <img class="main-image rounded-corners" src="<?php the_post_thumbnail_url('small'); ?>" alt="" style="width: 100%;" >
 
-                            <div class="d-flex align-content-start flex-wrap mt-2 col-12" id="icon-container">
+                            <div class="container-fluid mt-2 col-12" id="icon-container">
 
-                                <div class="container align-self-start col-2" id="icons">
-                                    <div class="icon">
-                                        <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sleep-Capacity.svg" alt="Sleep Capacity" ></i>
-                                        <p class="bottom-center"><?php echo get_field('capacity') ?></p>
-                                    </div>
+                                <div class="container  col-2" id="icons">
+
+                                    <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sleep-Capacity.svg" alt="Sleep Capacity" ></i>
+                                    <p class="bottom-center"><?php echo get_field('capacity') ?></p>
+
                                 </div>
                                 <div class="container col-2" id="icons">
-                                    <div class="icon">
-                                        <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Nearest-Gondola-Lift-distance.svg" alt="Nearest Lift" ></i>
-                                        <p class="bottom-center"><?php echo get_field('distance_to_lift')?></p>
-                                    </div>
+
+                                    <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Nearest-Gondola-Lift-distance.svg" alt="Nearest Lift" ></i>
+                                    <p class="bottom-center"><?php echo get_field('distance_to_lift')?></p>
+
                                 </div>
                                 <div class="container col-2" id="icons">
-                                    <div class="icon">
-                                        <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Chalet-Size.svg" alt="Chalet Size" ></i>
-                                        <p class="bottom-center"><?php echo get_field('accommodation_size')?></p>
-                                    </div>
+
+                                    <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Chalet-Size.svg" alt="Chalet Size" ></i>
+                                    <p class="bottom-center"><?php echo get_field('accommodation_size')?></p>
+
                                 </div>
 
                                 <?php
@@ -72,53 +72,52 @@
                                 foreach ($facilities as $facility):
                                     if ($facility == 'catered'):?>
                                         <div class="container col-2" id="icons">
-                                            <div class="icon">
-                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Catered.svg" alt="Catered Accommodation" ></i>
 
-                                            </div>
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Catered.svg" alt="Catered Accommodation" ></i>
+
+
                                         </div>
                                     <?php elseif ($facility == 'hot-tub'): ?>
                                         <div class="container col-2" id="icons">
-                                            <div class="icon">
-                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub.svg" alt="Hot Tub" ></i>
 
-                                            </div>
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Hot-Tub.svg" alt="Hot Tub" ></i>
+
+
                                         </div>
 
                                     <?php elseif ($facility == 'sauna'): ?>
                                         <div class="container col-2" id="icons">
-                                            <div class="icon">
-                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna.svg" alt="Hot Tub" ></i>
 
-                                            </div>
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Sauna.svg" alt="Hot Tub" ></i>
+
+
                                         </div>
                                     <?php elseif ($facility == 'pet-friendly'): ?>
-                                        <div class="container align-self-start col-2" id="icons">
-                                            <div class="icon">
-                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Pet-Friendly-Accom.svg" alt="Pet Friendly" ></i>
+                                        <div class="container  col-2" id="icons">
 
-                                            </div>
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Pet-Friendly-Accom.svg" alt="Pet Friendly" ></i>
+
+
                                         </div>
                                     <?php elseif ($facility == 'wifi'): ?>
                                         <div class="container col-2" id="icons">
-                                            <div class="icon">
-                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Wifi-Accom.svg" alt="Wifi Available" ></i>
 
-                                            </div>
+                                            <i><img class="info-icon" id="wifi-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Wifi-Accom.svg" alt="Wifi Available" ></i>
+
+
                                         </div>
                                     <?php elseif ($facility == 'parking'): ?>
                                         <div class="container col-2" id="icons">
-                                            <div class="icon">
-                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Parking-Accom.svg" alt="Parking Available" ></i>
 
-                                            </div>
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Parking-Accom.svg" alt="Parking Available" ></i>
+
                                         </div>
                                     <?php elseif ($facility == 'swimming-pool'): ?>
                                         <div class="container col-2" id="icons">
-                                            <div class="icon">
-                                                <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Swimming-Pool-Accom.svg" alt="Swimming Pool" ></i>
 
-                                            </div>
+                                            <i><img class="info-icon" src="../../../../../wp-content/themes/peakfeelingski/assets/images/icons/Swimming-Pool-Accom.svg" alt="Swimming Pool" ></i>
+
+
                                         </div>
                                     <?php endif; ?>
                                 <?php endforeach;
