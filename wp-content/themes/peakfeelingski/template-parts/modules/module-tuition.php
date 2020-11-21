@@ -21,7 +21,7 @@
     </div>
 
 
-    <div class="customer-section tuition__module">
+    <div class="customer-section container col-12 tuition__module">
 
 
         <div class="row justify-content-center">

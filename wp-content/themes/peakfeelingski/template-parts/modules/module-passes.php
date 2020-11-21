@@ -21,7 +21,7 @@
             </div>
         </div>
 
-    <div class="customer-section liftpass__module">
+    <div class="customer-section container col-12 liftpass__module">
 
 
         <div class="row justify-content-center">

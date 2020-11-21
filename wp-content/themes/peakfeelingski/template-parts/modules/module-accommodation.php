@@ -1,4 +1,4 @@
-<div class="customer-section container-fluid accommodation__module">
+<div class="customer-section container col-12 accommodation__module">
 
     <?php
         $products = get_sub_field('product_post');

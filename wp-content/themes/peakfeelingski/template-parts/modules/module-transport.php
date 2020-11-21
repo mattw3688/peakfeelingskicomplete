@@ -18,7 +18,7 @@
         </div>
     </div>
 
-<div class="customer-section transport__module">
+<div class="customer-section container col-12 transport__module">
 
     <div class="row justify-content-center">
 

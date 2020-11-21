@@ -6,7 +6,7 @@
 
 <?php foreach ($products as $post):?>
 
-<div class="customer-section massage__module">
+<div class="customer-section container col-12 massage__module">
 
     <?php
     $term_id = 'term' . '-' . $post->ID;

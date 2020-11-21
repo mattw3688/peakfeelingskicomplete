@@ -19,7 +19,7 @@
     </div>
     
 
-<div class="customer-section childcare__module">
+<div class="customer-section container col-12 childcare__module">
 
 
 

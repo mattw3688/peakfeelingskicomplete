@@ -38,12 +38,30 @@
 
 .customer-page {
 
+  @media (max-width: 800px) {
+
+    #top-slogan {
+      * {
+        font-size: 2rem;
+      }
+    }
+
+    #customer-info {
+      * {
+        font-size: 1.8rem !important;
+      }
+    }
+
+  }
+
   .card-body {
     padding: 10px 10px 10px 10px
   }
   .row {
     padding-bottom: 20px;
   }
+
+
 
 
 
@@ -119,10 +137,16 @@
     left: 22vw;
   }
 
-  .gform_button {
-    position: relative;
-    left: 25vw;
+  @media (min-width: 950px) {
+    .gform_button {
+      position: relative;
+      left: 25vw;
+    }
   }
+
+
+
+
 
   #gfield_description_5_7 {
     position: relative;
@@ -196,6 +220,16 @@
     left: 10px;
   }
 
+  @media (max-width: 600px) {
+    input.price-checkbox {
+      position: relative;
+      width: 5vw;
+      height: 5vw;
+      border: 10px solid;
+      left: 10px;
+    }
+  }
+
 
 
   .terms {
@@ -211,6 +245,7 @@
 
 
 .accommodation__module {
+
   .card {
     border: $cardborderthickness $greycard;
     border-radius: $cardradius;

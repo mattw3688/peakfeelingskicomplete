@@ -159,7 +159,9 @@ p {
 //}
 
 .customer-page {
-  background: url("../../assets/images/customer-page-background.svg") no-repeat;
+
+  background: url("../../assets/images/customer-page-background.svg"), #d1e0e4 no-repeat;
+
   background-size: 100% auto;
 
 }
@@ -187,10 +189,17 @@ ul {
   list-style-type: none;
 }
 
-
-html {
+html{
   overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
 }
+
+body{
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+ }
 
 
 

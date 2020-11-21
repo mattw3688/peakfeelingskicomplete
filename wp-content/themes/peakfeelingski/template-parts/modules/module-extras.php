@@ -16,7 +16,7 @@
                 <?php echo get_field('terms_and_conditions'); ?>
         </div>
     </div>
-<div class="customer-section extras__module">
+<div class="customer-section container col-12 extras__module">
 
 
     <div class="row justify-content-center">

@@ -1,12 +1,9 @@
-<div class=" page-wrapper customer-page">
+<div class=" page-wrapper bg-transparent justify-content-center customer-page">
     <div class="container" style="display: none">
         <?php get_header(); ?>
     </div>
-    <div >
-    </div>
-    <div class="container  col-lg-4">
 
-    </div>
+
 
     <div class="container col-xs-6 col-lg-4 text-center" id="header-logo">`
 
@@ -18,18 +15,15 @@
         </a>
         <!--                --><?php //endif; ?>
     </div>
-    <div class="container col-lg-4 ">
 
 
-    </div>
-
-    <div class="container-fluid text-center mt-2">
+    <div class="container col-11 text-center mt-2" id="top-slogan">
         <h1><?php the_field('top_heading') ?></h1>
 
 
     </div>
-    <div class="container col-lg-10 text-center mt-2">
-        <i><h1 style="font-size: 2.5rem"><?php the_field('customer_details') ?></h1></i>
+    <div class="container col-lg-10 text-center mt-2" id="customer-info">
+        <h1 style="font-size: 2.5rem"><?php the_field('customer_details') ?></h1>
     </div>
 
     <br/>
